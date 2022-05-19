@@ -1,12 +1,4 @@
-\documentclass[a4paper,12pt]{report}
-\usepackage{graphicx}
-\usepackage[T1]{fontenc}
-\usepackage[utf8]{inputenc}
-\usepackage{blindtext}
-\usepackage[french]{babel}
 
-
-\begin{document}
 	\chapter{Cadre du projet :}
 	\newpage
 	
@@ -17,45 +9,43 @@
 	porte l'etude d'existant, la troisiéme détermine la  solution proposé, la quatreieme partie porte l’objectif, et la dernière spécifie la Méthodologie de gestion de projet.
 	\section{Problématique :}
 	Depuis des temps immémoriaux l'agriculture tunisienne était trés importante dans la meusure où elle faisait partie intégrante de la vie humaine.
-	\par
+	
+	
 	Néanmoins ce secteur central a étalé une faiblesse importante de compétivité sur les marchés nationaux et internationaux suite à un manque de la technique et de l'innovation qui reflète une faible production et l'absence de qualité des produits agricoles d'organisations professionnelles bien développée.
-	
-	\section{Etude de l’existant :}
-	
-	Donc on a besoin d'un système de détection couvrent les plantations, rangée par rangée, grâce à une quadri rotor. Les données recueillies par le système sont ensuite analysées et traitées à l’aide de l’Intellegence Artificielles, afin d’identifier les oranges de chaque arbre. Les résultats sont alors transmis au producteur et sont accessibles sur l'appareil.
-	\section{Solution proposée: }
+	\section{Solution proposée }
 	Après avoir étudié attentivement ce sujet, l'observation et l'analyse des problèmes qui résultent de ce sujet . Nous avons bien conclu qu'il faut créé une progression au niveau de ce secteur, concevoir des solutions qui peuvent augmenter la qualité et la production de l'agriculture et aider les agriculteurs à avoir une progression au niveau de la compétitivité dans ce domaine-là . Dans ce contexte, nous avons mis en place un système innovant focalisé sur l'application d'un drone pour la détection des oranges .
-	\par
+
+
+	Le système de détection couvrent les plantations, rangée par rangée, grâce à une quadri rotor. Les données recueillies par le système sont ensuite analysées et traitées à l’aide de l’Intellegence Artificielles, afin d’identifier les oranges de chaque arbre. Les résultats sont alors transmis au producteur et sont accessibles sur l'appareil.
+
+
 	Ce système est divisé en deux parites :
-	\par
-	- drone 
-	\par
-	- détection des oranges
-	\newpage
+
+
+\begin{itemize}
+\item  drone 	
+\item détection des oranges
+\end{itemize}
+
 	\section{Objectif :}
-	Quelle est l'objectif de l'agriculture ?
-	Répondre aux besoins des populations. Garantir une production suffisante Réduire les écarts de richesse. Garantir l'équilibre du milieu naturel.  limitant la fatigue des opérateurs et l’impact
-	Les systèmes d’agriculture intelligente et de précision devraient jouer un rôle important dans
-	l’amélioration des activités agricoles.
-	e plus productives, plus efficaces
-	et plus rentables
-	, cependant de telles technologies ne suffisent pas à elles seules; elles doivent être
-	combinées judicieusement avec des outils puissants d’exploration de données pour fournir des informations pertinentes, utiles et fiables.
-	Les drones sont en mesure de fournir des données de manière rapide et précise, ce qui permet de livrer les projets plus vite et facilite la prise de décision.
+	L'objectif de notre projet est d’utiliser les nouvelles technologies pour*
+	 améliorer les performances économiques et environnementales des productions agricoles
 	
 	
 	
 	Afin de s’organiser de manière appropriée, les agriculteurs ont besoin d’anticiper leur production. Mais le comptage des fruits est une tâche qui prend du temps. Le projet AGERPIX, soutenu par l’UE, a permis de mettre au point une méthode de travail plus efficace pour les fournisseurs de produits agricoles: un système automatisé de comptage des fruits sur l’arbre.Un système de comptage des fruits très précis utilise l’intelligence artificielle pour aider les producteurs à optimiser leurs récoltes et à planifier leurs ventes sur le marché.
 	
-	\section{Méthodologie de gestion de projet :}
+	\section{Méthodologie de gestion de projet }
 	\subsection{Choix de méthodologie :}
 	Afin d'assurer le bon déroulement des différentes étapes
 	Dans notre projet, nous avons choisi la méthode Agile Scrum pour gérer notre travail, concevoir et
 	Développer nos systèmes pour des raisons claires est vraiment le processus
 	Scrum s'inscrit parfaitement dans la décomposition de notre projet de fin d'etudes, qui s'appuie sur des avantages suivants :
-	\par
+	
+	
 	Plus de flexibilité et de réactivité.
-	\par
+	
+	
 	traduire et organiser le projet de façon simple, transparente et pragmatique.
 	
 	\subsection{C'est quoi Scrum :}
@@ -108,4 +98,45 @@
 		\end{center}
 		\caption{Méthode scrum}
 	\end{figure}
-\end{document}
+	\newpage
+		\section{Analyse des besoins :}
+		
+		Cette partie sera utilisée pour jeter les bases de la collecte des besoins du système devant être réalisé.
+		Dans le but de préciser les besoins des utilisateurs de notre système, nous présenterons les besoins fonctionnels 
+		ainsi que les besoins non fonctionnels.
+		\subsection{Les besoins fonctionnels:}
+		Mon projet consiste à développer un drone doit survoler la parcelle tout en inspectant les arbres 
+		afin de détecter pour chaque arbre les oranges présentes.
+		
+		Les besoins fonctionnels et les attentes vis-à-vis notre drone varient d'un acteur à un autre. 
+		Pour cela, nous avons décrit pour chaque acteur les besoins fonctionnels qui lui sont associés.
+		
+		* Les besoins pilote:
+		Le rôle de pilote consiste à :
+		-paramètrer le le contrôleur de vol APM 2.8 (Calibrer le gyroscope, l'accéléromètre, la radiocommande et les contrôleurs de vitesses ESC)
+		-Maintenir le drone en état de vol (recharger la batterie, réparer le drone)
+		-Contrôler l'AGRIDrone (Déplacer le drone verticalement, selon le Roulis, selon Tangage, selon le lacet)
+		* Les besoins de système de détection:
+		-Détection des oranges(Introduire la vidéo, Décomposer la vidéo en image, Détecter les oranges)
+		\subsection{Les besoins non fonctionnels:}
+		Après avoir cité les différents besoins fonctionnels, plusieurs besoins non fonctionnels de drone ont été définis.
+		Les besoins non fonctionnels sont liés aux contraintes dont il faut tenir compte pour appliquer une solution adéquate.
+		
+		L'extensibilité :
+		\par
+		Dans le cadre de ce travail, le drone devra être extensible, c'est-à-dire qu'il pourra y avoir une possibilité d'ajouter ou de modifier des nouvelles fonctionnalités.
+		
+		-L'ergonomie: 
+		\par
+		Il faut que le drone ergonomique lorsqu'il est adapté à l'utilisateur et au contexte 
+		d'utilisation.
+		\newpage
+		-Performance: 
+		\par
+		l'AGRIDrone doit être performent en matiére d'autonomie et de capacité de vol.
+		
+		-Disponibilité:
+		\par
+		le drone doit être disponible à tous moment.
+	
+
