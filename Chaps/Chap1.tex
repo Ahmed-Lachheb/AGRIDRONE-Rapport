@@ -9,7 +9,7 @@
 	\section{Problématique }
 	Depuis des temps immémoriaux, l'agriculture était très importante dans la mesure où elle faisait partie intégrante de la vie humaine et demeure d’une grande importance économique et sociopolitique du fait de sa contribution à la réalisation des objectifs nationaux en matière de sécurité alimentaire, de création de revenus, d’emplois, d’équilibre régional et de gestion des ressources naturelles. Néanmoins ce secteur central a étalé une faiblesse importante mondiale et régionale de compétitivité sur les marchés nationaux et internationaux suite à un manque de la technique et de l'innovation qui reflète une faible production et l'absence de qualité des produits agricoles d'organisations professionnelles bien développée . Les agriculteurs doivent constamment faire des miracles pour trouver des solutions à de nouveaux problèmes. Les défis à relever à l'avenir peuvent être très différents des problèmes rencontrés aujourd’hui. Pour cette raison-là, L'agriculture a connu de nombreuses crises vue qu’ils utilisent les mêmes moyens sans innover de nouvelles technologies ni augmenter sa productivité.
 	
-	Ces dernières années, le monde a été confronté à une baisse importante de la production agricole. Par exemple, Au Brésil, le premier producteur d’oranges dans le monde avec plus de 19 millions de tonnes d'où proviennent plus de la moitié des fruits utilisés pour fabriquer les jus consommés à travers le monde, la situation est particulièrement critique. La production d'oranges risque d'être la plus faible depuis plus de vingt ans, d'après les estimations du département américain de l'Agriculture (Usda)[5]. Et en Tunisie, la production d'agrumes de la campagne 2017/2018 a fortement chuté à 38,2 \%, soit 346 000 tonnes. Cette baisse de production est due à une baisse du maltais (49\%), de la clémentine (38\%) et du nombril (31\%)[5].
+	Ces dernières années, le monde a été confronté à une baisse importante de la production agricole. Par exemple, Au Brésil, le premier producteur d’oranges dans le monde avec plus de 19 millions de tonnes d'où proviennent plus de la moitié des fruits utilisés pour fabriquer les jus consommés à travers le monde, la situation est particulièrement critique. La production d'oranges risque d'être la plus faible depuis plus de vingt ans, d'après les estimations du département américain de l'Agriculture (Usda)[5]. En Tunisie, la production d'agrumes de la campagne 2017/2018 a fortement chuté à 38,2 \%, soit 346 000 tonnes. Cette baisse de production est due à une baisse du maltais (49\%), de la clémentine (38\%) et du nombril (31\%)[5].
 	
 	En plus, récemment avec le covid19 le secteur agricole face à d’autres problèmes et d’autres challenges a cause de cette crise sanitaire. Il a perturbé le fonctionnement de l'agriculture et du système alimentaire en perturbant le processus de production menant au centre de consommation. En raison des restrictions, il y a plus de travailleurs ni des ouvrières dans de nombreux secteurs et domaines, ce qui peut facilement affecter la production et les économies mondiales et régionales. Le confinement des pays et la fermeture des frontières ont une forte incidence sur la rapidité et la flexibilité d’un secteur initiale, l’agriculture, vue que y'a un manque de main d'œuvres et l'absence d'innovations alternatives ce qui peut refléter un ralentissement de la production agricole.
 	
@@ -51,7 +51,7 @@
 	Chaque jour du sprint, tous les membres de l’équipe (ainsi que le responsable produit et le SCRUM Master) doivent assister à la réunion SCRUM quotidienne. Cette dernière ne doit pas durer plus de 15 minutes, et permet aux membres de l’équipe de partager avec les autres ce qu’ils ont fait la veille, ce sur quoi ils travaillent le jour même, ainsi que l’identification de tout problème pouvant entraver le bon déroulement du sprint. Cette réunion permet ainsi de synchroniser tous les membres de l’équipe.
 	
 	
-	La fin d’un sprint est marquée par une session de débriefing permettant de présenter le travail achevé au responsable produit, et de partager des informations pouvant influer sur le sprint suivant.
+	La fin d’un sprint est marquée par une session de débriefing permettant de présenter le travail achevé au responsable produit, et de partager des informations pouvant influer sur le sprint suivant.[7]
 		\begin{figure} [h]
 		\begin{center}
 			\centering
@@ -154,7 +154,7 @@ Cette structure est bien adaptée pour décrire de manière claire les fonctions
 
 		\subsection{Cas d'utilisation global }
 		
-		En se basant sur les fonctionnalités décrites ci-dessus nous précison dans ce paragraphe le diagramme de cas d'utilisation globale de notre projet. Ce diagramme est général et particulier les besoins un par un, il regroupe un ensemble de fonctionnalités dans un seul cas qui peut être à son tour détaillé afin de mieux le comprendre.
+		En se basant sur les fonctionnalités décrites ci-dessous nous précison dans ce paragraphe le diagramme de cas d'utilisation globale de notre projet. Ce diagramme est général, il traite les besoins un par un et regroupe un ensemble de fonctionnalités dans un seul cas qui peut être à son tour détaillé afin de mieux le comprendre.
 		
 	
 		\begin{figure} [h]
@@ -166,10 +166,11 @@ Cette structure est bien adaptée pour décrire de manière claire les fonctions
 		\end{figure}
 		\newpage
 		
-		La figure précédente décrit d'une manière générale les différents acteurs du système ainsi que les fonctionnalités principales dont ils disposent
-		ci dessous nous exposerons quelques cas d'utilisation afin de mieux comprendre les caractéristique contenues dans chaque cas.
+		La figure précédente décrit d'une manière générale les différents acteurs du système ainsi que les fonctionnalités principales dont ils disposent.
+		Ci-dessous, nous montrons quelques cas d'utilisation afin de mieux comprendre les fonctions attribuées à chaque acteur.
 	
 		\subsection{Cas d'utilisation Pilote}
+		Nous montrons à travers la figure suivante le diagramme de cas d’utilisation du pilote qui permet de déterminer les principales fonctions qu’il doit effectuer. A savoir, en paramètrant le contôleur de vol, cet acteur a la possibilité de calibrer les contrôleurs de vitesses, la radiocommande, l'accéléromètre, le magnétomètre et régler les modes de vol sur le channel 5. Le pilote doit contrôler l'AGRIDrone en le déplacent verticalement, selon le lacet, le tanguage et le roulis.En plus, il surveille l'état de batterie de commande. 
 		
 		\begin{figure}[h] 
 		\begin{center} 
@@ -179,10 +180,7 @@ Cette structure est bien adaptée pour décrire de manière claire les fonctions
 		
 		\caption{Diagramme de cas d'utilasation pilote}
 		\end{figure}
-		
-		
-		Grâce à cette fonctionnalité il est possible de  paramétrer le contrôleur de vol APM 2.8, configurer la Radiocommande, contrôler l’AGRIDrone et surveiller le niveau d'état de batterie de commande.
-		\newpage
+	
 		\subsection{Cas d'utilisation d'agriculteur }
 		
 		\begin{figure}[h] 
