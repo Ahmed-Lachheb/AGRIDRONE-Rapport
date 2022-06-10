@@ -1,0 +1,306 @@
+
+	
+	\documentclass[a4paper,12pt]{report}
+	\usepackage{graphicx}
+	\usepackage[T1]{fontenc}
+	\usepackage[utf8]{inputenc}
+	\usepackage{lipsum}
+	\usepackage{lastpage}
+	\usepackage[french]{babel}
+	
+	
+	
+	\begin{document}
+	
+	
+	\chapter{Modélisation du drone quadrirotor }
+	\newpage
+	
+	\section{Introduction}
+
+	
+	
+	\section{Définition d'un drone}
+	
+Les drones (du mot anglais signifiant « faux bourdon ») sont des aéronefs sans équipage dont le pilotage est automatique ou télécommandé. Leur masse varie de quelques grammes à plusieurs tonnes[10], moins chers et plus simples à mettre en œuvre qu'un avion. Ils sont plus discrets et leur perte est moins grave que celle d'un appareil de son pilote.  !!!!!
+	
+	
+	
+	\section{Les types des drones}
+	Il existe plusieurs types de drones, nous avons mis l'accent sur deux types:
+	\begin{itemize}
+	 \item Aile fixe.
+	 \item Multirotors 
+	\end{itemize}
+	\subsection{Aile fixe (fixed wing)}
+	Un avion à voile fixe est un avion capable de voler en utilisant des ailes qui génèrent une élévation causée par la vitesse avant du véhicule et la forme des ailes.
+	
+	
+	\begin{figure}[h] 
+	\begin{center} 
+		\centering
+ \fbox{	\includegraphics[width=0.6\linewidth]{../Images/Ailes fixed}}
+		
+	\end{center}
+	
+	\caption{Ailes fixes Drones}
+	\end{figure}
+	\subsection{Multi-rotors}
+	Le type de drone qui a de multiples rotors sur son corps, ce qui lui permet de rester en position unique pendant une longue période. Ces drones sont très populaires pour diverses utilisations.	
+	
+	\begin {figure}[h] 
+	\begin{center} 
+		\centering
+	\fbox{\includegraphics[width=1.1\linewidth]{../Images/Types des multirotor}}
+		
+	\end{center}
+	
+	\caption{Types des multirotors}
+	\end{figure}
+	
+	
+	
+	
+	
+	
+	
+	\subsection{Comparaison entre fixed wing drone et multirotors drone}
+	Après avoir étudié chaque type de drone, nous avons effectué une étude comparative entre eux en terme de vitesse, niveau de contrôle, capacité de charge, endurance et atterissage/décollage.
+	
+	Nous remarquons à travers ce tableau que les drones à voilure fixe sont plus rapides que les drones à voilure tournante  . Ils sont difficiles à contrôller, supportent une faible charge et nécessitent des grandes surfaces pour l'atterissage et le décollage.
+    Vu que notre situation nécessite une vitesse adapté à notre système de détection des oranges, nous avons choisi le quadrirotor qui est facile à contrôler, supporte une charge importante et pratique dans les petites surfaces.      
+	\begin{table}[h]
+		\begin{center}
+			\caption{Comparaison entre fixed wing drone et multirotors drone	 }
+			\begin{tabular}{|c|c|c|}
+				\hline
+				\centering
+				& 
+				\includegraphics[scale=0.2]{../Images/Quadrirotor}
+				&
+				\includegraphics[scale=0.2]{../Images/Ailed fixed}\\
+				
+				\hline
+				Vitesse & 70 Km /h - 250 Km /h & 100 Km /h-700 Km /h  \\
+				\hline
+				Contrôle	& facile &	Difficile \\
+				\hline
+				Capacité de Charge &	Grande charge &	Petite charge \\
+				\hline
+				Endurance &	15min-60min & 1h-12heures \\
+				\hline
+				Atterrissage et décollage &	Petites surfaces &	Grandes surfaces \\
+				\hline
+			\end{tabular}
+		\end{center}
+	\end{table}
+\newpage
+	
+	\subsection{Définition du quadrirotor}
+	Un quadrirotor est un aéronef à voilure tournante à Quatre rotors sont généralement placés à l'extrémité de la croix. Pour empêcher l'appareil de tourner de lui-même sur son axe de lacet, il faut que deux hélices tournent dans un sens et les deux autres dans l'autre. Pour pouvoir diriger l'appareil, il fallait placer chaque paire d'hélices qui tournaient dans le même sens aux extrémités opposées de la branche transversale.
+	\begin{figure}[h] 
+	\begin{center} 
+		\centering
+	\fbox{	\includegraphics[width=0.4\linewidth]{../Images/Sens de rotation des rotors}}
+		
+	\end{center}
+	\caption{Sens de rotation des moteurs }
+	\end{figure}
+	\section{Histoire des quadrirotors}
+	Le premier quadrirotor à décoller du sol est le gyroplane Breguet-Richet, développé par société Breguet en 1907. Il ne décolle alors qu'à une hauteur de 60 cm et quatre hommes maintiennent la structure. L'année suivante, une seconde version sur laquelle sont ajoutées des ailes biplans avance de quelques mètres en inclinant le fuselage de 12° vers l'avant. La version 2bis est présentée au Grand Palais en 1908.(6)
+	\begin{figure}[h] 
+	\begin{center} 
+		\centering
+	\fbox{	\includegraphics[width=0.6\linewidth]{../Images/Breguet_Gyroplane_1907}}
+		
+	\end{center}
+	\caption{Le Gyroplane }
+	\end{figure}
+
+	\section{Les domaines d'applications du quadrirotor}
+	
+	Le drone est de plus en plus répandu dans le secteur professionnel, pour son apport de nouvelles informations, son autonomie et sa rapidité.
+	
+	\begin{itemize}
+		
+		\item Le Militaire et la protection civile.
+		\item La sécurité et la surveillance.
+		\item L'agriculture.
+		\item Le Journalisme.
+		\item Le FPV racing.
+		
+	\end{itemize}
+	\newpage
+	\section{Mouvements du quadrirotor}
+	Les mouvements de base du quadrirotor sont réalisés en variant la vitesse de chaque rotor changeant ainsi la poussée produite. Ces mouvements sont couplés, ce qui signifie que le quadrirotor ne peut pas faire de translation sans réaliser un mouvement de roulis  ou de tangage.
+	
+	Le quadrirotor à quatre mouvements principaux:		
+	\begin{itemize}
+		\item Mouvement vertical.
+		\item Mouvement de roulis.
+		\item Mouvement de tangage.
+		\item Mouvement de lacet.
+	\end{itemize}
+	\begin{figure} [h]
+	\begin{center}
+		\centering
+	\fbox{	\includegraphics[width=0.7\linewidth]{../Images/Les mouvements du drones}}
+	\end{center}
+	\caption{Les mouvements du drones }
+	\end{figure}
+
+	
+	\subsection{Mouvement vertical}
+	Pour monter, nous augmentons la vitesse des moteurs simultanément, tous les moteurs tournent au même régime et inversement pour descendre. Cette manipulation s'effectue à travers la commande des gaz.
+	\begin{figure} [h]
+	\begin{center}
+		\centering
+	\fbox{\includegraphics[width=0.6\linewidth]{../Images/Mouvement vertical}}
+	\end{center}
+	\caption{Mouvement vertical}
+	\end{figure}
+	\newpage
+	\subsection{Mouvement de roulis}
+	Pour incliner vers la gauche, nous diminuons les moteurs de gauche et augmentons ceux de droite. Inversement pour incliner vers la droite. Cette action s’appelle le Roulie.
+	\begin{figure} [h]
+	\begin{center}
+	\fbox{	\includegraphics[width=1.1\linewidth]{../Images/Mouvement de roulis}}
+		\caption{Mouvement de roulis}
+	\end{center}
+	\end{figure}
+	\subsection{Mouvement de tanguage}
+	Pour avancer, nous diminuons la vitesse des moteurs avant et augmentons la vitesse des moteurs arrière et inversement pour reculer. Cette action s'appelle le tangage.
+	
+	
+	\begin{figure}[h] 
+	\begin{center}
+		\centering
+		\fbox{\includegraphics[width=1\linewidth]{../Images/Mouvement de tanguage}}
+	\end{center}
+	\caption{Mouvement de tanguage}
+	\end{figure}
+	
+	\subsection{Mouvement de lacet}
+	Pour un mouvement de rotation, nous augmentons la vitesse d’une paire de moteurs sur le même axe et inversement. Ceci est un mouvement de lacet.
+	\begin{figure} [h]
+	\begin{center}
+\fbox{	\includegraphics[width=1.1\linewidth]{../Images/Mouvement de lacet}}
+	\end{center}
+	\caption{Mouvement de lacet}	
+\end{figure}
+\newpage
+\subsection {Action proportionnelle}
+L’effet de l’action proportionnelle consiste à amplifier l’erreur d’un gain constant afin que le
+système réagisse plus rapidement aux changements de consigne. Cette action proportionnelle est
+représentée comme suit :
+
+$ c(t) = K_p\times \epsilon(t) $
+
+
+Plus la valeur de $K_p$ est grande plus la réponse est rapide mais au détriment d’une détérioration
+de la stabilité du système allant jusqu’à l’instabilité pour de grandes valeurs.
+
+
+
+
+\subsection  {Action intégrale}
+L’action intégrale a pour but de réduire voire d’éliminer l’erreur statique en régime permanent
+pour réaliser cela le régulateur intègre l’erreur par rapport au temps et multiplie le résultat par une
+constante $K_i$ comme suit :
+
+$c(t) $ =$ K_i \epsilon(t) dt$
+
+
+Plus la valeur de $K_i$ est grande plus l’erreur statique sera vite corrigée mais nous perdons un peu
+en stabilité et il y a un risque de dépassement qui subvient.
+
+\subsection  {Action dérivée}
+Pour obtenir une action dérivée nous multipliant la dérivée de l’erreur par un coefficient $K_d$
+cette action permet d’éliminer le dépassement de la réponse et d’améliorer la stabilité du système. Sa
+relation est donnée comme suit :
+
+$ c(t)  = K_d\frac{d\epsilon(t)}{dt}$
+
+
+Plus la valeur de Kd est grand plus le dépassement est atténué mais si elle est trop grande le
+système est ralenti jusqu’à risquer de devenir instable pour de très grandes valeurs.
+
+
+
+
+\subsection {Action PID} 
+Le régulateur PID combine les trois actions vues précédemment et permet ainsi d’avoir de
+bonnes performances aussi bien en vitesse en stabilité qu’en précision. L’expression d’un régulateur
+PID est donné comme suit :
+
+$ c(t)=K_p\times \epsilon(t) + K_i\int\epsilon(t)dt+K_d\int\frac{d\epsilon(t)}{dt}$
+
+
+Ainsi ce régulateur permet d’atteindre les objectifs fixés en termes de vitesse de stabilité et de
+précision et ce en trouvant la configuration optimale des valeurs des différents gains $K_p $, $ K_i$ et $ K_d$.
+\section{Détection des oranges et comptage}
+Notre approche consiste en plusieurs étapes. La première est de détecter les oranges sur des images acquises dans les vergers, par une des méthodes de détection d’objets. Ensuite nous améliorons ces résultats en caractérisant les pixels acquis sur les oranges, puis en estimant une position  dans l’image plus précise pour oranges détectée, ainsi que leur taille moyenne.
+\section{Réseau de neurones}
+Afin de détecter et catégoriser les objets souhaités, le réseau de neurones à convolutions
+doit passer par une phase d’apprentissage avant d’être utilisé comme détecteur. Le but de
+cette dernière est de lui apprendre à reconnaitre une ou plusieurs classes d’objets. Pour cela,
+nous lui fournissons un ensemble d’images contenant les objets en question que nous aurons
+encadrés et classifiés au préalable. Ces encadrements sont effectués par nos soins et sont
+appelés "La vérité sur le terrain" ("Ground Truth" en anglais) qui est le terme technique
+utilisé dans le domaine de l’IA. Ces "Ground Truth" sont généralement représentés par des
+rectangles mais peuvent aussi bien être des cercles ou encore des polygones. Et pour chaque
+"Ground Truth" défini, nous lui associons la classe de l’objet.
+\section{Détection d'objet par encadrement}
+La plupart des programmes d’IA que nous retrouvons pour la détection et la classification de tous types d’objets, possèdent une architecture utilisant les boîtes englobantes[15]. Le réseau de neurones, après l’analyse de l’image qui est la donnée d’entrée, va nous renvoyer en sortie une image avec des boîtes englobantes encadrant les objets prédits et leurs classes respectives . Ainsi nous avons accès d’une part, à la position de l’objet dans l’image et d’autre part, à sa classe.
+\newpage
+\section{Applications de quadrirotors basées sur la vision artificielle}
+Nous avons pu voir, à travers les parties précédentes de cet état de l’art, les outils qui ont permis de propulser l’utilisation des drones durant ces dernières années. De plus, l’évolution perpétuelle de ces outils offre aux drones l’accès à de plus en plus de domaines d’applications, leurs assurant un avenir certain dans les années futures. Dans cette dernière partie, nous allons voir différents cas d’application de drones utilisant la vision artificielle pour réaliser leur tâche.
+
+
+Nous pouvons distinguer quatre principaux types d’applications :
+\begin{itemize}
+\item Évitement d’obstacles 
+\item Suivi de cible
+\item Atterrissage de drones 
+\item Saisie et dépôt d’objets 
+\end{itemize}
+
+
+\begin{figure}[h]
+\centering
+	\begin{minipage}{0.49\textwidth}
+\fbox{\includegraphics[width=0.8\linewidth]{C:/Users/Ahmed Baha eddine/Downloads/Sans titre103}}
+\caption{Évitement d’obstacles}
+\label{fig:my_label}
+	\end{minipage}
+	\begin{minipage}{0.49\textwidth}
+\fbox{\includegraphics[width=0.8\linewidth]{C:/Users/Ahmed Baha eddine/Downloads/Sans titre102}}
+		\caption{Suivi de cible}
+		\label{fig:my_label}
+	\end{minipage}
+\end{figure}
+\begin{figure}[h]
+	\begin{minipage}{0.49\textwidth}
+\fbox{\includegraphics[width=0.8\linewidth]{C:/Users/Ahmed Baha eddine/Downloads/Sans titre101}}
+		\caption{Atterrissage de drones}
+		\label{fig:my_label}
+	\end{minipage}
+	\begin{minipage}{0.49\textwidth}
+\fbox{\includegraphics[width=0.8\linewidth]{C:/Users/Ahmed Baha eddine/Downloads/Sans titre100}}
+	\caption{Saisie et dépôt d’objets }
+	\label{fig:my_label}
+\end{minipage}
+\end{figure}
+\newpage
+\section{Yolo}
+Dans un premier temps, étant donné que le modèle de détection doit être à la fois précis et rapide dans son exécution, les outils de détection en temps réel constitue la première approche de ce projet. Selon l’état de l’art, le choix de l’outil YOLO était le plus adéquat. En effet, comme expliqué et montré sur la figure 2.3, l’architecture de YOLO lui permet d’effectuer les tâches de détection et de classification en parallèle, augmentant ainsi sa vitesse d’exécution.
+\section{Détection des fruits}
+
+
+
+
+
+
+
+\end{document}
+
