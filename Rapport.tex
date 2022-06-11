@@ -1,18 +1,32 @@
 \documentclass[a4paper,12pt]{book}
 \usepackage{graphicx}
+\usepackage{lipsum}
+\usepackage{float}
+\usepackage{siunitx}
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
-\usepackage{lipsum}
-\usepackage{lastpage}
 \usepackage[belowskip=-10pt,aboveskip=10 pt]{caption}
 \setlength{\intextsep}{20pt plus 2pt minus 2pt}
 \setlength{\belowcaptionskip}{-15pt}
+
 \usepackage[french]{babel}
+\usepackage{lastpage}
+\usepackage{fancyhdr}
+\lhead{ISET BEJA}
+\cfoot{}
+\rhead{
+}
+\lfoot{Chapitre2: Etude de l'art}
+\rfoot{\thepage}
+\renewcommand{\headrulewidth}{1mm}
+\renewcommand{\footrulewidth}{1mm}
+% leftmark
+\pagestyle{fancy}
+
 
 
 \begin{document}
 
-\input{Chaps/Chap2.tex}
-	
-	
+	\input{Chaps/Chap2.tex}
+
 \end{document}
