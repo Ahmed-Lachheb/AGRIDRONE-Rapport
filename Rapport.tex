@@ -1,93 +1,18 @@
-\documentclass[a4paper,12pt]{report}
+\documentclass[a4paper,12pt]{book}
 \usepackage{graphicx}
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
-
-
+\usepackage{lipsum}
+\usepackage{lastpage}
+\usepackage[belowskip=-10pt,aboveskip=10 pt]{caption}
+\setlength{\intextsep}{20pt plus 2pt minus 2pt}
+\setlength{\belowcaptionskip}{-15pt}
 \usepackage[french]{babel}
-
 
 
 \begin{document}
 
-\subsection {Action proportionnelle}
-L’effet de l’action proportionnelle consiste à amplifier l’erreur d’un gain constant afin que le
-système réagisse plus rapidement aux changements de consigne. Cette action proportionnelle est
-représentée comme suit :
-$ 𝐶(𝑡) = 𝐾_𝑝  \times \epsilon(t)$
-Plus la valeur de 𝐾𝑝 est grande plus la réponse est rapide mais au détriment d’une détérioration
-de la stabilité du système allant jusqu’à l’instabilité pour de grandes valeurs.
-
-
-
-
-\subsection  {Action intégrale}
-L’action intégrale a pour but de réduire voire d’éliminer l’erreur statique en régime permanent
-pour réaliser cela le régulateur intègre l’erreur par rapport au temps et multiplie le résultat par une
-constante 𝐾𝑖 comme suit :
-$ 𝐶(𝑡) = K_i\int\epsilon(t)dt$
-
-Plus la valeur de 𝐾𝑖 est grande plus l’erreur statique sera vite corrigée mais nous perdons un peu
-en stabilité et il y a un risque de dépassement qui subvient.
-
-\subsection  {Action dérivée}
-Pour obtenir une action dérivée nous multipliant la dérivée de l’erreur par un coefficient 𝐾𝑑
-cette action permet d’éliminer le dépassement de la réponse et d’améliorer la stabilité du système. Sa
-relation est donnée comme suit :
-$ 𝐶(𝑡) = K_d \frac{d\epsilon(t)}{dt}$
-Plus la valeur de 𝐾𝑑 est grand plus le dépassement est atténué mais si elle est trop grande le
-système est ralenti jusqu’à risquer de devenir instable pour de très grandes valeurs.
-
-
-
-
-\subsection {Action PID} 
-Le régulateur PID combine les trois actions vues précédemment et permet ainsi d’avoir de
-bonnes performances aussi bien en vitesse en stabilité qu’en précision. L’expression d’un régulateur
-PID est donné comme suit :
-$ 𝐶(𝑡) = 𝐾_𝑝  \times \epsilon(t) + K_i\int\epsilon(t)dt + K_d \frac{d\epsilon(t)}{dt} $
-Ainsi ce régulateur permet d’atteindre les objectifs fixés en termes de vitesse de stabilité et de
-précision et ce en trouvant la configuration optimale des valeurs des différents gains 𝐾𝑝, 𝐾𝑖 et 𝐾𝑑.	
-
-
-
-
-
-\subsection {Action proportionnelle}
-L’effet de l’action proportionnelle consiste à amplifier l’erreur d’un gain constant afin que le
-système réagisse plus rapidement aux changements de consigne. Cette action proportionnelle est
-représentée comme suit :
-
-$ c(𝑡) = 𝐾_𝑝  \times \epsilon(t) $
-
-
-Plus la valeur de $𝐾_𝑝 $ est grande plus la réponse est rapide mais au détriment d’une détérioration
-de la stabilité du système allant jusqu’à l’instabilité pour de grandes valeurs.
-
-
-
-
-\subsection  {Action intégrale}
-L’action intégrale a pour but de réduire voire d’éliminer l’erreur statique en régime permanent
-pour réaliser cela le régulateur intègre l’erreur par rapport au temps et multiplie le résultat par une
-constante $K_i$ comme suit :
-
-$ c(𝑡) = K_i \int\ epsilon(t) dt $
-
-
-Plus la valeur de $K_i$ est grande plus l’erreur statique sera vite corrigée mais nous perdons un peu
-en stabilité et il y a un risque de dépassement qui subvient.
-
-\subsection  {Action dérivée}
-Pour obtenir une action dérivée nous multipliant la dérivée de l’erreur par un coefficient $ K_d $
-cette action permet d’éliminer le dépassement de la réponse et d’améliorer la stabilité du système. Sa
-relation est donnée comme suit :
-
-$ c(𝑡) = K_d \frac{d\epsilon(t)}{dt} $
-
-
-Plus la valeur de 𝐾𝑑 est grand plus le dépassement est atténué mais si elle est trop grande le
-système est ralenti jusqu’à risquer de devenir instable pour de très grandes valeurs
+\input{Chaps/Chap2.tex}
 	
 	
 \end{document}
