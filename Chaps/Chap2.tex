@@ -1,7 +1,7 @@
 
 	
 	
-\chapter{Etude de l'art }
+\chapter{Etat de l'art }
 \newpage
 	
 \section{Introduction}
@@ -27,6 +27,7 @@ Les drones (du mot anglais signifiant « faux bourdon ») sont des aéronefs san
 	\begin{figure}[h] 
 	\begin{center} 
 		\centering
+
  \fbox{	\includegraphics[width=0.6\linewidth]{Images/Ailes fixed}}
 		
 	\end{center}
@@ -38,6 +39,8 @@ Les drones (du mot anglais signifiant « faux bourdon ») sont des aéronefs san
 	\begin {figure}[h] 
 	\begin{center} 
 		\centering
+			\pagestyle{fancy}
+		\hspace*{-0.7cm}
 	\fbox{\includegraphics[width=1.1\linewidth]{Images/Types des multirotor}}
 		
 	\end{center}
@@ -147,10 +150,11 @@ Un quadrirotor est un aéronef à voilure tournante à quatre rotors qui sont g�
 	\end{figure}
 	\newpage
 	\subsection{Mouvement de roulis}
-	Pour incliner vers la gauche, nous diminuons les moteurs de gauche et augmentons ceux de droite. Inversement pour incliner vers la droite. Cette action s’appelle le roulie.
+	Pour incliner vers la gauche, nous diminuons les moteurs de gauche et augmentons ceux de droite. Inversement pour incliner vers la droite. Cette action s'appelle le roulie.
 	\begin{figure} [h]
 	\begin{center}
-	\fbox{	\includegraphics[width=1.1\linewidth]{Images/Mouvement de roulis}}
+	
+	\fbox{	\includegraphics[width=1\linewidth]{Images/Mouvement de roulis}}
 		\caption{Mouvement de roulis}
 	\end{center}
 	\end{figure}
@@ -167,57 +171,58 @@ Un quadrirotor est un aéronef à voilure tournante à quatre rotors qui sont g�
 	\end{figure}
 	
 	\subsection{Mouvement de lacet}
-	Pour un mouvement de rotation, nous augmentons la vitesse d’une paire de moteurs sur le même axe et inversement. Ceci est un mouvement de lacet.
+	Pour un mouvement de rotation, nous augmentons la vitesse d'une paire de moteurs sur le même axe et inversement. Ceci est un mouvement de lacet.
 	\begin{figure} [h]
 	\begin{center}
-\fbox{	\includegraphics[width=1.1\linewidth]{Images/Mouvement de lacet}}
+\fbox{	\includegraphics[width=1\linewidth]{Images/Mouvement de lacet}}
 	\end{center}
 	\caption{Mouvement de lacet}	
 \end{figure}
+\section {Stabilization du quadrirotor}
 \newpage
 \subsection {Action PID} !!!!!!!!!!!!
-Le régulateur PID combine les trois actions vues précédemment et permet ainsi d’avoir de
-bonnes performances aussi bien en vitesse, en stabilité et en précision. L’expression d’un régulateur PID est donné comme suit :
+Le régulateur PID combine les trois actions vues précédemment et permet ainsi d'avoir de
+bonnes performances aussi bien en vitesse, en stabilité et en précision. L'expression d’un régulateur PID est donné comme suit :
 
 $ c(t)=K_p\times \epsilon(t) + K_i\int\epsilon(t)dt+K_d\frac{d\epsilon(t)}{dt}$
 
 
-Ainsi ce régulateur permet d’atteindre les objectifs fixés en termes de vitesse de stabilité et de
+Ainsi ce régulateur permet d'atteindre les objectifs fixés en termes de vitesse de stabilité et de
 précision et ce en trouvant la configuration optimale des valeurs des différents gains $K_p $, $ K_i$ et $ K_d$.
 \subsection {Action proportionnelle}
-L’effet de l’action proportionnelle consiste à amplifier l’erreur d’un gain constant afin que le
+L'effet de l’action proportionnelle consiste à amplifier l'erreur d’un gain constant afin que le
 système réagisse plus rapidement aux changements de consigne. Cette action proportionnelle est
 représentée comme suit :
 
 $ c(t) = K_p\times \epsilon(t) $
 
 
-Plus la valeur de $K_p$ est grande plus la réponse est rapide mais au détriment d’une détérioration
-de la stabilité du système allant jusqu’à l’instabilité pour de grandes valeurs.
+Plus la valeur de $K_p$ est grande plus la réponse est rapide mais au détriment d'une détérioration
+de la stabilité du système allant jusqu'à l'instabilité pour de grandes valeurs.
 
 
 
 
 \subsection  {Action intégrale}
-L’action intégrale a pour but de réduire voire d’éliminer l’erreur statique en régime permanent
-pour réaliser cela le régulateur intègre l’erreur par rapport au temps et multiplie le résultat par une
+L'action intégrale a pour but de réduire voire d'éliminer l'erreur statique en régime permanent
+pour réaliser cela le régulateur intègre l'erreur par rapport au temps et multiplie le résultat par une
 constante $K_i$ comme suit :
 
 $c(t) $ =$ K_i\times\int \epsilon(t) dt$
 
 
-Plus la valeur de $K_i$ est grande plus l’erreur statique sera vite corrigée mais nous perdons un peu
+Plus la valeur de $K_i$ est grande plus l'erreur statique sera vite corrigée mais nous perdons un peu
 en stabilité et il y a un risque de dépassement qui subvient.
 
 \subsection  {Action dérivée}
-Pour obtenir une action dérivée, nous multiplions la dérivée de l’erreur par un coefficient $K_d$.
-Cette action permet d’éliminer le dépassement de la réponse et d’améliorer la stabilité du système. Sa relation est donnée comme suit :
+Pour obtenir une action dérivée, nous multiplions la dérivée de l'erreur par un coefficient $K_d$.
+Cette action permet d'éliminer le dépassement de la réponse et d'améliorer la stabilité du système. Sa relation est donnée comme suit :
 
 $ c(t)  = K_d\times\frac{d\epsilon(t)}{dt}$
 
 
 Plus la valeur de Kd est grand plus le dépassement est atténué mais si elle est trop grande le
-système est ralenti jusqu’à risquer de devenir instable pour de très grandes valeurs.
+système est ralenti jusqu'à risquer de devenir instable pour de très grandes valeurs.
 
 
 
@@ -228,10 +233,10 @@ L'emploie de l'intelligence artifificielle sur les quadrirotors est une innovati
 
 Nous pouvons distinguer quatre principaux types d'applications:   
 \begin{itemize}
-	\item Évitement d’obstacles 
+	\item Évitement d'obstacles 
 	\item Suivi de cible
 	\item Atterrissage de drones 
-	\item Détection d’objets 
+	\item Détection d'objets 
 \end{itemize}
 
 
@@ -239,29 +244,30 @@ Nous pouvons distinguer quatre principaux types d'applications:
 	\centering
 	\begin{minipage}{0.49\textwidth}
 		\fbox{\includegraphics[width=0.8\linewidth]{Images/Evitement d'obstacles}}
-		\caption{Évitement d’obstacles}
-		\label{fig:my_label}
+		\caption{Évitement d'obstacles}
+		
 	\end{minipage}
 	\begin{minipage}{0.49\textwidth}
 		\fbox{\includegraphics[width=0.8\linewidth]{Images/Quadrirotor mener par un autre}}
 		\caption{Suivi de cible}
-		\label{fig:my_label}
+		
 	\end{minipage}
 \end{figure}
 \begin{figure}[h]
 	\begin{minipage}{0.49\textwidth}
 \fbox{\includegraphics[width=0.8\linewidth]{Images/Atterissage de quadrirotor}}
 		\caption{Atterrissage }
-		\label{fig:my_label}
+	
 	\end{minipage}
 	\begin{minipage}{0.49\textwidth}
 		\fbox{\includegraphics[width=0.8\linewidth]{Images/Détection d'objet}}
-		\caption{Détection d’objets }
-		\label{fig:my_label}
+		\caption{Détection d'objets }
+		
 	\end{minipage}
 \end{figure}
 \section{Intellegence artificielle}
-L’Homme a toujours cherché à se confronter à ses découvertes et ses
+!!!!!!!!!!!!
+L’homme a toujours cherché à se confronter à ses découvertes et ses
 nouvelles créations, d’abord par curiosité afin de savoir si ces dernières étaient
 capables de meilleures prouesses que lui, mais aussi par peur car nombre
 d’inventions ont mis à mal des professions au fil du temps : nous pouvons prendre
@@ -272,9 +278,9 @@ bowlings ont fait disparaître des métiers d’un autre temps qu’étaient les
 les placeurs de quilles, et d’autres avancées dans le monde de la télécommunication
 ont fait évoluer la profession de standardiste.
 \section{Détection des fruits}
-La détection et la classification des fruits restent difficiles en raison de la forme, de la couleur et de la texture des différentes espèces de fruits. En étudiant l'impact de la vision par notre système sur la détection et la classification des fruits, nous avons souligné que jusqu'en 2018, de nombreuses méthodes d'apprentissage automatique conventionnelles étaient utilisées tandis que quelques méthodes exploitaient l'application de méthodes d'apprentissage en profondeur pour la détection et la classification des fruits. Cela nous a incités à poursuivre une étude approfondie sur l'enquête et la mise en œuvre de modèles d'apprentissage en profondeur pour la détection et la classification des fruits. Dans cet article, nous avons longuement discuté des ensembles de données utilisés par de nombreux chercheurs, des descripteurs pratiques, de la mise en œuvre du modèle et des défis liés à l'utilisation de l'apprentissage en profondeur pour détecter et catégoriser les fruits. Enfin, nous avons résumé les résultats de différentes méthodes d'apprentissage en profondeur appliquées dans des études antérieures à des fins de détection et de classification des fruits. Cette revue couvre l'étude d'articles récemment publiés qui utilisaient des modèles d'apprentissage en profondeur pour l'identification et la classification des fruits. De plus, nous avons également mis en œuvre à partir de zéro un modèle d'apprentissage en profondeur pour la classification des fruits en utilisant l'ensemble de données populaire "Fruit 360" pour permettre aux chercheurs débutants dans le domaine de l'agriculture de comprendre plus facilement le rôle de l'apprentissage en profondeur dans le domaine de l'agriculture.
+La détection et la classification des fruits restent difficiles en raison de la forme, de la couleur et de la texture des différentes espèces de fruits. En étudiant l'impact de la vision par notre système sur cette opération, nous avons souligné que jusqu'aujourd'hui, la méthode d'apprentissage en profondeur(Deep learning) est la plus pratique pour la détection et la classification des fruits. C'est pour cette raison que nous avons décidé de l'employer dans notre projet. Puisque la couleur orange est attractive ainsi qu'on la trouve dans plusieurs catégories d'oranges, nous avons choisi de travailler spécifiquement sur la détection des oranges.
 \section{Détection des oranges et comptage}
-Notre approche consiste en plusieurs étapes. La première est de détecter les oranges sur des images acquises dans les vergers, par une des méthodes de détection d’objets. Ensuite nous améliorons ces résultats en caractérisant les pixels acquis sur les oranges, puis en estimant une position  dans l’image plus précise pour oranges détectée, ainsi que leur taille moyenne.
+Notre approche consiste en plusieurs étapes. D'abord, nous détectons les oranges sur des images acquises dans les vergers par une des méthodes de détection d’objets. Ensuite, nous améliorons ces résultats en caractérisant les pixels acquis sur les oranges. Enfin, nous estimons une position  dans l’image plus précise pour les oranges détectées, ainsi que leur taille moyenne.
 	\begin{figure} [h]
 	\begin{center}
 		\fbox{\includegraphics[width=0.4\linewidth]{Images/Détection des oranges}}
@@ -283,22 +289,29 @@ Notre approche consiste en plusieurs étapes. La première est de détecter les 
 \end{figure}
 
 \section{Réseau de neurones}
+Ce réseau est un système informatique s'inspirant du fonctionnement du cerveau humain. Il existe le réseau de neurones récurrents et le réseau de neurones convolutifs[23].
 
-Afin de détecter et catégoriser les objets souhaités, le réseau de neurones à convolutions doit passer par une phase d’apprentissage avant d’être utilisé comme détecteur. Le but de cette dernière est de lui apprendre à reconnaitre une ou plusieurs classes d’objets. Pour cela, nous lui fournissons un ensemble d’images contenant les objets en question que nous aurons encadrés et classifiés au préalable. Ces encadrements sont effectués par nos soins et sont appelés "La vérité sur le terrain" ("Ground Truth" en anglais) qui est le terme technique utilisé dans le domaine de l’IA. Ces "Ground Truth" sont généralement représentés par des rectangles mais peuvent aussi bien être des cercles ou encore des polygones. Et pour chaque "Ground Truth" défini, nous lui associons la classe de l’objet.
+Afin de détecter et catégoriser les objets souhaités facilement, nous avons choisi de travailler avec le réseau de neurones à convolutions qui doit passer par une phase d’apprentissage avant d’être utilisé comme détecteur. Le but de cette dernière est de lui apprendre à reconnaitre une ou plusieurs classes d’objets. Pour cela, nous lui fournissons un ensemble d’images contenant les objets en question que nous souhaitons encadrer et classifier. Ces encadrements sont généralement effectués sous forme de rectangles, cercles et polygones.
+
+
+
 
 \section{Détection d'objet par encadrement}
-La plupart des programmes d’IA que nous retrouvons pour la détection et la classification de tous types d’objets, possèdent une architecture utilisant les boîtes englobantes [15]. Le réseau de neurones, après l’analyse de l’image qui est la donnée d’entrée, va nous renvoyer en sortie une image avec des boîtes englobantes encadrant les objets prédits et leurs classes respectives. Ainsi nous avons accès d’une part, à la position de l’objet dans l’image et d’autre part, à sa classe.
-
-
-
-
+!!!!!!!Parmi les formes d'encadrement citées plus haut, nous avons choisi de travailler avec la forme rectangle grâce 
+La plupart des programmes d’IA que nous retrouvons pour la détection et la classification de tous types d’objets, possèdent une architecture utilisant les boîtes englobantes [15].
+ Le réseau de neurones, après l’analyse de l’image qui est la donnée d’entrée, va nous renvoyer en sortie une image avec des boîtes englobantes encadrant les objets prédits et leurs classes respectives. Ainsi nous avons accès d’une part, à la position de l’objet dans l’image et d’autre part, à sa classe.
 \section{Détection en temps réel}
-
-
 \section{Yolo}
-Dans un premier temps, étant donné que le modèle de détection doit être à la fois précis et rapide dans son exécution, les outils de détection en temps réel constitue la première approche de ce projet. Selon l’état de l’art, le choix de l’outil YOLO était le plus adéquat. En effet, comme expliqué et montré sur la figure 2.3, l’architecture de YOLO lui permet d’effectuer les tâches de détection et de classification en parallèle, augmentant ainsi sa vitesse d’exécution.
+Dans un premier temps, étant donné que le modèle de détection doit être à la fois précis et rapide dans son exécution, les outils de détection en temps réel constitue la première approche de ce projet. Selon l’état de l’art, le choix de l’outil YOLO était le plus adéquat à nos besoins. 
 
- YOLO découpe l’image en une grille de taille S × S. Puis de façon simultanée, il réalise d’une part la prédiction des objets dans l’image et d’autre part, détermine la classe de l’objet, comme montré sur la figure 2.3.
+Ce dérnier découpe l’image en une grille de taille S × S. Puis de façon simultanée, il réalise d’une part la prédiction des objets dans l’image et d’autre part, détermine la classe de l’objet, comme montré sur la figure \ref{fig:A.Y}
+\begin{figure} [h]
+	\begin{center}
+		\fbox{\includegraphics[width=0.8\linewidth]{Images/Architecture Yolo}}
+		\caption{\label{fig:A.Y}Architecture de Yolo}
+	\end{center}
+\end{figure}
+
 
 
 
