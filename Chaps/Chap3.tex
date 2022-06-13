@@ -65,7 +65,7 @@
 	\subsection {Contrôleur de vol (APM 2.8)}[5]
 	Le contrôleur de vol est l'élément central de l'électronique de notre drone.
 	Nous avons sélectionné l’APM 2.8 comme étant un contrôleur de vol grâce à son système de pilotage automatique open source complet. Permettant aussi de contrôler plusieurs objets radiocommandes comme les avions, les voitures, les planeurs et les multirotors tel que hexarotor, trirotor et quadrirotor ...
-	Ce contrôleur de vol constitue le cerveau de notre quadrirotor qui est capable d'effectuer des missions GPS programmées avec des points de cheminement. Il s’agit d’une carte microcontrôleur à puce ATMEGA328P!!! livrée avec un gyroscope, un accéléromètre, un magnétomètre et un baromètre intégrés à 3 axes!!!!.
+	Ce contrôleur de vol constitue le cerveau de notre quadrirotor qui est capable d'effectuer des missions GPS programmées avec des points de cheminement. Il s’agit des puces ATMEGA2560 et ATMEGA32U-2 d'Atmel pour le traitement et les fonctions usb respectivement et qui comprend aussi un gyroscope à 3 axes, un accéléromètre et un magnétomètre, ainsi qu'un baromètre haute performance[APM2.8].
 	
 	Dans notre cas, l’APM 2.8 est connecté avec le récepteur de la radiocommande dans les broches d’entrée ainsi qu'avec les contrôleurs de vitesse ESC dans les broches de sortie. 
 	
@@ -93,7 +93,7 @@
 		\caption{calibration du radio}
 	\end{figure}
 	\subsubsection{Récepteur }
-	Ce récepteur IA8 AFHDS 2A dispose de 8 voies et fonctionne parfaitement avec la radiocommande Turnigy 9x système AFHDS 2A. Il a une portée de plus de 500 mètres  grâce à ses deux antennes. En plus, Ce composant reste très compact et fonctionne en PWM!!!!!! ou PPM .
+	Ce récepteur IA8 AFHDS 2A dispose de 8 voies et fonctionne parfaitement avec la radiocommande Turnigy 9x système AFHDS 2A. Il a une portée de plus de 500 mètres  grâce à ses deux antennes. En plus, Ce composant reste très compact et fonctionne en PWM ou PPM.
 	\begin{figure} [h]
 		\begin{center}
 			\centering
@@ -102,7 +102,7 @@
 		\caption{calibration du radio}
 	\end{figure}
 	\subsection {Diodes  et résistances}
-	Afin d'éclairer notre quadrirotor, nous avons utilisé 8 diodes ( 4 diodes blanches et 4  rouges) pour mieux connaître son mouvement. Nous avons utilisé 5v  de l'Apm 2.8. Puisqu'une diode a besoin de 3 v et 5 mA, nous avons choisi une résistance de \SI{330}{\ohm} à chaque diode pour encaisser les 2 v supplémentaires et tout cela sous 5 mA.
+	Afin d'éclairer notre quadrirotor, nous avons utilisé 8 diodes ( 4 diodes blanches et 4  rouges) pour mieux connaître son mouvement. Nous avons utilisé 5V de l'Apm 2.8. Puisqu'une diode a besoin de 3V et 5mA, nous avons choisi une résistance de \SI{330}{\ohm} à chaque diode pour encaisser les 2V supplémentaires et tout cela sous 5mA.
 	\begin{figure}[h]
 		\centering
 		\begin{minipage}{0.49\textwidth}
@@ -149,7 +149,7 @@
 		\caption{Plateforme sur Jira software}
 	\end{figure}
 	\subsubsection{GitHub}
-	Github est utilisé pour la centralisation et la gestion du code source , des documets et des différents modules du projet. Ce service est utilisé puisque le projet se trouvait déjà sur cette plateforme et qu’elle est facile à utiliser.
+	Github est utilisé pour la centralisation et la gestion du code source, des documets et des différents modules du projet. Ce service est utilisé puisque le projet se trouvait déjà sur cette plateforme et qu’elle est facile à utiliser.
 	\begin{figure}[h]
 		\begin{center}
 			\centering
@@ -221,10 +221,10 @@
 	\section{Configurations et calibrations}
 	Puisque le contrôleur de vol et la radiocommande fonctionnent sur différents modèles d'avions, il est nécessaire de leurs effectuer des configurations  ainsi que  des calibrations spécifiques pour le fonctionnement de notre quadrirotor. 
 	\subsection{Configurations et calibrations de l'APM 2.8}
-	Pour configurer et calibrer l'APM 2.8, il nous reste  de lancer l’assistant et le connecter en USB sur notre PC.
+	Pour configurer et calibrer l'"APM 2.8", il nous reste  de lancer l’assistant et le connecter en USB sur notre PC.
 	\subsubsection{Chargement du firmware }
-	Ensuite, nous avons accédé au menu "INITIAL SETUP". L'installation du frimware se fait en cliquant sur le bouton "Install Frimware". Cette opération commence après avoir séléctionné le type du multicoptère, dans notre cas c'est le "quadrirotor" que nous avons chargé.  la dernière version du firmware dans
-	notre carte APM2.8 est présenté dans la figure ci-dessous . Le logo "CONNECT" doit rester rouge c'est à dire en mode déconnecté. Dès que le frimware est installé, le drone sera prêt à être configuré et paramétré.
+	Ensuite, nous avons accédé au « INITIAL SETUP ». L'installation du frimware se fait en cliquant sur le bouton « Install Frimware ». Cette opération commence après avoir séléctionné le type du multicoptère, dans notre cas c'est le « quadrirotor » que nous avons chargé.  la dernière version du firmware dans
+	notre carte "APM2.8" est présenté dans la figure ci-dessous . Le logo « CONNECT » doit rester rouge c'est à dire en mode déconnecté. Dès que le frimware est installé, le drone sera prêt à être configuré et paramétré.
 	\begin{figure}[h]
 		\begin{center}
 			\centering
@@ -234,7 +234,7 @@
 	\end{figure}
 	
 	\subsubsection{Type de Châssis}
-	Après avoir installé le frimware, nous avons connecté  la carte APM 2.8 en haut à droite de Mission Planner. Pour s'assurer que la carte Apm est bien connectée, le logo "CONNECT" doit passer de la couleur rouge à la couleur verte. Ensuite, nous avons cliqué sur "INITIAL SETUP", "Mandatory Hardware" et "Frame Type" afin de  configurer le type de notre quadrirotor. 
+	Après avoir installé le frimware, nous avons connecté  la carte "APM 2.8" en haut à droite de Mission Planner. Pour s'assurer que la carte Apm est bien connectée, le logo « CONNECT » doit passer de la couleur rouge à la couleur verte. Ensuite, nous avons cliqué sur « INITIAL SETUP », « Mandatory Hardware » et « Frame Type » afin de configurer le type de notre quadrirotor. 
 	\begin{figure}[h]
 		\begin{center}
 			\centering
@@ -255,7 +255,7 @@
 	\end{figure}
 	
 	\subsection{Calibration des accéléromètres}
-	Pour un résultat optimal,  premiérement nous devons accéder au menu "INITIAL SETUP", deuxiément "Mandatory Hardware" et finalement, "Accel Calibration". L'APM2.8 doit être positionnée successivement sur chacune de ses six faces.
+	Pour un résultat optimal,  premiérement nous devons accéder au menu « INITIAL SETUP », deuxiément « Mandatory Hardware » et finalement, « Accel Calibration ». L'"APM2.8" doit être positionnée successivement sur chacune de ses six faces.
 	La séquence se présente de la façon suivante :
 	\begin{table}[H]
 		\begin{center}
@@ -298,8 +298,7 @@
 	
 	\newpage
 	\subsection{Calibration du radio}
-	Après s’être assuré que le récepteur est bien connecté au contrôleur de vol et qu’il est apparié à la
-	radiocommande sous tension et correctement programmée, nous avons  accédé aux « Radio
+	Après s’être assuré que le récepteur est bien connecté au contrôleur de vol et qu’il est apparié à la radiocommande sous tension et correctement programmée, nous avons  accédé aux « Radio
 	Calibration », cliqué sur le bouton « Calibrer Radio ». 
 	Une fois validé, nous avons actionné toutes les commandes de la radio de leur minimum à leur maximum. 
 	\begin{figure} [h]
@@ -311,7 +310,7 @@
 	\end{figure}
 	
 	\subsection{Configurations des modes de vol} 
-	Notre APM 2.8 est caractérisé par la variété de ces modes de vol qui nous facilitent le pilotage et le contrôle de notre quadrirotor. Dans notre cas, nous avons utilisé deux modes de vol: le mode "Stabilize" nous permettant de contrôler notre drone manuellement et le mode "Alt Hold" permet le maitien de l'altitude constante. A savoir, le mode "Alt Hold" n'est pas applicable vu l'absence de GPS. Pour effectuer  cette configuration, nous avons accédé au <<Flight Modes>> comme le montre la figure ci-dessous.
+	Notre "APM 2.8" est caractérisé par la variété de ces modes de vol qui nous facilitent le pilotage et le contrôle de notre quadrirotor. Dans notre cas, nous avons utilisé deux modes de vol: le mode « Stabilize » nous permettant de contrôler notre drone manuellement et le mode « Alt Hold » permet le maitien de l'altitude constante. A savoir, le mode « Alt Hold » n'est pas applicable vu l'absence de GPS. Pour effectuer  cette configuration, nous avons accédé au « Flight Modes » comme le montre la figure ci-dessous.
 	
 	\begin{figure} [h]
 		\begin{center}
@@ -321,11 +320,22 @@
 		\caption{Modes de vol}
 	\end{figure}
 	\newpage
+	\subsection{Régulateurs PID de contrôleur de vol APM2.8}
+	Dans le contrôleur de vol que nous avons utilisé, à savoir Ardupilot "APM2.8" des régulateurs PID sont implantés automatiquement lors de la téléchargement du firmware de quadrirotor.
+	
+	Voici la fenêtre de configuration des PIDs de l'Ardupilot suivante :
+		\begin{figure} [h]
+		\begin{center}
+			\centering
+			\fbox{\includegraphics[width=0.8\linewidth]{Images/Configuration des PID}}
+		\end{center}
+		\caption{Configurations des PIDs de l'APM 2.8}
+	\end{figure}
+
 	\subsection{Calibration des ESC}
 	Les contrôleurs de vitesse doivent être étalonnés pour connaître les valeurs minimales et maximales du commande des Gaz. 
-	
-	
-	La procédure d’étalonnage est la suivante. Nous avons en premier lieu coupé l’alimentation de l’appareil. Par la suite, nous avons allumé la radiocommande et positionné le manche des Gaz à son maximum. Ensuite, nous avons mis l’appareil sous tension en attendant que le contrôleur de vol démarre. Ainsi, nous avons coupé l’alimentation de l’appareil et nous l'avons remis sous tension. Après avoir entendu la mélodie issue des moteurs confirmant l’apprentissage de la valeur maximale des Gaz, nous avons baissé le manche des Gaz au minimum en attendant la mélodie de confirmation et actionner doucement les Gaz pour vérifier que tous les moteurs démarrent en même temps et tournent au même régime. Finalement, nous avons recoupé l’alimentation de l’appareil.
+		
+	La procédure d’étalonnage est la suivante. Nous avons en premier lieu coupé l’alimentation de l’appareil. Par la suite, nous avons allumé la radiocommande et positionné le manche des Gaz à son maximum. Ensuite, nous avons mis l’appareil sous tension en attendant que le contrôleur de vol démarre. Ainsi, nous avons coupé l’alimentation de l’appareil et nous l'avons remis sous tension. Après avoir entendu la mélodie issue des moteurs confirmant l'apprentissage de la valeur maximale des Gaz, nous avons baissé le manche des Gaz au minimum en attendant la mélodie de confirmation et actionner doucement les Gaz pour vérifier que tous les moteurs démarrent en même temps et tournent au même régime. Finalement, nous avons recoupé l'alimentation de l'appareil.
 	\subsection{Configuration et calibration de la radiocommande}
 	Concernant la configuration et la calibration de la radiocommande, nous avons passé par plusieurs étapes que nous expliquons ci-dessous. 
 	\subsection{Mode de la radiocommande}
@@ -334,7 +344,7 @@
 	
 	\subsubsection{SELECTION type de modèle}
 	Cette fonctionnalité nous permet de sélectionner le type de modèles réduits d'avions qui seront utilisés ou affectés à un modèle particulier.
-	Dans le menu Réglages Système, nous avons sélectionné SELE TYPE et appuyé sur MENU. Ensuite, en utilisant le haut ou bas nous avons choisi le type de modèle qui sera utilisé soit HELI, ACRO ou bien GLID. Après avoir sélectionné l'option Acro, nous avons appuyé sur MENU pour enregistrer, puis sur EXIT pour retourner au menu précédent.
+	Dans le menu Réglages Système, nous avons sélectionné « SELE TYPE » et appuyé sur « MENU ». Ensuite, en utilisant le haut ou bas nous avons choisi le type de modèle qui sera utilisé soit HELI, ACRO ou bien GLID. Après avoir sélectionné l'option Acro, nous avons appuyé sur « MENU  » pour enregistrer, puis sur « EXIT » pour retourner au menu précédent.
 	
 	\begin{figure}[h]
 		\begin{center}
@@ -343,8 +353,26 @@
 		\end{center}
 		\caption{type de modèle}
 	\end{figure}
+\subsection{ SELECT OSCILLANT TYPE}
+Cette fonctionnalité nous permet de sélectionner le type de modulation qui sera utilisé à un modèle particulier (PPM ou PCM).
+
+
+PPM: modulation de position d'impulsion (Pulse Modulation de position) 
+
+PCM: Pulse Code Modulation (Modulation d'impulsions codées).
+
+
+Dans le menu configuration système, nous avons cliqué sur « Modeuat », appuyé sur « MENU », sélectionné l'option désirée PPM et confirmé cette option sélectionnée en appuyant sur « MENU ». Ensuite, nous avons appuyé sur le bouton « EXIT » pour revenir au menu précédent.
+
+\begin{figure}[h]
+	\begin{center}
+		\centering
+		\fbox{\includegraphics[width=0.6\linewidth]{Images/Sélection de mode pour Acro}}
+	\end{center}
+	\caption{Sélection de mode pour Acro}
+\end{figure}
 	\subsection{STICK SET }
-	Dans le menu Réglages Système, nous avons sélectionné STICK SET, aprés avoir presser le MENU. Ensuite, nous avons choisi le mode le plus appropriée à notre style d'utilisation "modèle 2". Dés que cette étape est réalisé, nous avons effectué la sauvegarde de l'option sélectionnée en appuyant sur MENU. Aprés, nous avons appuyé sur le bouton EXIT pour revenir au menu précédent.
+	Dans le menu Réglages Système, nous avons sélectionné « STICK SET », aprés avoir presser le « MENU ». Ensuite, nous avons choisi le mode le plus appropriée à notre style d'utilisation "modèle 2". Dés que cette étape est réalisé, nous avons effectué la sauvegarde de l'option sélectionnée en appuyant sur « MENU ». Aprés, nous avons appuyé sur le bouton « EXIT » pour revenir au menu précédent.
 	\begin{figure}[h]
 		\begin{center}
 			\centering
@@ -352,9 +380,9 @@
 		\end{center}
 		\caption{Les 4 modes}
 	\end{figure}
-	\newpage
+\newpage
 	Aprés avoir visualisé les différents modes de pilotage, nous allons les traiter un par un à travers le tableau suivant:
-	\begin{table}[h]
+	\begin{table}[H]
 		\begin{center}
 			
 			\caption{Différentes Modes }
@@ -380,33 +408,17 @@
 			\end{tabular}
 		\end{center}
 	\end{table}
-	
-	\subsection{ SELECT OSCILLANT TYPE}
-	Cette fonctionnalité nous permet de sélectionner le type de modulation qui sera utilisé à un modèle particulier (PPM ou PCM).\\
+	\newpage
 	
 	
-	PPM: modulation de position d'impulsion (Pulse Modulation de position) 
-	
-	PCM: Pulse Code Modulation (Modulation d'impulsions codées).
-	
-	
-	Dans le menu configuration système, nous avons cliqué sur Modeuat, appuyé sur MENU, sélectionné l'option désirée PPM et confirmé cette option sélectionnée en appuyant sur MENU. Ensuite, nous avons appuyé sur le bouton EXIT pour revenir au menu précédent.
-	
-	\begin{figure}[h]
-		\begin{center}
-			\centering
-			\fbox{\includegraphics[width=0.6\linewidth]{Images/Sélection de mode pour Acro}}
-		\end{center}
-		\caption{Sélection de mode pour Acro}
-	\end{figure}
 	
 	\subsection{Inversion des servos}
 	La Servo Reverse nous permet de renverser le fonctionnement du servos afin de le manipuler conformément à nos besoin.
 	
 	
 	
-	Dans le MENU REGLAGES nous avons appuyé sur FUNC et sélectionné la fonction REVERSE en utilisant les touches haut ou bas. Ensuite, avec les touches + ou -
-	nous avons appliqué cette fonction aux servos que nous avons affécté à cette opération. Aprés, nous avons appuyé sur MENU pour sauvegarder les nouveaux réglages et revenir au menu précédent.
+	Dans le MENU REGLAGES nous avons appuyé sur « FUNC » et sélectionné la fonction « REVERSE » en utilisant les touches haut ou bas. Ensuite, avec les touches + ou -
+	nous avons appliqué cette fonction aux servos que nous avons affécté à cette opération. Aprés, nous avons appuyé sur « MENU » pour sauvegarder les nouveaux réglages et revenir au menu précédent.
 	\begin{figure}[h]
 		\begin{center}
 			\centering
@@ -423,8 +435,9 @@
 			\centering
 			\fbox{\includegraphics[width=0.5\linewidth]{Images/Green-128}}
 		\end{center}
-		\caption{Pins Green-128}
+		\caption{Pins Green-128\label{fig:P.G}}
 	\end{figure}
+\newpage
 	\subsubsection{Programmateur Usbasp}
 	Puisque le microcontrôleur "Green-128" est compatible avec "Atmega 128". Nous avons choisi le programmateur "Usbasp" vu qu'il est un programmateur pour la famille Atmel des microcôntroleurs. 
 	
@@ -442,7 +455,7 @@
 				\centering
 				\fbox{\includegraphics[width=0.8\linewidth]{Images/Usbasp pinout}}
 				\centering
-				\hspace{1cm}\caption{Shéma pinout }
+				\hspace{1cm}\caption{Shéma pinout \label{fig:P.U}}
 			    \label{fig:my_label}
 			\end{minipage}
 		\end{center}
@@ -455,11 +468,12 @@
 			\centering
 			\fbox{\includegraphics[width=0.8\linewidth]{Images/Soudure des files}}
 		\end{center}
-		\caption{Soudure des files}
+		\caption{Soudure des files\label{fig:S.F}}
 	\end{figure}
+	\newpage
 	
 	
-	En se basant sur les figures 22,24 et 25, nous expliquons à travers ce tableau la communication entre le microcontrôleur "Green-128" et le programmateur "Usbasp" en spécifiant les couleurs attribuées à chaque connexion entre eux.
+	En se basant sur les figures \ref{fig:P.G}, \ref{fig:P.U} et \ref{fig:S.F}, nous expliquons à travers ce tableau la communication entre le microcontrôleur "Green-128" et le programmateur "Usbasp" en spécifiant les couleurs attribuées à chaque connexion entre eux.
 	
 	\begin{table}[H]
 		\begin{center}
