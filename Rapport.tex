@@ -8,7 +8,7 @@
 \usepackage[belowskip=-10pt,aboveskip=10 pt]{caption}
 \setlength{\intextsep}{20pt plus 2pt minus 2pt}
 \setlength{\belowcaptionskip}{-15pt}
-
+\usepackage{natbib}
 \usepackage[french]{babel}
 \usepackage{lastpage}
 \usepackage{fancyhdr}
@@ -20,15 +20,11 @@
 \rfoot{\thepage}
 \renewcommand{\headrulewidth}{1mm}
 \renewcommand{\footrulewidth}{1mm}
-% leftmark
-
-
-
-
 \begin{document}
 	\pagestyle{fancy}
 	\tableofcontents
 
 	\input{Chaps/Chap2.tex}
-
+\bibliographystyle{unsrt}
+\bibliography{Bib/ref.bib}
 \end{document}
