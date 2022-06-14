@@ -6,14 +6,14 @@
 \newpage
 	\section{Introduction}
 	
-	Dans ce chapitre nous présenterons les différentes étapes de réalisation de notre projet. Nous avons choisi de construire notre montage à base d’un contrôleur de vol Apm 2.8 pour ses fonctionnalités. Notre drone est réalisé à l’aide de 4 moteurs qui sont commandés depuis ce contrôleur de vol  à travers des contrôleurs de vitesse électronique (ESC). L'ensemble de ces composants  est alimenté par une batterie et piloté à l’aide d’une radiocommande.
+	Dans ce chapitre nous présenterons les différentes étapes de réalisation de notre projet. Nous avons choisi de construire notre montage à base d’un contrôleur de vol "Apm 2.8" pour ses fonctionnalités. Notre drone est réalisé à l’aide de 4 moteurs qui sont commandés depuis ce contrôleur de vol  à travers des contrôleurs de vitesse électronique (ESC). L'ensemble de ces composants  est alimenté par une batterie et piloté à l’aide d’une radiocommande.
 	\section{Matériels utilisés}
 	Lors de notre réalisation, nous avons utilisé plusieurs composants que nous présentons ci-dessous.
 	\subsection{Châssis}
 	Le châssis représente le corps principal de notre quadrirotor. Il comprend quatre bras de forme ’X’. Ses caractéristiques à prendre en compte sont le poids, qui est lié aux matériaux utilisés et sa résistance au choc, plus le châssis est léger, plus nous conservons de la puissance.
 	
 	Pour éliminer les vibrations du moteur et pour obtenir les meilleures performances sur le côté aérodynamique, nous avons choisis d’utiliser un châssis professionnel "le DJI F450". Son assemblage est simple et rapide. Les 4 bras sont vissés entre la plaque inférieure et la plaque supérieure. Notre châssis a une envergure de 450 mm et pèse 272 grammes.
-	Cette structure permet d’accueillir toute l’électronique : ESCs, moteurs, contrôleur de vol. En plus, Nous pouvons grâce au PCB intégré dans la plaque inférieure souder les pôles  du contrôleur de vitesse (+/-) et la batterie. La propulsion recommandée repose sur des moteurs 2212, des hélices 10x45 en 3S et 8x45 en 4S pour un poids total en vol situé entre 800 et 1600 grammes maximum.
+	Cette structure permet d’accueillir toute l’électronique : ESCs, moteurs, contrôleur de vol. En plus, Nous pouvons grâce au PCB intégré dans la plaque inférieure souder les pôles  du contrôleur de vitesse (+/-) et la batterie. La propulsion recommandée repose sur des moteurs 2212, des hélices 10x45 en 3S et 8x45 en 4S pour un poids total en vol situé entre 800 et 1600 grammes maximum \cite{studiosport}.
 	
 	\begin{figure} [h]
 		\begin{center}
@@ -24,7 +24,7 @@
 	\end{figure}
 	\newpage
 	\subsection{Moteurs Brushless}
-	Notre drone nécessite l'utilisation de moteurs ayant une très grande vitesse en considérant leur poids qui doit être léger. Ceci nous oblige d'utiliser des moteurs brushless 2212 (22 pour le diamètre et 12 pour l'hauteur) qui sont des moteurs à courant continu, n’utilisent pas de balais collecteurs car les bobines sont alimentées directement au stator et que les aimants sont placés sur le rotor[9]. Afin d'obtenir un vol stable et un couple de moteurs important, nous avons choisi ces composants possèdant 930KV. A savoir, KV représente la constante de vitesse qui est le nombre de tours par minutes divisé par les volts KV=RPM/U. Par exemple, lorsque nous attribuons à un moteur une tension de 10V, celui-ci tournera à 9300 tr/min. 
+	Notre drone nécessite l'utilisation de moteurs ayant une très grande vitesse en considérant leur poids qui doit être léger. Ceci nous oblige d'utiliser des moteurs brushless 2212 (22 pour le diamètre et 12 pour l'hauteur) qui sont des moteurs à courant continu, n’utilisent pas de balais collecteurs car les bobines sont alimentées directement au stator et que les aimants sont placés sur le rotor \cite{Cube}. Afin d'obtenir un vol stable et un couple de moteurs important, nous avons choisi ces composants possédant 930KV. A savoir, KV représente la constante de vitesse qui est le nombre de tours par minutes divisé par les volts KV=RPM/U. Par exemple, lorsque nous attribuons à un moteur une tension de 10V, celui-ci tournera à 9300 tr/min. 
 	\begin{figure} [h]
 		\begin{center}
 			\centering
@@ -33,7 +33,7 @@
 		\caption{Moteur Brushless}
 	\end{figure}
 	\subsection{Contrôleurs de vitesse électronique (ESC)}
-	Concernant l'étage de puissance, nous avons opté pour un variateur de vitesse ESC (Electronic Speed Controller) pour contrôller l'énergie délivrée aux moteurs brushless  grâce à la tension de sortie modulable d’une carte programmable.  Ces appareils reçoivent des signaux PWM (Pulse Modulation Width) ou PPM (pulse position modulation). Vu que le variateur de vitesse doit être supérieur au courant maximum du moteur qui est de 10A, nous avons choisi un courant de 30A. 
+	Concernant l'étage de puissance, nous avons opté pour un variateur de vitesse ESC (Electronic Speed Controller) pour contrôller l'énergie délivrée aux moteurs brushless  grâce à la tension de sortie modulable d’une carte programmable. Ces appareils reçoivent des signaux PWM (Pulse Modulation Width) ou PPM (pulse position modulation). Vu que le variateur de vitesse doit être supérieur au courant maximum du moteur qui est de 10A, nous avons choisi un courant de 30A. 
 	\par
 	\begin{figure} [h]
 		\begin{center}
@@ -44,7 +44,7 @@
 	\end{figure}
 	\newpage
 	\subsection{Batterie}
-	L'alimentation électrique de notre système est une procédure très importante pour le fonctionnement de notre quadrirotor. Pour cela, nous avons choisi d'utiliser une batterie LiPo (Lithium Polymère) puisqu'elle fournit suffisament de puissance pour une faible masse. Elle est fabriquée avec une technologie offrant un trés bon rapport poids/ puissance. Notre batterie est composée de 3 cellules, chacune possède une tension de 3.7V, c'est pour cette raison qu'elle délivre en total une tension de 11.1V. Conçernant son ampérage, elle fournit 3000 mA par heure.
+	L'alimentation électrique de notre système est une procédure très importante pour le fonctionnement de notre quadrirotor. Pour cela, nous avons choisi d'utiliser une batterie LiPo (Lithium Polymère) puisqu'elle fournit suffisamment de puissance pour une faible masse. Elle est fabriquée avec une technologie offrant un très bon rapport poids/ puissance. Notre batterie est composée de 3 cellules, chacune possède une tension de 3.7V, c'est pour cette raison qu'elle délivre en total une tension de 11.1V. Concernant son ampérage, elle fournit 3000 mA par heure.
 	\par
 	\begin{figure} [h]
 		\begin{center}
@@ -54,18 +54,18 @@
 		\caption{Batterie Lipo 3S}
 	\end{figure}
 	\subsection{Hélice}
-	L’hélice est un dispositif rotatif formé d’un certains nombre de pales ayant un profile d’aile. Le choix de ces composants est aussi important lors de la conception de notre drone dont il faut des hélices adaptées au type de vol que nous souhaitons réaliser. Puisque nous avons utilisé le châssis DJI F450 et la batterie Lipo 3s qui dépendent du choix des hélices, nous avons utilisé des pales 1045 ( 10 pour la longueur et 4.5 pour le pas).
+	L’hélice est un dispositif rotatif formé d’un certains nombre de pales ayant un profile d’aile. Le choix de ces composants est aussi important lors de la conception de notre drone dont il faut des hélices adaptées au type de vol que nous souhaitons réaliser. Puisque nous avons utilisé le châssis DJI F450 et la batterie Lipo 3s qui dépendent du choix des hélices, nous avons utilisé des pales 8045 ( 80 pour la longueur et 4.5 pour le pas)\cite{FPV24}.
 	\begin{figure} [h]
 		\begin{center}
 			\centering
 			\fbox{\includegraphics[width=0.3\linewidth]{Images/Hélice 1045}}
 		\end{center}
-		\caption{Hélice 1045}
+		\caption{Hélice 8045}
 	\end{figure}
-	\subsection {Contrôleur de vol (APM 2.8)}[5]
+	\subsection {Contrôleur de vol (APM 2.8)}
 	Le contrôleur de vol est l'élément central de l'électronique de notre drone.
 	Nous avons sélectionné l’APM 2.8 comme étant un contrôleur de vol grâce à son système de pilotage automatique open source complet. Permettant aussi de contrôler plusieurs objets radiocommandes comme les avions, les voitures, les planeurs et les multirotors tel que hexarotor, trirotor et quadrirotor ...
-	Ce contrôleur de vol constitue le cerveau de notre quadrirotor qui est capable d'effectuer des missions GPS programmées avec des points de cheminement. Il s’agit des puces ATMEGA2560 et ATMEGA32U-2 d'Atmel pour le traitement et les fonctions usb respectivement et qui comprend aussi un gyroscope à 3 axes, un accéléromètre et un magnétomètre, ainsi qu'un baromètre haute performance[APM2.8].
+	Ce contrôleur de vol constitue le cerveau de notre quadrirotor qui est capable d'effectuer des missions GPS programmées avec des points de cheminement. Il s’agit des puces ATMEGA2560 et ATMEGA32U-2 d'Atmel pour le traitement et les fonctions usb respectivement et qui comprend aussi un gyroscope à 3 axes, un accéléromètre et un magnétomètre, ainsi qu'un baromètre haute performance \cite{Tech}.
 	
 	Dans notre cas, l’APM 2.8 est connecté avec le récepteur de la radiocommande dans les broches d’entrée ainsi qu'avec les contrôleurs de vitesse ESC dans les broches de sortie. 
 	
@@ -80,10 +80,10 @@
 	\subsection {Radiocomamande}
 	Une radiocommande est un outil permettant de contrôler à distance notre drone à travers des signaux radio. Nous avons choisi cet appareil grâce à sa portée et sa latence qui sont importantes par rapport au wifi et au bluetooth. Son émetteur est de type Turnigy 9x et son récepteur de type IA8 AFHDS2A.
 	
-	\subsubsection{Emetteur} 
+	\subsubsection{Émetteur} 
 	La Turnigy 9x est une radio de 9 voies, elle est équipée de 6 interrupteurs de deux positions, un interrupteur de trois position et de trois potentiomètres rotatifs.
 	De plus, grâce à la technologie 2,4 Ghz, nous disposons d'une réaction ultra-rapide et d'un contrôle sans interférence. Pour la
-	conception ergonomique, celle-ci facilite l'utilisation de toutes les commandes dont les interrupteurs et les ports sont tous positionnés pour plus de confort. En plus, les bâtons de longueur réglable peuvent être adaptés à nos besoins et l' écran LCD monochrome facilite la programmation ainsi que la modification des paramètres. 
+	conception ergonomique, celle-ci facilite l'utilisation de toutes les commandes dont les interrupteurs et les ports sont tous positionnés pour plus de confort\cite{Hobbyking}. En plus, les bâtons de longueur réglable peuvent être adaptés à nos besoins et l' écran LCD monochrome facilite la programmation ainsi que la modification des paramètres. 
 	
 	\begin{figure} [h]
 		\begin{center}
@@ -93,7 +93,7 @@
 		\caption{calibration du radio}
 	\end{figure}
 	\subsubsection{Récepteur }
-	Ce récepteur IA8 AFHDS 2A dispose de 8 voies et fonctionne parfaitement avec la radiocommande Turnigy 9x système AFHDS 2A. Il a une portée de plus de 500 mètres  grâce à ses deux antennes. En plus, Ce composant reste très compact et fonctionne en PWM ou PPM.
+	Ce récepteur IA8 AFHDS 2A dispose de 8 voies et fonctionne parfaitement avec la radiocommande Turnigy 9x système AFHDS 2A \cite{Hobbyking}. Il a une portée de plus de 500 mètres  grâce à ses deux antennes. En plus, Ce composant reste très compact et fonctionne en PWM ou PPM.
 	\begin{figure} [h]
 		\begin{center}
 			\centering
@@ -122,7 +122,7 @@
 	\section{Logiciels utilisés}
 	Dans notre projet, nous avons travaillé sur de nombreux logiciels que nous traitons un par un.
 	\subsubsection{Latex}
-	Nous avons choisi comme éditeur de texte le logiciel Latex car il nous  offre de nombreuses fonctionnalités et nous permet de composer une très grande variété de formules mathématiques.
+	Nous avons choisi comme éditeur de texte le logiciel "Latex" car il nous  offre de nombreuses fonctionnalités et nous permet de composer une très grande variété de formules mathématiques.
 	\begin{figure}[h]
 		\begin{center}
 			\centering
@@ -131,7 +131,7 @@
 		\caption{Interface de Latex}
 	\end{figure}
 	\subsubsection{Google Drive}
-	Dans le but de partager et de collaborer notre travail, nous avons utlilisé google drive qui nous permet de travailler sur les différents documents à produire au cours du projet.
+	Dans le but de partager et de collaborer notre travail, nous avons utlilisé "google drive" qui nous permet de travailler sur les différents documents à produire au cours du projet.
 	\begin{figure}[h]
 		\begin{center}
 			\centering
@@ -140,7 +140,7 @@
 		\caption{Plateforme sur Google drive}
 	\end{figure}
 	\subsubsection{Jira Software}
-	Nous avons sélectionné jira software comme étant un outil de gestion de notre projet puisqu'il est  puissant et nous permet de visualiser l'avancement de notre travail grâce aux tableaux Agile. En plus, il nous offre la possibilité de travailler à distance grâce à cette platforme.
+	Nous avons sélectionné "jira software" comme étant un outil de gestion de notre projet puisqu'il est  puissant et nous permet de visualiser l'avancement de notre travail grâce aux tableaux Agile. En plus, il nous offre la possibilité de travailler à distance grâce à cette plateforme.
 	\begin{figure}[h]
 		\begin{center}
 			\centering
@@ -149,7 +149,7 @@
 		\caption{Plateforme sur Jira software}
 	\end{figure}
 	\subsubsection{GitHub}
-	Github est utilisé pour la centralisation et la gestion du code source, des documets et des différents modules du projet. Ce service est utilisé puisque le projet se trouvait déjà sur cette plateforme et qu’elle est facile à utiliser.
+	"Github" est utilisé pour la centralisation et la gestion du code source, des documents et des différents modules du projet. Ce service est utilisé puisque le projet se trouvait déjà sur cette plateforme et qu’elle est facile à utiliser.
 	\begin{figure}[h]
 		\begin{center}
 			\centering
@@ -168,7 +168,7 @@
 	\end{figure}
 	\newpage
 	\subsubsection{Visual Paradigm}
-	Suite à des obstacles que nous avons rencontré au niveau de Papy-rus, nous avons recours à Visual Paradigm pour la réalisation des diagrammes d'exigence et de définition de bloc.
+	Suite à des obstacles que nous avons rencontré au niveau de Papyrus, nous avons recours à "Visual Paradigm" pour la réalisation des diagrammes d'exigence et de définition de bloc.
 	\begin{figure}[h]
 		\begin{center}
 			\centering
@@ -187,7 +187,7 @@
 	\end{figure}
 	\newpage
 	\subsubsection{Jabref}
-	JabRef est un logiciel que nous avons utilisé dans la gestion bibliographique. Il nous fournit une interface conviviale pour éditer des fichiers Bib(La)TeX.
+	"JabRef" est un logiciel que nous avons utilisé dans la gestion bibliographique. Il nous fournit une interface conviviale pour éditer des fichiers Bib(La)TeX.
 	\begin{figure}[h]
 		\begin{center}
 			\centering
@@ -223,7 +223,7 @@
 	\subsection{Configurations et calibrations de l'APM 2.8}
 	Pour configurer et calibrer l'"APM 2.8", il nous reste  de lancer l’assistant et le connecter en USB sur notre PC.
 	\subsubsection{Chargement du firmware }
-	Ensuite, nous avons accédé au « INITIAL SETUP ». L'installation du frimware se fait en cliquant sur le bouton « Install Frimware ». Cette opération commence après avoir séléctionné le type du multicoptère, dans notre cas c'est le « quadrirotor » que nous avons chargé.  la dernière version du firmware dans
+	Ensuite, nous avons accédé au « INITIAL SETUP ». L'installation du frimware se fait en cliquant sur le bouton « Install Frimware ». Cette opération commence après avoir sélectionné le type du multicoptère, dans notre cas c'est le « quadrirotor » que nous avons chargé.  la dernière version du firmware dans
 	notre carte "APM2.8" est présenté dans la figure ci-dessous . Le logo « CONNECT » doit rester rouge c'est à dire en mode déconnecté. Dès que le frimware est installé, le drone sera prêt à être configuré et paramétré.
 	\begin{figure}[h]
 		\begin{center}
@@ -257,11 +257,12 @@
 	\subsection{Calibration des accéléromètres}
 	Pour un résultat optimal,  premiérement nous devons accéder au menu « INITIAL SETUP », deuxiément « Mandatory Hardware » et finalement, « Accel Calibration ». L'"APM2.8" doit être positionnée successivement sur chacune de ses six faces.
 	La séquence se présente de la façon suivante :
+	
 	\begin{table}[H]
 		\begin{center}
 			\caption{Calibration des accéléromètres  }
 			
-			\hspace*{-0.8 cm}	\begin{tabular}{|c|c|}
+			\hspace*{-0.7 cm}	\begin{tabular}{|c|c|}
 				\hline
 				\centering
 				\includegraphics[width=7.5cm]{Images/A plat sur le ventre} & \includegraphics[width=7.5cm]{Images/Vertical sur son flanc gauche}\\
@@ -296,10 +297,9 @@
 	\end{table}	
 	
 	
-	\newpage
-	\subsection{Calibration du radio}
-	Après s’être assuré que le récepteur est bien connecté au contrôleur de vol et qu’il est apparié à la radiocommande sous tension et correctement programmée, nous avons  accédé aux « Radio
-	Calibration », cliqué sur le bouton « Calibrer Radio ». 
+
+	\subsection{Calibration du radiocommande}
+	Après s’être assuré que le récepteur est bien connecté au contrôleur de vol et qu’il est apparié à la radiocommande sous tension et correctement programmée, nous avons  accédé aux « Radio Calibration », cliqué sur le bouton « Calibrer Radio ». 
 	Une fois validé, nous avons actionné toutes les commandes de la radio de leur minimum à leur maximum. 
 	\begin{figure} [h]
 		\begin{center}
@@ -310,7 +310,7 @@
 	\end{figure}
 	
 	\subsection{Configurations des modes de vol} 
-	Notre "APM 2.8" est caractérisé par la variété de ces modes de vol qui nous facilitent le pilotage et le contrôle de notre quadrirotor. Dans notre cas, nous avons utilisé deux modes de vol: le mode « Stabilize » nous permettant de contrôler notre drone manuellement et le mode « Alt Hold » permet le maitien de l'altitude constante. A savoir, le mode « Alt Hold » n'est pas applicable vu l'absence de GPS. Pour effectuer  cette configuration, nous avons accédé au « Flight Modes » comme le montre la figure ci-dessous.
+	Notre "APM 2.8" est caractérisé par la variété de ces modes de vol qui nous facilitent le pilotage et le contrôle de notre quadrirotor. Dans notre cas, nous avons utilisé deux modes de vol: le mode « Stabilize » nous permettant de contrôler notre drone manuellement et le mode « Alt Hold » permet le maintien de l'altitude constante. A savoir, le mode « Alt Hold » n'est pas applicable vu l'absence de GPS. Pour effectuer  cette configuration, nous avons accédé au « Flight Modes » comme le montre la figure ci-dessous.
 	
 	\begin{figure} [h]
 		\begin{center}
@@ -339,7 +339,7 @@
 	\subsection{Configuration et calibration de la radiocommande}
 	Concernant la configuration et la calibration de la radiocommande, nous avons passé par plusieurs étapes que nous expliquons ci-dessous. 
 	\subsection{Mode de la radiocommande}
-	Au début, notre radiocommande est activée en mode 1 où le bâton droite est relaché dans l'axe verticale et le bâton gauche est centré dans les deux axes. Afin de faciliter le pilotage de notre drone, nous avons activé notre radiocommande en mode 2  qui est l'inverse du mode précédent. Pour effectuer cette opération, nous avons tout d'abord retiré les six vis à l'arriére du boîtier. Ensuite, nous avons déplacé le ressort vers le bâton droite.  Finalement, nous avons fermé la radiocommande en remettant les vis.
+	Au début, notre radiocommande est activée en mode 1 où le bâton droite est relâché dans l'axe verticale et le bâton gauche est centré dans les deux axes. Afin de faciliter le pilotage de notre drone, nous avons activé notre radiocommande en mode 2  qui est l'inverse du mode précédent. Pour effectuer cette opération, nous avons tout d'abord retiré les six vis à l'arriére du boîtier. Ensuite, nous avons déplacé le ressort vers le bâton droite.  Finalement, nous avons fermé la radiocommande en remettant les vis.
 	
 	
 	\subsubsection{SELECTION type de modèle}
@@ -372,7 +372,7 @@ Dans le menu configuration système, nous avons cliqué sur « Modeuat », appuy
 	\caption{Sélection de mode pour Acro}
 \end{figure}
 	\subsection{STICK SET }
-	Dans le menu Réglages Système, nous avons sélectionné « STICK SET », aprés avoir presser le « MENU ». Ensuite, nous avons choisi le mode le plus appropriée à notre style d'utilisation "modèle 2". Dés que cette étape est réalisé, nous avons effectué la sauvegarde de l'option sélectionnée en appuyant sur « MENU ». Aprés, nous avons appuyé sur le bouton « EXIT » pour revenir au menu précédent.
+	Dans le menu Réglages Système, nous avons sélectionné « STICK SET », après avoir presser le « MENU ». Ensuite, nous avons choisi le mode le plus appropriée à notre style d'utilisation "modèle 2". Dés que cette étape est réalisé, nous avons effectué la sauvegarde de l'option sélectionnée en appuyant sur « MENU ». Après, nous avons appuyé sur le bouton « EXIT » pour revenir au menu précédent.
 	\begin{figure}[h]
 		\begin{center}
 			\centering
@@ -381,7 +381,7 @@ Dans le menu configuration système, nous avons cliqué sur « Modeuat », appuy
 		\caption{Les 4 modes}
 	\end{figure}
 \newpage
-	Aprés avoir visualisé les différents modes de pilotage, nous allons les traiter un par un à travers le tableau suivant:
+	Après avoir visualisé les différents modes de pilotage, nous allons les traiter un par un à travers le tableau suivant:
 	\begin{table}[H]
 		\begin{center}
 			
