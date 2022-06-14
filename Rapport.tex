@@ -22,12 +22,18 @@
 \renewcommand{\footrulewidth}{1mm}
 % leftmark
 \pagestyle{fancy}
+\usepackage{natbib}
+\usepackage{url}
 
 
 
 \begin{document}
-
+	\pagestyle{fancy}
+	\tableofcontents
+	
 	\input{Chaps/Chap3.tex}
 	
+	\bibliographystyle{unsrt}
+	\bibliography{bib/ref.bib}
 	
 \end{document}
