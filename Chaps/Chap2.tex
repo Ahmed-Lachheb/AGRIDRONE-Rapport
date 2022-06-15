@@ -1,10 +1,10 @@
 	
 \chapter{Etat de l'art }
 \newpage	
-\section{Introduction}
-Ce chapitre sera porté sur l'état de l'art de notre système qui sera expliqué sur deux grandes parties. La première concerne le drone et la deuxième porte sur la détection des oranges. 
+\section*{Introduction}
+Ce chapitre sera porté sur l'état de l'art de notre système qui sera expliqué sur deux grandes parties. La première concerne le drone et la deuxième porte sur l'intelligence artificielle. 
 \section{Drone}	
-Les drones (du mot anglais signifiant « faux bourdon ») sont des aéronefs sans équipage dont le pilotage est automatique ou télécommandé. Leur masse varie de quelques grammes à plusieurs tonnes[10]\cite{Wikipidea2019}, moins chers et plus simples à mettre en œuvre qu'un avion. Ils sont plus discrets et leur perte est moins grave que celle d'un appareil de son pilote.
+Les drones sont des aéronefs sans équipage dont le pilotage est automatique ou télécommandé. Leur masse varie de quelques grammes à plusieurs tonnes\cite{Wikipideaa}, moins chers et plus simples à mettre en œuvre qu'un avion. Ils sont plus discrets et leur perte est moins grave que celle d'un appareil de son pilote.
 
 Dans cette section, nous allons étudier les principaux types de drone ainsi que les multirotors que nous avons choisi. En plus, nous allons passer aux différents domaines d'application du quadrirotor, ses mouvements, sa stabilisation et les applications de quadrirotor basés sur la vision artificielle.   	
 \subsection{Les types des drones}
@@ -14,10 +14,10 @@ Il existe plusieurs types de drones, nous avons mis l'accent sur deux types:
 	 \item Multirotors 
 	\end{itemize}
 	\subsubsection{Aile fixe }
-	L'avion à voile fixe est capable de voler en utilisant des ailes qui génèrent une élévation causée par la vitesse avant du véhicule et la forme des ailes.
+	L'avion à voile fixe est capable de voler en utilisant des ailes qui génèrent une élévation causée par la vitesse avant du véhicule et la forme des ailes\cite{educalingo}.
 	
 	
-	\begin{figure}[h] 
+	\begin{figure}[H] 
 	\begin{center} 
 		\centering
 
@@ -29,7 +29,7 @@ Il existe plusieurs types de drones, nous avons mis l'accent sur deux types:
 	\end{figure}
 	\subsubsection{Multi-rotors}
 	C'est le type de drone qui possède plusieurs rotors sur son corps. Cette caractéristique lui offre la possibilité de rester en position unique pendant une longue période. En plus, ces drones sont très pratiques pour diverses utilisations.
-	\begin {figure}[h] 
+	\begin {figure}[H] 
 	\begin{center} 
 		\centering
 			\pagestyle{fancy}
@@ -40,19 +40,12 @@ Il existe plusieurs types de drones, nous avons mis l'accent sur deux types:
 	
 	\caption{Types des multirotors}
 	\end{figure}
-	
-	
-	
-	
-	
-	
-	
 	\subsubsection{Comparaison entre aile fixe drone et multirotors drone}
 	Après avoir étudié chaque type de drone, nous avons effectué une étude comparative entre eux en terme de vitesse, niveau de contrôle, capacité de charge, endurance et atterissage/décollage.
 	
-	Nous remarquons à travers ce tableau que les drones à voilure fixe sont plus rapides que les drones à voilure tournante  . Ils sont difficiles à contrôller, supportent une faible charge et nécessitent des grandes surfaces pour l'atterissage et le décollage.
+	Nous remarquons à travers ce tableau que les drones à voilure fixe sont plus rapides que les drones à voilure tournante. Ils sont difficiles à contrôller, supportent une faible charge et nécessitent des grandes surfaces pour l'atterissage et le décollage.
     Vu que notre situation nécessite une vitesse adapté à notre système de détection des oranges, nous avons choisi le quadrirotor qui est facile à contrôler, supporte une charge importante et pratique dans les petites surfaces.      
-	\begin{table}[h]
+	\begin{table}[H]
 		\begin{center}
 			\caption{Comparaison entre fixed wing drone et multirotors drone	 }
 			\begin{tabular}{|c|c|c|}
@@ -76,12 +69,10 @@ Il existe plusieurs types de drones, nous avons mis l'accent sur deux types:
 				\hline
 			\end{tabular}
 		\end{center}
-	\end{table}
-\newpage
-	
+	\end{table}	
 \subsection{Définition du quadrirotor}
-Un quadrirotor est un aéronef à voilure tournante à quatre rotors qui sont généralement placés à l'extrémité de la croix. Pour empêcher l'appareil de tourner sur lui-même autour de son axe de lacet, il faut que deux hélices tournent dans un sens et les deux autres dans l'autre. Pour pouvoir diriger l'appareil, il faut placer chaque paire d'hélices qui tournent dans le même sens aux extrémités opposées de la branche transversale.
-	\begin{figure}[h] 
+C'est un aéronef à voilure tournante à quatre rotors qui sont généralement placés à l'extrémité de la croix. Pour empêcher l'appareil de tourner sur lui-même autour de son axe de lacet, il faut que deux hélices tournent dans un sens et les deux autres dans le sens inverse\cite{Wikipidea}. Pour pouvoir diriger l'appareil, il faut placer chaque paire d'hélices qui tournent dans le même sens aux extrémités opposées de la branche transversale.
+	\begin{figure}[H] 
 	\begin{center} 
 		\centering
 \fbox{\includegraphics[width=0.6\linewidth]{Images/Sens de rotation des moteurs}}	
@@ -89,8 +80,8 @@ Un quadrirotor est un aéronef à voilure tournante à quatre rotors qui sont g�
 	\caption{Sens de rotation des moteurs }
 	\end{figure}
 	\subsection{Histoire des quadrirotors}
-	Le premier quadrirotor à décoller du sol est le gyroplane Breguet-Richet, développé par la société Breguet en 1907. Il ne décolle qu'à une hauteur de 60 cm et quatre hommes maintiennent la structure\cite{Wikipidea2019a}. 
-	\begin{figure}[h] 
+	Le premier quadrirotor à décoller du sol est le gyroplane Breguet-Richet, développé par la société Breguet en 1907. Il ne décolle qu'à une hauteur de 60 cm et quatre hommes maintiennent la structure\cite{Wikipidea}. 
+	\begin{figure}[H] 
 	\begin{center} 
 		\centering
 	\fbox{\includegraphics[width=0.6\linewidth]{Images/Breguet_Gyroplane_1907}}
@@ -114,7 +105,7 @@ Un quadrirotor est un aéronef à voilure tournante à quatre rotors qui sont g�
 	\end{itemize}
 	\newpage
 	\subsection{Mouvements du quadrirotor}
-	Les mouvements de base du quadrirotor sont réalisés en variant la vitesse de chaque rotor et en changeant la poussée produite. Ces mouvements sont couplés, ce qui signifie que le quadrirotor ne peut pas faire de translation sans réaliser un mouvement de roulis ou de tangage.
+	Les mouvements de base du quadrirotor sont réalisés en variant la vitesse de chaque rotor et en changeant la poussée produite. Ces mouvements sont couplés, ce qui signifie que le quadrirotor ne peut pas faire de translation sans réaliser un mouvement de roulis ou de tangage\cite{WikiMemoires}.
 	
 	Nous présentons ci-dessous les mouvements effectués par le quadrirotor:		
 	\begin{itemize}
@@ -123,7 +114,7 @@ Un quadrirotor est un aéronef à voilure tournante à quatre rotors qui sont g�
 		\item Mouvement de tangage.
 		\item Mouvement de lacet.
 	\end{itemize}
-	\begin{figure} [h]
+	\begin{figure} [H]
 	\begin{center}
 		\centering
 	\fbox{	\includegraphics[width=0.7\linewidth]{Images/Les mouvements du drones}}
@@ -134,17 +125,17 @@ Un quadrirotor est un aéronef à voilure tournante à quatre rotors qui sont g�
 	
 	\subsubsection{Mouvement vertical}
 	Pour monter, nous augmentons la vitesse des moteurs simultanément, tous les moteurs tournent au même régime et inversement pour descendre. Cette manipulation s'effectue à travers la commande des gaz.
-	\begin{figure} [h]
+	\begin{figure} [H]
 	\begin{center}
 		\centering
 	\fbox{\includegraphics[width=0.6\linewidth]{Images/Mouvement vertical}}
 	\end{center}
 	\caption{Mouvement vertical}
 	\end{figure}
-	\newpage
+
 	\subsubsection{Mouvement de roulis}
 	Pour incliner vers la gauche, nous diminuons les moteurs de gauche et augmentons ceux de droite. Inversement pour incliner vers la droite. Cette action s'appelle le roulie.
-	\begin{figure} [h]
+	\begin{figure} [H]
 	\begin{center}
 	
 	\fbox{	\includegraphics[width=1\linewidth]{Images/Mouvement de roulis}}
@@ -152,10 +143,10 @@ Un quadrirotor est un aéronef à voilure tournante à quatre rotors qui sont g�
 	\end{center}
 	\end{figure}
 	\subsubsection{Mouvement de tanguage}
-	Pour avancer, nous diminuons la vitesse des moteurs avant et augmentons la vitesse des moteurs arrière et inversement pour reculer. Cette action s'appelle le tangage.
+	Pour avancer, nous diminuons la vitesse des moteurs avant et augmentons la vitesse des moteurs arrière et inversement pour reculer. C'est le tangage.
 	
 	
-	\begin{figure}[h] 
+	\begin{figure}[H] 
 	\begin{center}
 		\centering
 		\fbox{\includegraphics[width=1\linewidth]{Images/Mouvement de tanguage}}
@@ -165,19 +156,25 @@ Un quadrirotor est un aéronef à voilure tournante à quatre rotors qui sont g�
 	
 	\subsubsection{Mouvement de lacet}
 	Pour un mouvement de rotation, nous augmentons la vitesse d'une paire de moteurs sur le même axe et inversement. Ceci est un mouvement de lacet.
-	\begin{figure} [h]
+	\begin{figure} [H]
 	\begin{center}
 \fbox{	\includegraphics[width=1\linewidth]{Images/Mouvement de lacet}}
 	\end{center}
 	\caption{Mouvement de lacet}	
 \end{figure}
 \subsection {Stabilisation du quadrirotor}
-Pour assurer la stabilisation du quadrirotor, nous avons trouvé que la solution adéquate à cette opération est le régulateur "PID" qui représente un système de contrôle permettant d’améliorer les performances d'un asservissement [PID] \cite{Wikipidea2018} .
+Pour assurer la stabilisation du quadrirotor, nous avons trouvé que la solution adéquate à cette opération est le régulateur "PID" qui représente un système de contrôle permettant d’améliorer les performances d'un asservissement\cite{Wikipideab}.
+	\begin{figure}[H] 
+	\begin{center}
+		\centering
+		\fbox{\includegraphics[width=0.7\linewidth]{Images/Asservissement PID}}
+	\end{center}
+	\caption{Mouvement de tanguage}
+\end{figure}
 
 Nous définissons l'action PID en détaillant chacune de ses parties.
 \subsubsection {Action PID} 
-Le régulateur PID combine les trois actions vues précédemment et permet ainsi d'avoir de
-bonnes performances aussi bien en vitesse, en stabilité et en précision. L'expression d’un régulateur PID est donné comme suit :
+Le régulateur PID combine les trois actions vues précédemment et permet ainsi d'avoir de bonnes performances aussi bien en vitesse, en stabilité et en précision. L'expression d’un régulateur PID \cite{WikiMemoiresa}est donné comme suit :
 
 $ c(t)=K_p\times \epsilon(t) + K_i\int\epsilon(t)dt+K_d\frac{d\epsilon(t)}{dt}$
 
@@ -187,27 +184,23 @@ précision et ce en trouvant la configuration optimale des valeurs des différen
 \subsubsection {Action proportionnelle}
 L'effet de l’action proportionnelle consiste à amplifier l'erreur d’un gain constant afin que le
 système réagisse plus rapidement aux changements de consigne. Cette action proportionnelle est
-représentée comme suit :
+représentée par l'équation suivante:
 
 $ c(t) = K_p\times \epsilon(t) $
 
 
 Plus la valeur de $K_p$ est grande plus la réponse est rapide mais au détriment d'une détérioration
 de la stabilité du système allant jusqu'à l'instabilité pour de grandes valeurs.
-
-
-
-
 \subsubsection  {Action intégrale}
 L'action intégrale a pour but de réduire voire d'éliminer l'erreur statique en régime permanent
 pour réaliser cela le régulateur intègre l'erreur par rapport au temps et multiplie le résultat par une
-constante $K_i$ comme suit :
+constante $K_i$ comme ci-dessous :
 
 $c(t) $ =$ K_i\times\int \epsilon(t) dt$
 
 
 Plus la valeur de $K_i$ est grande plus l'erreur statique sera vite corrigée mais nous perdons un peu
-en stabilité et il y a un risque de dépassement qui subvient.
+en stabilité et il y a un risque de dépassement.
 
 \subsubsection  {Action dérivée}
 Pour obtenir une action dérivée, nous multiplions la dérivée de l'erreur par un coefficient $K_d$.
@@ -216,7 +209,7 @@ Cette action permet d'éliminer le dépassement de la réponse et d'améliorer l
 $ c(t)  = K_d\times\frac{d\epsilon(t)}{dt}$
 
 
-Plus la valeur de Kd est grand plus le dépassement est atténué mais si elle est trop grande le
+Plus la valeur de Kd est grande plus le dépassement est atténué mais si elle est trop grande le
 système est ralenti jusqu'à risquer de devenir instable pour de très grandes valeurs.
 \subsection{Applications de quadrirotors basées sur la vision artificielle}
 L'emploie de l'intelligence artifificielle sur les quadrirotors est une innovation qui a réalisé plusieurs succès dans les différents domaines d'applications. Cette procédure facilite notre mode de vie vu qu'elle nous permet de gagner du temps et d'effectuer des tâches complexes.
@@ -228,9 +221,7 @@ Nous pouvons distinguer quatre principaux types d'applications:
 	\item Atterrissage de drones 
 	\item Détection d'objets 
 \end{itemize}
-
-
-\begin{figure}[h]
+\begin{figure}[H]
 	\centering
 	\begin{minipage}{0.49\textwidth}
 		\fbox{\includegraphics[width=0.8\linewidth]{Images/Evitement d'obstacles}}
@@ -240,10 +231,9 @@ Nous pouvons distinguer quatre principaux types d'applications:
 	\begin{minipage}{0.49\textwidth}
 		\fbox{\includegraphics[width=0.8\linewidth]{Images/Quadrirotor mener par un autre}}
 		\caption{Suivi de cible}
-		
 	\end{minipage}
 \end{figure}
-\begin{figure}[h]
+\begin{figure}[H]
 	\begin{minipage}{0.49\textwidth}
 \fbox{\includegraphics[width=0.8\linewidth]{Images/Atterissage de quadrirotor}}
 		\caption{Atterrissage }
@@ -256,14 +246,14 @@ Nous pouvons distinguer quatre principaux types d'applications:
 	\end{minipage}
 \end{figure}
 \section{Intelligence artificielle}
-Le but de l'intelligence artificielle étant toujours de concevoir des systèmes capables de reproduire le comportement de l'humain dans ses activités de raisonnement [IA]. Pour cela, nous avons employé cette technologie dans notre système puisqu'elle le rend autonome, c'est à dire il raisonne d'une façon fiable et précise. 
+Le but de l'intelligence artificielle étant toujours de concevoir des systèmes capables de reproduire le comportement de l'humain dans ses activités de raisonnement\cite{PowerPoint}. Pour cela, nous avons employé cette technologie dans notre système puisqu'elle le rend autonome, c'est à dire il raisonne d'une façon fiable et précise. 
 Durant cette partie, nous allons expliquer en premier lieu le concept général de la détection des fruits en détaillant plus tard le déroulement de la détection des oranges, le réseau de neurones et la détection des objets par encadrement. Nous allons finir cette section par la description de l'outil Yolo. 
 
 \subsection{Détection des fruits}
 La détection et la classification des fruits restent difficiles en raison de la forme, de la couleur et de la texture des différentes espèces de fruits. En étudiant l'impact de la vision par notre système sur cette opération, nous avons souligné que jusqu'aujourd'hui, la méthode d'apprentissage en profondeur(Deep learning) est la plus pratique pour la détection et la classification des fruits. C'est pour cette raison que nous avons décidé de l'employer dans notre projet. Puisque la couleur orange est attractive ainsi qu'on la trouve dans plusieurs catégories d'oranges, nous avons choisi de travailler spécifiquement sur la détection des oranges.
 \subsection{Détection des oranges et comptage}
 Notre approche consiste en plusieurs étapes. D'abord, nous détectons les oranges sur des images acquises dans les vergers par une des méthodes de détection d’objets. Ensuite, nous améliorons ces résultats en caractérisant les pixels acquis sur les oranges. Enfin, nous estimons une position  dans l’image plus précise pour les oranges détectées, ainsi que leur taille moyenne.
-	\begin{figure} [h]
+	\begin{figure} [H]
 	\begin{center}
 		\fbox{\includegraphics[width=0.4\linewidth]{Images/Détection des oranges}}
 		\caption{Mouvement de roulis}
@@ -271,30 +261,25 @@ Notre approche consiste en plusieurs étapes. D'abord, nous détectons les orang
 \end{figure}
 
 \subsection{Réseau de neurones}
-Ce réseau est un système informatique s'inspirant du fonctionnement du cerveau humain. Il existe le réseau de neurones récurrents et le réseau de neurones convolutifs[23].
+Ce réseau est un système informatique s'inspirant du fonctionnement du cerveau humain. Il existe le réseau de neurones récurrents et le réseau de neurones convolutifs\cite{Lebigdata}.
 
-Afin de détecter et catégoriser les objets souhaités facilement, nous avons choisi de travailler avec le réseau de neurones à convolutions qui doit passer par une phase d’apprentissage avant d’être utilisé comme détecteur. Le but de cette dernière est de lui apprendre à reconnaitre une ou plusieurs classes d’objets. Pour cela, nous lui fournissons un ensemble d’images contenant les objets en question que nous souhaitons encadrer et classifier. Ces encadrements sont généralement effectués sous forme de rectangles, cercles et polygones.
-
-
-
-
+Afin de détecter et catégoriser les objets souhaités facilement, nous avons choisi de travailler avec le réseau de neurones à convolutions qui doit passer par une phase d’apprentissage avant d’être utilisé comme détecteur. Le but de cette dernière est de lui apprendre à reconnaitre une ou plusieurs classes d’objets. Pour cela, nous lui fournissons un ensemble d’images contenant les objets en question que nous souhaitons encadrer et classifier.
 \subsection{Détection d'objet par encadrement}
-!!!!!!!Parmi les formes d'encadrement citées plus haut, nous avons choisi de travailler avec la forme rectangle grâce 
-La plupart des programmes d’IA que nous retrouvons pour la détection et la classification de tous types d’objets, possèdent une architecture utilisant les boîtes englobantes [15].
- Le réseau de neurones, après l’analyse de l’image qui est la donnée d’entrée, va nous renvoyer en sortie une image avec des boîtes englobantes encadrant les objets prédits et leurs classes respectives. Ainsi nous avons accès d’une part, à la position de l’objet dans l’image et d’autre part, à sa classe.
+Après avoir classifié les objets à travers le réseau de neurones, il est nécessaire d'employer la détection d'objet par encadrement qui consiste à dessiner un cadre de délimitation autour de chaque objet dans l’image sous forme d'un rectangle.
 \subsection{Détection en temps réel}
-C'est un système d'où le comportement se base sur l'exactitude des traitements effectués et surtout le temps requis pour produire ses résultats. 
+C'est un système d'où le comportement se base sur l'exactitude des traitements effectués et surtout le temps requis pour produire ses résultats. Ceci nous permet de gagner en terme de temps et de vitesse d'exécution.
 \subsection{Yolo}
 Dans un premier temps, étant donné que le modèle de détection doit être à la fois précis et rapide dans son exécution, les outils de détection en temps réel constitue la première approche de ce projet. Selon l’état de l’art, le choix de l’outil YOLO était le plus adéquat à nos besoins. 
 
-Ce dérnier découpe l’image en une grille de taille S × S. Puis de façon simultanée, il réalise d’une part la prédiction des objets dans l’image et d’autre part, détermine la classe de l’objet, comme montré sur la figure \ref{fig:A.Y}
-\begin{figure} [h]
+Ce dérnier découpe l’image en une grille de taille S × S. Puis de façon simultanée, il réalise d’une part la prédiction des objets dans l’image et d’autre part, détermine la classe de l’objet\cite{towardsdatascience.}, comme montré sur la figure \ref{fig:A.Y}
+\begin{figure} [H]
 	\begin{center}
 		\fbox{\includegraphics[width=0.8\linewidth]{Images/Architecture Yolo}}
 		\caption{\label{fig:A.Y}Architecture de Yolo}
 	\end{center}
 \end{figure}
-\section{Conclusion}
+\section*{Conclusion}
 Durant ce chapitre, nous avons donné les 
-généralités sur le drone. Nous avons présenté et expliqué le fonctionnement du quadrirotor ainsi que nous avons décrit la méthode de détection des oranges choisie
+généralités sur le drone. Nous avons présenté et expliqué le fonctionnement du quadrirotor ainsi que nous avons décrit l'implémentation du l'intelligence artificielle pour la détection des oranges.
+
 Le dernier chapitre sera consacré pour la réalisation de notre projet.
