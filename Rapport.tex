@@ -1,5 +1,7 @@
-\documentclass[a4paper,12pt]{report}
+\documentclass[a4paper,12pt]{book}
 \usepackage{graphicx}
+\graphicspath{ {figures/} }
+\usepackage{array}
 \usepackage{lipsum}
 \usepackage{float}
 \usepackage{siunitx}
@@ -13,17 +15,14 @@
 \usepackage{lastpage}
 \usepackage{fancyhdr}
 \lhead{ISET BEJA}
-\cfoot{}
-\rhead{
-}
-\lfoot{Chapitre2: Etude de l'art}
-\rfoot{\thepage}
+
 \renewcommand{\headrulewidth}{1mm}
 \renewcommand{\footrulewidth}{1mm}
 \begin{document}
-	\pagestyle{fancy}
+	\pagestyle{empty}
 	\tableofcontents
-
+	\listoffigures
+	\listoftables
 	\input{Chaps/Chap2.tex}
 \bibliographystyle{unsrt}
 \bibliography{Bib/ref.bib}
