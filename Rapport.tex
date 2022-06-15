@@ -1,35 +1,33 @@
 \documentclass[a4paper,12pt]{book}
 \usepackage{graphicx}
+\graphicspath{ {figures/} }
+\usepackage{array}
 \usepackage{lipsum}
 \usepackage{float}
 \usepackage{siunitx}
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
 \usepackage[belowskip=-10pt,aboveskip=10 pt]{caption}
+\usepackage{setspace}
+\doublespacing
 \setlength{\intextsep}{20pt plus 2pt minus 2pt}
 \setlength{\belowcaptionskip}{-15pt}
-
+\usepackage{natbib}
 \usepackage[french]{babel}
 \usepackage{lastpage}
 \usepackage{fancyhdr}
 \lhead{ISET BEJA}
-\cfoot{}
-\rhead{
-}
 
-\rfoot{\thepage}
 \renewcommand{\headrulewidth}{1mm}
 \renewcommand{\footrulewidth}{1mm}
-% leftmark
-\pagestyle{fancy}
-\usepackage{natbib}
-\usepackage{url}
 
 
 
 \begin{document}
 	\pagestyle{fancy}
 	\tableofcontents
+	\listoffigures
+	\listoftables
 	\input{Chaps/Chap3.tex}
 	\bibliographystyle{unsrt}
 	\bibliography{bib/ref.bib}
