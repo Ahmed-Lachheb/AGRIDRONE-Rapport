@@ -1,5 +1,6 @@
-\documentclass[a4paper,12pt]{report}
+\documentclass[a4paper,12pt]{book}
 \usepackage{graphicx}
+\usepackage{natbib}
 \graphicspath{ {figures/} }
 \usepackage{array}
 \usepackage{lipsum}
@@ -7,10 +8,13 @@
 \usepackage{siunitx}
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
+
 \usepackage[belowskip=-10pt,aboveskip=10 pt]{caption}
+\usepackage{setspace}
+\doublespacing
 \setlength{\intextsep}{20pt plus 2pt minus 2pt}
 \setlength{\belowcaptionskip}{-15pt}
-\usepackage{natbib}
+
 \usepackage[french]{babel}
 \usepackage{lastpage}
 \usepackage{fancyhdr}
@@ -19,12 +23,15 @@
 \renewcommand{\headrulewidth}{1mm}
 \renewcommand{\footrulewidth}{1mm}
 \begin{document}
+
 \input{Chaps/Remer.tex}
+\pagestyle{empty}
+\tableofcontents
+\listoffigures
+\listoftables
 \input{Chaps/Intro.tex}
 \input{Chaps/Chap1.tex}
-	
+\input{Chaps/Chap2.tex}
 \bibliographystyle{unsrt}
 \bibliography{bib/ref.bib}
 \end{document}
-
-
