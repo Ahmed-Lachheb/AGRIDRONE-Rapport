@@ -48,6 +48,7 @@ La figure ci-dessous présente le déroulement de la gestion de projet par Scrum
 \begin{figure} [H]
 	\begin{center}
 		\centering
+		\hspace*{-0.5cm}
 		\fbox{\includegraphics[width=0.67\linewidth]{Images/Méthode Scrum}}
 	\end{center}
 	\caption{Agile Scrum}
@@ -131,7 +132,7 @@ La figure ci-dessous présente le déroulement de la gestion de projet par Scrum
 			\begin {figure} [H]
 			\begin{center}
 	\centering
-\hspace*{-2.2cm}\fbox{\includegraphics[width=1.2\linewidth]{Images/Diagramme de cas d'utilisation globale}}
+\hspace*{-0.8cm}\fbox{\includegraphics[width=1.2\linewidth]{Images/Diagramme de cas d'utilisation globale}}
 			\end{center}
 		    \caption{Diagramme de cas d'utilisation global}
 	        \end {figure}
@@ -162,24 +163,6 @@ La figure ci-dessous présente le déroulement de la gestion de projet par Scrum
 				\caption{\label{fig:D.A}Diagramme de cas d'utilisation d'agriculteur}	
 				
 				\end {figure}
-				\section[D.définition de bloc]{Diagramme de bloc de définition }
-				Le diagramme de définition de bloc permet d'exprimer la structure d'un système, d'un sous-système ou d'un composant. Ces blocs peuvent représenter des entités physiques ou logiques qui sont décomposables et peuvent posséder des propriétés ainsi qu'un comportement.
-				
-				Notre AGRIDrone  est constitué de plusieurs éléments. Il existe deux principaux blocs: Le quadrirotor et le système de détection.
-				
-				Le quadrirotor est lié à une alimentation électrique qui  délivre une tension de 12V au contrôleur de vitesse. Ce dernier transmet 5V au contrôleur de vol qui l'envoi à son tour au récepteur de la radiocommande afin de l'allumer. Ce composant est en attente du signal radio qui va-t-être transmis par l'émmeteur. Dès que ce signal est reçu, le récepteur se charge de le décoder puis l'envoyer au contôleur de vol en tant que signal PWM. Par la suite, il sera transmis au contrôleur de vitesse pour effectuer le démarrage des moteurs qui sont chargés de la rotation des hélices. Le châssis est aussi un élément du quadrirotor qui supporte tous ses composants sauf l'émetteur de la radiocommande.
-				
-				Concernant le système de détection, il est aussi en relation avec l'alimentation électrique. Cette dernière fournit une tension de 12V à la carte électronique qui délivre 5V à la caméra.
-				
-					\begin{figure}[H] 
-					\begin{center} 
-						\centering
-					\hspace*{-2.25cm}	\fbox{\includegraphics[width=1.4\linewidth]{Images/Diagramme de définition de bloc}}
-					\end{center}
-					
-					\caption{Diagramme de définition de bloc}
-					
-					\end {figure}
 				
 			   \section{Conclusion}
 				Le long de ce chapitre, nous avons exposé la problématique à partir de laquelle nous avons créé l'objectif de notre projet et nous avons montré la phase de la méthodologie de travail ,de la spécification des besoins et de la conception des diagrammes SysML.
