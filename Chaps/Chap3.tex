@@ -6,13 +6,14 @@
 \newpage
 	\section*{Introduction}
 	
-	Dans ce chapitre nous présenterons les différentes étapes de réalisation de notre projet. Nous avons choisi de construire notre montage à base d'un contrôleur de vol "Apm 2.8" pour ses fonctionnalités. Notre drone est réalisé à l'aide de 4 moteurs qui sont commandés depuis ce contrôleur de vol  à travers des contrôleurs de vitesse électronique (ESC). L'ensemble de ces composants  est alimenté par une batterie et piloté à l'aide d’une radiocommande.
+		Dans ce chapitre nous présenterons les différentes étapes de réalisation de notre projet en exposant le matériel utilisé et son diagramme de définition de bloc. Par la suite, nous expliquerons les logiciels avec lesquels nous avons travaillé. Finalement, nous détaillerons la configuration et la calibration de l'APM2.8 et la radiocommande, ainsi que les étapes que nous avons effectué pour résoudre le problème rencontré dans notre travail. 
+	
 	\section{Matériels utilisés}
 	Lors de notre réalisation, nous avons utilisé plusieurs composants que nous présentons ci-dessous.
 	\subsection{Châssis}
 	Le châssis représente le corps principal de notre quadrirotor. Il comprend quatre bras de forme "X". Ses caractéristiques à prendre en compte sont le poids, qui est lié aux matériaux utilisés et sa résistance au choc. Plus le châssis est léger, plus nous conservons de la puissance.
 	
-	Pour éliminer les vibrations du moteur et pour obtenir les meilleures performances sur le côté aérodynamique, nous avons choisis d’utiliser un châssis professionnel "le DJI F450". Il est fabriqué en PA66 et 30GF qui offre une meilleur résistance aux dommages sur les atterrissages durs\cite{smartcube}, son assemblage est simple et rapide. Les 4 bras sont vissés entre la plaque inférieure et la plaque supérieure. Notre châssis a une envergure de 450 mm et pèse 272 grammes.
+	Pour éliminer les vibrations du moteur et pour obtenir les meilleures performances sur le côté aérodynamique, nous avons choisis d’utiliser un châssis professionnel "le DJI F450". Il est fabriqué en PA66 et 30GF qui offre une meilleur résistance aux dommages sur les atterrissages durs \cite{smartcube}, son assemblage est simple et rapide. Les 4 bras sont vissés entre la plaque inférieure et la plaque supérieure. Notre châssis a une envergure de 450 mm et pèse 272 grammes.
 	Cette structure permet d'accueillir toute l'électronique : ESCs, moteurs, contrôleur de vol. En plus, nous pouvons grâce au PCB intégré dans la plaque inférieure souder les pôles du contrôleur de vitesse (+/-) et la batterie. La propulsion recommandée repose sur le châssis qui est capable de supporter un poids total en vol situé entre 800 et 1600 grammes maximum a l'aide des moteurs 2212 \cite{studiosport}.
 	
 	\begin{figure} [H]
@@ -53,7 +54,7 @@
 		\caption{Batterie Lipo 3S}
 	\end{figure}
 	\subsection{Hélice}
-	L'hélice est un dispositif rotatif formé d’un certains nombre de pales ayant un profile d'aile \cite{aerohesbaye}. Le choix de ces composants est aussi important lors de la conception de notre drone dont il faut des hélices adaptées au type de vol que nous souhaitons réaliser. Afin d'obtenir un vol stable qui dépend du choix des hélices, nous avons utilisé 2 hélices à sens horaires\underline{8045R} et 2 hélices à sens anti-horaire \underline{8045} (leur diamètre et leur pas indiqués en pouces)\cite{FPV24}.
+	L'hélice est un dispositif rotatif formé d’un certains nombre de pales ayant un profile d'aile \cite{aerohesbaye}. Le choix de ces composants est aussi important lors de la conception de notre drone dont il faut des hélices adaptées au type de vol que nous souhaitons réaliser. Afin d'obtenir un vol stable qui dépend du choix des hélices, nous avons utilisé 2 hélices à sens horaires\underline{8045R} et 2 hélices à sens anti-horaire \underline{8045} (leur diamètre et leur pas indiqués en pouces) \cite{FPV24}.
 	\begin{figure} [H]
 		\begin{center}
 			\centering
@@ -244,7 +245,7 @@ Le diagramme de définition de bloc permet d'exprimer la structure d'un système
 	Pour configurer et calibrer l'"APM 2.8", il nous reste  de lancer l'assistant et le connecter en USB sur notre PC.
 	\subsubsection{Chargement du firmware }
 	Ensuite, nous avons accédé au « INITIAL SETUP ». L'installation du frimware se fait en cliquant sur le bouton « Install Frimware ». Cette opération commence après avoir sélectionné le type du multicoptère, dans notre cas c'est le « quadrirotor » que nous avons chargé.  la dernière version du frimware dans
-	notre carte "APM2.8" est présentée dans la figure ci-dessous . Le logo « CONNECT » doit rester rouge c'est à dire en mode déconnecté. Dès que le frimware est installé, le drone sera prêt à être configuré et paramétré.
+	notre carte "APM2.8" est présentée dans la figure ci-dessous. Le logo « CONNECT » doit rester rouge c'est à dire en mode déconnecté. Dès que le frimware est installé, le drone sera prêt à être configuré et paramétré.
 	\begin{figure}[H]
 		\begin{center}
 			\centering
@@ -392,7 +393,7 @@ Dans le menu configuration système, nous avons cliqué sur « Modeuat », appuy
 	\caption{Sélection de mode pour Acro}
 \end{figure}
 	\subsubsection{STICK SET }
-	Dans le menu Réglages Système, nous avons sélectionné « STICK SET », après avoir presser le « MENU ». Ensuite, nous avons choisi le mode le plus appropriée à notre style d'utilisation "modèle 2". Dés que cette étape est réalisée, nous avons effectué la sauvegarde de l'option sélectionnée en appuyant sur « MENU ». Après, nous avons appuyé sur le bouton « EXIT » pour revenir au menu précédent.
+	Dans le menu Réglages Système, nous avons sélectionné « STICK SET », après avoir presser le « MENU ». Ensuite, nous avons choisi le mode le plus appropriée à notre style d'utilisation "modèle 2". Dés que cette étape est réalisée, nous avons effectué la sauvegarde de l'option sélectionnée en appuyant sur « MENU ». Après, nous avons appuyé sur le bouton «EXIT» pour revenir au menu précédent.
 	\begin{figure}[H]
 		\begin{center}
 			\centering
@@ -505,7 +506,7 @@ Dans le menu configuration système, nous avons cliqué sur « Modeuat », appuy
 				\hline
 				PE0 pin 2 & Mosi pin 1 & Rouge  \\
 				\hline
-				PE1 pin 3 & Miso pin 9 & Blue  \\
+				PE1 pin 3 & Miso pin 9 & Bleu  \\
 				\hline
 				PS1 (Sck)  pin 11 & Sck pin 7 & Vert  \\
 				\hline

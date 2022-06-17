@@ -2,7 +2,8 @@
 \chapter{Etat de l'art }
 \newpage	
 \section*{Introduction}
-Ce chapitre sera porté sur l'état de l'art de notre système qui sera expliqué sur deux grandes parties. La première concerne le drone et la deuxième porte sur l'intelligence artificielle. 
+Ce chapitre portera en premier lieu sur le drone avec ses différents types et mouvements ainsi que sa stabilisation. En second lieu, nous expliquerons la phase de l'intelligence artificielle et nous passerons au concept de la détection des fruits. 
+ 
 \section{Drone}	
 Les drones sont des aéronefs sans équipage dont le pilotage est automatique ou télécommandé. Leur masse varie de quelques grammes à plusieurs tonnes\cite{Wikipideaa}, moins chers et plus simples à mettre en œuvre qu'un avion. Ils sont plus discrets et leur perte est moins grave que celle d'un appareil de son pilote.
 
@@ -105,7 +106,7 @@ C'est un aéronef à voilure tournante à quatre rotors qui sont généralement 
 	\end{itemize}
 	\newpage
 	\subsection{Mouvements du quadrirotor}
-	Les mouvements de base du quadrirotor sont réalisés en variant la vitesse de chaque rotor et en changeant la poussée produite. Ces mouvements sont couplés, ce qui signifie que le quadrirotor ne peut pas faire de translation sans réaliser un mouvement de roulis ou de tangage\cite{WikiMemoires}.
+	Les mouvements de base du quadrirotor sont réalisés en variant la vitesse de chaque rotor et en changeant la poussée produite. Ces mouvements sont couplés, ce qui signifie que le quadrirotor ne peut pas faire de translation sans réaliser un mouvement de roulis ou de tangage \cite{WikiMemoires}.
 	
 	Nous présentons ci-dessous les mouvements effectués par le quadrirotor:		
 	\begin{itemize}
@@ -246,7 +247,7 @@ Nous pouvons distinguer quatre principaux types d'applications:
 	\end{minipage}
 \end{figure}
 \section{Intelligence artificielle}
-Le but de l'intelligence artificielle étant toujours de concevoir des systèmes capables de reproduire le comportement de l'humain dans ses activités de raisonnement\cite{PowerPoint}. Pour cela, nous avons employé cette technologie dans notre système puisqu'elle le rend autonome, c'est à dire il raisonne d'une façon fiable et précise. 
+Le but de l'intelligence artificielle étant toujours de concevoir des systèmes capables de reproduire le comportement de l'humain dans ses activités de raisonnement \cite{PowerPoint}. Pour cela, nous avons employé cette technologie dans notre système puisqu'elle le rend autonome, c'est à dire il raisonne d'une façon fiable et précise. 
 Durant cette partie, nous allons expliquer en premier lieu le concept général de la détection des fruits en détaillant plus tard le déroulement de la détection des oranges, le réseau de neurones et la détection des objets par encadrement. Nous allons finir cette section par la description de l'outil Yolo. 
 
 \subsection{Détection des fruits}
@@ -271,7 +272,7 @@ C'est un système d'où le comportement se base sur l'exactitude des traitements
 \subsection{Yolo}
 Dans un premier temps, étant donné que le modèle de détection doit être à la fois précis et rapide dans son exécution, les outils de détection en temps réel constitue la première approche de ce projet. Selon l’état de l’art, le choix de l’outil YOLO était le plus adéquat à nos besoins. 
 
-Ce dérnier découpe l’image en une grille de taille S × S. Puis de façon simultanée, il réalise d’une part la prédiction des objets dans l’image et d’autre part, détermine la classe de l’objet\cite{towardsdatascience.}, comme montré sur la figure \ref{fig:A.Y}
+Ce dérnier découpe l’image en une grille de taille S × S. Puis de façon simultanée, il réalise d’une part la prédiction des objets dans l’image et d’autre part, détermine la classe de l’objet \cite{towardsdatascience.}, comme montré sur la figure \ref{fig:A.Y}
 \begin{figure} [H]
 	\begin{center}
 		\fbox{\includegraphics[width=0.8\linewidth]{Images/Architecture Yolo}}
