@@ -2,7 +2,7 @@
 
 	
 
-\chapter{Réalisation de projet}
+\chapter{Réalisation du projet}
 \newpage
 	\section*{Introduction}
 	
@@ -13,7 +13,7 @@
 	\subsection{Châssis}
 	Le châssis représente le corps principal de notre quadrirotor. Il comprend quatre bras de forme "X". Ses caractéristiques à prendre en compte sont le poids, qui est lié aux matériaux utilisés et sa résistance au choc. Plus le châssis est léger, plus nous conservons de la puissance.
 	
-	Pour éliminer les vibrations du moteur et pour obtenir les meilleures performances sur le côté aérodynamique, nous avons choisis d’utiliser un châssis professionnel "le DJI F450". Il est fabriqué en PA66 et 30GF qui offre une meilleur résistance aux dommages sur les atterrissages durs \cite{smartcube}, son assemblage est simple et rapide. Les 4 bras sont vissés entre la plaque inférieure et la plaque supérieure. Notre châssis a une envergure de 450 mm et pèse 272 grammes.
+	Pour éliminer les vibrations du moteur et pour obtenir les meilleures performances aérodynamique, nous avons choisis d’utiliser un châssis professionnel "le DJI F450". Il est fabriqué en PA66 et 30GF qui offre une meilleur résistance aux dommages sur les atterrissages durs \cite{smartcube}, son assemblage est simple et rapide. Les 4 bras sont vissés entre la plaque inférieure et la plaque supérieure. Notre châssis a une envergure de 450 mm et pèse 272 grammes.
 	Cette structure permet d'accueillir toute l'électronique : ESCs, moteurs, contrôleur de vol. En plus, nous pouvons grâce au PCB intégré dans la plaque inférieure souder les pôles du contrôleur de vitesse (+/-) et la batterie. La propulsion recommandée repose sur le châssis qui est capable de supporter un poids total en vol situé entre 800 et 1600 grammes maximum a l'aide des moteurs 2212 \cite{studiosport}.
 	
 	\begin{figure} [H]
@@ -54,7 +54,7 @@
 		\caption{Batterie Lipo 3S}
 	\end{figure}
 	\subsection{Hélice}
-	L'hélice est un dispositif rotatif formé d’un certains nombre de pales ayant un profile d'aile \cite{aerohesbaye}. Le choix de ces composants est aussi important lors de la conception de notre drone dont il faut des hélices adaptées au type de vol que nous souhaitons réaliser. Afin d'obtenir un vol stable qui dépend du choix des hélices, nous avons utilisé 2 hélices à sens horaires\underline{8045R} et 2 hélices à sens anti-horaire \underline{8045} (leur diamètre et leur pas indiqués en pouces) \cite{FPV24}.
+	L'hélice est un dispositif rotatif formé d’un certains nombre de pales ayant un profile d'aile \cite{aerohesbaye}. Le choix de ces composants est aussi important lors de la conception de notre drone dont il faut des hélices adaptées au type de vol que nous souhaitons réaliser. Afin d'obtenir un vol stable qui dépend du choix des hélices, nous avons utilisé 2 hélices à sens horaires \underline{8045R} et 2 hélices à sens anti-horaire \underline{8045} (leur diamètre et leur pas indiqués en pouces) \cite{FPV24}.
 	\begin{figure} [H]
 		\begin{center}
 			\centering
@@ -81,7 +81,7 @@
 	Une radiocommande est un outil permettant de contrôler à distance notre drone à travers des signaux radio. Nous avons choisi cet appareil grâce à sa portée et sa latence qui sont importantes par rapport au wifi et au bluetooth. Son émetteur est de type Turnigy 9x et son récepteur de type IA8 AFHDS2A.
 	
 	\subsubsection{Émetteur} 
-	La Turnigy 9x est une radio de 9 voies, elle est équipée de 6 interrupteurs de deux positions, un interrupteur de trois position et de trois potentiomètres rotatifs.
+	La Turnigy 9x est une radiocommande de 9 voies, elle est équipée de 6 interrupteurs de deux positions, un interrupteur de trois position et de trois potentiomètres rotatifs.
 	De plus, grâce à la technologie 2,4 Ghz, nous disposons d'une réaction ultra-rapide et d'un contrôle sans interférence. Pour la
 	conception ergonomique, celle-ci facilite l'utilisation de toutes les commandes dont les interrupteurs et les ports sont tous positionnés pour plus de confort\cite{Hobbyking}. En plus, les bâtons de longueur réglable peuvent être adaptés à nos besoins et l' écran LCD monochrome facilite la programmation ainsi que la modification des paramètres. 
 	
@@ -90,7 +90,7 @@
 			\centering
 			\fbox{\includegraphics[width=0.8\textwidth]{Images/Emetteur radiocommande}}
 		\end{center}
-		\caption{calibration du radio}
+		\caption{Turnigy 9x}
 	\end{figure}
 	\subsubsection{Récepteur }
 	Ce récepteur IA8 AFHDS 2A dispose de 8 voies et fonctionne parfaitement avec la radiocommande Turnigy 9x système AFHDS 2A \cite{Hobbyking}. Il a une portée de plus de 500 mètres  grâce à ses deux antennes. En plus, ce composant reste très compact et fonctionne en PWM ou PPM.
@@ -99,7 +99,7 @@
 			\centering
 			\fbox{\includegraphics[width=0.4\textwidth]{Images/Récépteur radiocommande}}
 		\end{center}
-		\caption{calibration du radio}
+		\caption{Récepteur IA8 AFHDS 2A}
 	\end{figure}
 	\subsection {Diodes  et résistances}
 	Afin d'éclairer notre quadrirotor, nous avons utilisé 8 diodes ( 4 diodes blanches et 4  rouges) pour mieux connaître son mouvement. Nous avons utilisé 5V de l'Apm 2.8. Puisqu'une diode a besoin de 3V et 5mA, nous avons choisi une résistance de \SI{330}{\ohm} à chaque diode pour encaisser les 2V supplémentaires et tout cela sous 5mA.
@@ -134,9 +134,9 @@ Le diagramme de définition de bloc permet d'exprimer la structure d'un système
 	\caption{Diagramme de définition de bloc}
 	
 	\end {figure}
-	Notre AGRIDrone  est constitué de plusieurs éléments. Il existe deux principaux blocs: Le quadrirotor et le système de détection.
+	Notre AGRIDrone  est constitué de plusieurs éléments. Il existe deux principaux blocs: le quadrirotor et le système de détection.
 	
-	Le quadrirotor est lié à une alimentation électrique qui  délivre une tension de 12V au contrôleur de vitesse. Ce dernier transmet 5V au contrôleur de vol qui l'envoi à son tour au récepteur de la radiocommande afin de l'allumer. Ce composant est en attente du signal radio qui va-t-être transmis par l'émmeteur. Dès que ce signal est reçu, le récepteur se charge de le décoder puis l'envoyer au contôleur de vol en tant que signal PWM. Par la suite, il sera transmis au contrôleur de vitesse pour effectuer le démarrage des moteurs qui sont chargés de la rotation des hélices. Le châssis est aussi un élément du quadrirotor qui supporte tous ses composants sauf l'émetteur de la radiocommande.
+	Le quadrirotor est lié à une alimentation électrique qui  délivre une tension de 12V au contrôleur de vitesse. Ce dernier transmet 5V au contrôleur de vol qui l'envoi à son tour au récepteur de la radiocommande afin de l'allumer. Ce composant est en attente du signal radio qui va être transmis par l'émmeteur. Dès que ce signal est reçu, le récepteur se charge de le décoder puis de l'envoyer au contôleur de vol en tant que signal PWM. Par la suite, il sera transmis au contrôleur de vitesse pour effectuer le démarrage des moteurs qui sont chargés de la rotation des hélices. Le châssis est aussi un élément du quadrirotor qui supporte tous ses composants sauf l'émetteur de la radiocommande.
 	
 	Concernant le système de détection, il est aussi en relation avec l'alimentation électrique. Cette dernière fournit une tension de 12V au système de décision qui délivre 5V à la caméra.
 	\section{Logiciels utilisés}
@@ -151,7 +151,7 @@ Le diagramme de définition de bloc permet d'exprimer la structure d'un système
 		\caption{Interface de Latex}
 	\end{figure}
 	\subsection{Google Drive}
-	Dans le but de partager et de collaborer notre travail, nous avons utlilisé "google drive" qui nous permet de travailler sur les différents documents à produire au cours du projet.
+	Dans le but de partager en collaborant notre travail, nous avons utlilisé "google drive" qui nous permet de travailler sur les différents documents à produire au cours du projet.
 	\begin{figure}[H]
 		\begin{center}
 			\centering
@@ -179,7 +179,7 @@ Le diagramme de définition de bloc permet d'exprimer la structure d'un système
 		\caption{Plateforme sur GitHub}
 	\end{figure}
 	\subsection{Papyrus}
-	C'est un logiciel gratuit qui est riche en fonction dont il nous a aidé à faire la conception de notre projet à travers les diagrammes de cas d'utilisation.
+	C'est un logiciel gratuit qui est riche en fonctionnalités. Il nous a aidé à faire la conception de notre projet à travers les diagrammes de cas d'utilisation.
 	\begin{figure}[H]
 		\begin{center}
 			\centering
@@ -198,7 +198,7 @@ Le diagramme de définition de bloc permet d'exprimer la structure d'un système
 		\caption{Interface Visual Paradigm}
 	\end{figure}
 	\subsection{Companion 9x}
-	Nous avons utilisé ce logiciel pour flacher la radiocommandele en téléversant le frimware via la mémoire de l'émetteur du radiocommande.
+	Nous avons utilisé ce logiciel pour téléverser le firmware vers la mémoire de l'émetteur du radiocommande.
 	\begin{figure}[H]
 		\begin{center}
 			\centering
@@ -242,26 +242,26 @@ Le diagramme de définition de bloc permet d'exprimer la structure d'un système
 	\section{Configurations et calibrations}
 	Puisque le contrôleur de vol et la radiocommande fonctionnent sur différents modèles d'avions, il est nécessaire de leurs effectuer des configurations  ainsi que  des calibrations spécifiques pour le fonctionnement de notre quadrirotor. 
 	\subsection{Configurations et calibrations de l'APM 2.8}
-	Pour configurer et calibrer l'"APM 2.8", il nous reste  de lancer l'assistant et le connecter en USB sur notre PC.
+	Pour configurer et calibrer l'"APM 2.8", nous devons lancer l'assistant et le connecter en USB sur notre PC.
 	\subsubsection{Chargement du firmware }
-	Ensuite, nous avons accédé au « INITIAL SETUP ». L'installation du frimware se fait en cliquant sur le bouton « Install Frimware ». Cette opération commence après avoir sélectionné le type du multicoptère, dans notre cas c'est le « quadrirotor » que nous avons chargé.  la dernière version du frimware dans
-	notre carte "APM2.8" est présentée dans la figure ci-dessous. Le logo « CONNECT » doit rester rouge c'est à dire en mode déconnecté. Dès que le frimware est installé, le drone sera prêt à être configuré et paramétré.
+	Ensuite, nous avons accédé au « INITIAL SETUP ». L'installation du firmware se fait en cliquant sur le bouton « Install Firmware ». Cette opération commence après avoir sélectionné le type du multicoptère, dans notre cas c'est le « quadrirotor » que nous avons chargé. La dernière version du firmware dans
+	notre carte "APM2.8" est présentée dans la figure ci-dessous. Le logo « CONNECT » doit rester rouge c'est à dire en mode déconnecté. Dès que le firmware est installé, le drone sera prêt à être configuré et paramétré.
 	\begin{figure}[H]
 		\begin{center}
 			\centering
 			\fbox{ \includegraphics[width=0.6\linewidth]{Images/Chargement du firmware}}
 		\end{center}
-		\caption{Les 4 modes}
+		\caption{Chargement de firmware}
 	\end{figure}
 	
-	\subsubsection{Type de Châssis}
-	Après avoir installé le frimware, nous avons connecté  la carte "APM 2.8" en haut à droite de Mission Planner. Pour s'assurer que notre carte est bien connectée, le logo « CONNECT » doit passer de la couleur rouge à la couleur verte. Ensuite, nous avons cliqué sur « INITIAL SETUP », « Mandatory Hardware » et « Frame Type » afin de configurer le type de notre quadrirotor. 
+	\subsubsection{Type de châssis}
+	Après avoir installé le firmware, nous avons connecté  la carte "APM 2.8" en haut à droite de Mission Planner. Pour s'assurer que notre carte est bien connectée, le logo « CONNECT » doit passer de la couleur rouge à la couleur verte. Ensuite, nous avons cliqué sur « INITIAL SETUP », « Mandatory Hardware » et « Frame Type » afin de configurer le type de notre quadrirotor. 
 	\begin{figure}[H]
 		\begin{center}
 			\centering
 			\fbox{\includegraphics[width=0.6\linewidth]{Images/Choix du type de quadrirotor}}
 		\end{center}
-		\caption{calibration du magnétométre}
+		\caption{Choix du type de châssis}
 	\end{figure}
 	\subsubsection{Calibration du magnétomètre}
 	Pour réaliser cette manipulation, il est préférable de connecter le contrôleur de vol avec un câble USB afin d'obtenir un échantillonnage précis et continu.
@@ -276,7 +276,7 @@ Le diagramme de définition de bloc permet d'exprimer la structure d'un système
 	\end{figure}
 	
 	\subsubsection{Calibration des accéléromètres}
-	Pour un résultat optimal,  premiérement nous devons accéder au menu « INITIAL SETUP », deuxiément « Mandatory Hardware » et finalement, « Accel Calibration ». L'"APM2.8" doit être positionnée successivement sur chacune de ses six faces.
+	Pour un résultat optimal,  nous devons premiérement  accéder au menu « INITIAL SETUP », deuxièment « Mandatory Hardware » et finalement, « Accel Calibration ». L'"APM2.8" doit être positionnée successivement sur chacune de ses six faces.
 	La séquence se présente de la façon suivante :
 	
 	\begin{table}[H]
@@ -327,7 +327,7 @@ Le diagramme de définition de bloc permet d'exprimer la structure d'un système
 			\centering
 			\fbox{\includegraphics[width=0.8\linewidth]{Images/calibaration du radio}}
 		\end{center}
-		\caption{calibration du radio}
+		\caption{calibration du radiocommande}
 	\end{figure}
 	
 	\subsubsection{Configurations des modes de vol} 
@@ -354,16 +354,16 @@ Le diagramme de définition de bloc permet d'exprimer la structure d'un système
 	\end{figure}
 
 	\subsubsection{Calibration des ESC}
-	Les contrôleurs de vitesse doivent être étalonnés pour connaître les valeurs minimales et maximales du commande des Gaz. 
+	Les contrôleurs de vitesse doivent être étalonnés pour connaître les valeurs minimales et maximales du commande des gaz. 
 		
-	La procédure d’étalonnage est la suivante. Nous avons en premier lieu coupé l'alimentation de l'appareil. Par la suite, nous avons allumé la radiocommande et positionné le manche des Gaz à son maximum. Ensuite, nous avons mis l'appareil sous tension en attendant que le contrôleur de vol démarre. Ainsi, nous avons coupé l'alimentation de l'appareil et nous l'avons remis sous tension. Après avoir entendu la mélodie issue des moteurs confirmant l'apprentissage de la valeur maximale des Gaz, nous avons baissé le manche des Gaz au minimum en attendant la mélodie de confirmation et actionner doucement les Gaz pour vérifier que tous les moteurs démarrent en même temps et tournent au même régime. Finalement, nous avons recoupé l'alimentation de l'appareil.
+	Concernant La procédure d’étalonnage, nous avons en premier lieu coupé l'alimentation de l'appareil. Par la suite, nous avons allumé la radiocommande et positionné le manche des gaz à son maximum. Ensuite, nous avons mis l'appareil sous tension en attendant que le contrôleur de vol démarre. Ainsi, nous avons coupé l'alimentation de l'appareil et nous l'avons remis sous tension. Après avoir entendu la mélodie issue des moteurs confirmant l'apprentissage de la valeur maximale des gaz, nous avons baissé le manche des gaz au minimum en attendant la mélodie de confirmation et actionner doucement les gaz pour vérifier que tous les moteurs démarrent en même temps et tournent au même régime. Finalement, nous avons recoupé l'alimentation de l'appareil.
 	\subsection{Configuration et calibration de la radiocommande}
 	Concernant la configuration et la calibration de la radiocommande, nous avons passé par plusieurs étapes que nous expliquons ci-dessous. 
 	\subsubsection{Mode de la radiocommande}
-	Au début, notre radiocommande est activée en mode 1 où le bâton droite est relâché dans l'axe verticale et le bâton gauche est centré dans les deux axes. Afin de faciliter le pilotage de notre drone, nous avons activé notre radiocommande en mode 2  qui est l'inverse du mode précédent. Pour effectuer cette opération, nous avons tout d'abord retiré les six vis à l'arriére du boîtier. Ensuite, nous avons déplacé le ressort vers le bâton droite.  Finalement, nous avons fermé la radiocommande en remettant les vis.
+	Au début, notre radiocommande est activée en mode "1" où le bâton droite est relâché dans l'axe verticale et le bâton gauche est centré dans les deux axes. Afin de faciliter le pilotage de notre drone, nous avons activé notre radiocommande en mode "2" qui est l'inverse du mode précédent. Pour effectuer cette opération, nous avons tout d'abord retiré les six vis à l'arriére du boîtier. Ensuite, nous avons déplacé le ressort vers le bâton droite. Finalement, nous avons fermé la radiocommande en remettant les vis.
 	
 	
-	\subsubsection{SELECTION type de modèle}
+	\subsubsection{Type de modèle}
 	Cette fonctionnalité nous permet de sélectionner le type de modèles réduits d'avions qui seront utilisés ou affectés à un modèle particulier.
 	Dans le menu Réglages Système, nous avons sélectionné « SELE TYPE » et appuyé sur « MENU ». Ensuite, en utilisant le haut ou bas nous avons choisi le type de modèle qui sera utilisé soit HELI, ACRO ou bien GLID. Après avoir sélectionné l'option Acro, nous avons appuyé sur « MENU  » pour enregistrer, puis sur « EXIT » pour retourner au menu précédent.
 	
@@ -374,13 +374,13 @@ Le diagramme de définition de bloc permet d'exprimer la structure d'un système
 		\end{center}
 		\caption{type de modèle}
 	\end{figure}
-\subsubsection{ SELECT OSCILLANT TYPE}
+\subsubsection{ Type de modulation}
 Cette fonctionnalité nous permet de sélectionner le type de modulation qui sera utilisé à un modèle particulier (PPM ou PCM).
 
 
-PPM: modulation de position d'impulsion. 
+\textbf{PPM:} modulation de position d'impulsion. 
 
-PCM: modulation d'impulsions codées.
+\textbf{PCM:} modulation d'impulsions codées.
 
 
 Dans le menu configuration système, nous avons cliqué sur « Modeuat », appuyé sur « MENU », sélectionné l'option désirée PPM et confirmé cette option sélectionnée en appuyant sur « MENU ». Ensuite, nous avons appuyé sur le bouton « EXIT » pour revenir au menu précédent.
@@ -403,6 +403,7 @@ Dans le menu configuration système, nous avons cliqué sur « Modeuat », appuy
 	\end{figure}
 
 	Après avoir visualisé les différents modes de pilotage, nous allons les traiter un par un à travers le tableau suivant:
+	
 	\begin{table}[H]
 		\begin{center}
 			
@@ -448,7 +449,7 @@ Dans le menu configuration système, nous avons cliqué sur « Modeuat », appuy
 		\caption{Inversion des servos}
 	\end{figure}
 	\section{Erreur eeprom}
-	Lors de la configuration et du paramétrage de notre radiocommande, nous avons observé qu'elle s'éteind tout d'un coup et un message "erreur eeprom" s'affiche avec une alerte sonore. Nous avons effectué le redémarrage de la radiocommande mais en vain. Nous avons cherché comment résoudre ce problème et nous avons constaté qu'il faut la flasher. Pour effectuer cette opération, nous avons besoin d'un logiciel, d'un frimware à installer et d'un programmateur.
+	Lors de la configuration et du paramétrage de notre radiocommande, nous avons observé qu'elle s'éteind tout d'un coup et un message "erreur eeprom" s'affiche avec une alerte sonore. Nous avons effectué le redémarrage de la radiocommande mais en vain. Nous avons cherché comment résoudre ce problème et nous avons constaté qu'il faut la rènitialiser. Pour effectuer cette opération, nous avons besoin d'un logiciel, d'un firmware à installer et d'un programmateur.
 	\subsection{Microcontôleur Green-128}
 	L'emmetteur de notre radiocommande turnigy 9x contient un microcontrôleur "Green-128" qui est compatible avec le microcontrôleur  "Atmega 128". Nous montrons dans la figure ci-dessous les pins de "Green-128". 
 	\begin{figure}[H]
