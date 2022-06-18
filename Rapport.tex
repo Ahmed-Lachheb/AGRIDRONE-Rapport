@@ -21,9 +21,9 @@
 \raggedbottom
 
 \usepackage[french]{babel}
-\usepackage{lastpage}
+%\usepackage{lastpage}
 \usepackage{fancyhdr}
-
+\pagestyle{fancy}
 \begin{document}
 
 
@@ -33,12 +33,14 @@
 \listoffigures
 \listoftables
 \mainmatter
+\markboth{INTRODUCTION}{}
 \input{Chaps/Intro.tex}
 \input{Chaps/Chap1.tex}
 \input{Chaps/Chap2.tex}
 \input{Chaps/Chap3.tex}
 \input{Chaps/Conc-géné.tex}
 \bibliographystyle{unsrt}
+\raggedright
 \bibliography{Bib/ref.bib}
 \end{document}
 
