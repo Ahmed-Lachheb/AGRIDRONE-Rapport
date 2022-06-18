@@ -1,6 +1,7 @@
-	
+
 \chapter{Etat de l'art }
-\newpage	
+
+\clearpage
 \section*{Introduction}
 Ce chapitre portera en premier lieu sur le drone avec ses différents types et mouvements ainsi que sa stabilisation. En second lieu, nous détaillerons la partie qui concerne l'intelligence artificielle et nous passerons au concept de la détection des fruits. 
  
@@ -45,7 +46,7 @@ Il existe plusieurs types de drones, nous avons mis l'accent sur deux types: ail
     Vu que notre situation nécessite une vitesse adapté à notre système de détection des oranges, nous avons choisi le quadrirotor qui est facile à contrôler, supporte une charge importante et pratique dans les petites surfaces.      
 	\begin{table}[H]
 		\begin{center}
-			\caption{Comparaison entre un drone aile fixe  et un drone multirotors }
+			\vspace{0.5cm}\caption{Comparaison entre un drone aile fixe  et un drone multirotors }
 			\begin{tabular}{|c|c|c|}
 				\hline
 				\centering
@@ -73,7 +74,7 @@ C'est un aéronef à voilure tournante à quatre rotors qui sont généralement 
 	\begin{figure}[H] 
 	\begin{center} 
 		\centering
-\fbox{\includegraphics[width=0.6\linewidth]{Images/Sens de rotation des moteurs}}	
+\fbox{\includegraphics[width=0.42\linewidth]{Images/Sens de rotation des moteurs}}	
 	\end{center}
 	\caption{Sens de rotation des moteurs }
 	\end{figure}
@@ -94,11 +95,11 @@ C'est un aéronef à voilure tournante à quatre rotors qui sont généralement 
 	
 	\begin{itemize}
 		
-		\item Le militaire et la protection civile
-		\item La sécurité et la surveillance
-		\item L'agriculture
-		\item Le journalisme
-		\item Le FPV racing
+		\item [$\bullet$]Le militaire et la protection civile
+		\item [$\bullet$]La sécurité et la surveillance
+		\item [$\bullet$]L'agriculture
+		\item [$\bullet$]Le journalisme
+		\item [$\bullet$]Le FPV racing
 		
 	\end{itemize}
 	\newpage
@@ -107,17 +108,17 @@ C'est un aéronef à voilure tournante à quatre rotors qui sont généralement 
 	
 	Nous présentons ci-dessous les mouvements effectués par le quadrirotor:		
 	\begin{itemize}
-		\item \textbf{Mouvement vertical}
-		\item \textbf{Mouvement de roulis} 
-		\item \textbf{Mouvement de tangage}
-		\item \textbf {Mouvement de lacet}
+		\item[$\bullet$] \textbf{Mouvement vertical}
+		\item[$\bullet$] \textbf{Mouvement de roulis} 
+		\item[$\bullet$] \textbf{Mouvement de tangage}
+		\item[$\bullet$] \textbf {Mouvement de lacet}
 	\end{itemize}
 	\begin{figure} [H]
 	\begin{center}
 		\centering
 	\fbox{	\includegraphics[width=0.7\linewidth]{Images/Les mouvements du drones}}
 	\end{center}
-	\caption{Les mouvements du drones }
+	\caption{Les mouvements du drones}
 	\end{figure}
 
 	
@@ -174,7 +175,7 @@ Nous définissons l'action PID en détaillant chacune de ses parties.
 \subsubsection {Action PID} 
 Le régulateur PID combine les trois actions vues précédemment et permet ainsi d'avoir de bonnes performances aussi bien en vitesse, en stabilité et en précision. L'expression d’un régulateur PID \cite{WikiMemoiresa}est donné comme suit :
 
-$ c(t)=K_p\times \epsilon(t) + K_i\int\epsilon(t)dt+K_d\frac{d\epsilon(t)}{dt}$
+ $ c(t)=K_p\times \epsilon(t) + K_i\int\epsilon(t)dt+K_d\frac{d\epsilon(t)}{dt}$
 
 
 Ainsi ce régulateur permet d'atteindre les objectifs fixés en termes de vitesse de stabilité et de
@@ -213,10 +214,10 @@ L'emploi de l'intelligence artificielle sur les quadrirotors est une innovation 
 
 Nous pouvons distinguer quatre principaux types d'applications:   
 \begin{itemize}
-	\item Évitement d'obstacles 
-	\item Suivi de cible
-	\item Atterrissage de drones 
-	\item Détection d'objets 
+	\item[$\bullet$]Évitement d'obstacles 
+	\item[$\bullet$] Suivi de cible
+	\item[$\bullet$] Atterrissage de drones 
+	\item[$\bullet$] Détection d'objets 
 \end{itemize}
 \begin{figure}[H]
 	\centering
@@ -226,7 +227,7 @@ Nous pouvons distinguer quatre principaux types d'applications:
 		
 	\end{minipage}
 	\begin{minipage}{0.49\textwidth}
-		\fbox{\includegraphics[width=0.8\linewidth]{Images/Quadrirotor mener par un autre}}
+		\fbox{\includegraphics[width=0.9\linewidth]{Images/Quadrirotor mener par un autre}}
 		\caption{Suivi de cible}
 	\end{minipage}
 \end{figure}

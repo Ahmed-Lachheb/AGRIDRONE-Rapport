@@ -3,7 +3,7 @@
 	
 
 \chapter{Réalisation du projet}
-\newpage
+\clearpage
 	\section*{Introduction}
 	
 		Dans ce chapitre nous présenterons les différentes étapes de réalisation de notre projet en exposant le matériel utilisé et son diagramme de définition de bloc. Par la suite, nous expliquerons les logiciels avec lesquels nous avons travaillé. Finalement, nous détaillerons la configuration et la calibration de l'APM2.8 et la radiocommande, ainsi que les étapes que nous avons effectué pour résoudre le problème rencontré dans notre travail. 
@@ -44,7 +44,7 @@
 	\end{figure}
 
 	\subsection{Batterie}
-	L'alimentation électrique de notre système est une procédure très importante pour le fonctionnement de notre quadrirotor. Pour cela, nous avons choisi d'utiliser une batterie LiPo (Lithium Polymère) puisqu'elle fournit suffisamment de puissance pour une faible masse. Elle est fabriquée avec une technologie offrant un très bon rapport poids/ puissance\cite{encyclopedie}. Notre batterie est composée de 3 cellules, chacune possède une tension de 3.7V, c'est pour cette raison qu'elle délivre en total une tension de 11.1V. Concernant son ampérage, elle fournit 3000 mA par heure.
+	L'alimentation électrique de notre système est une procédure très importante pour le fonctionnement de notre quadrirotor. Pour cela, nous avons choisi d'utiliser une batterie LiPo (Lithium Polymère) puisqu'elle fournit suffisamment de puissance pour une faible masse. Elle est fabriquée avec une technologie offrant un très bon rapport poids/ puissance \cite{encyclopedie}. Notre batterie est composée de 3 cellules, chacune possède une tension de 3.7V, c'est pour cette raison qu'elle délivre en total une tension de 11.1V. Concernant son ampérage, elle fournit 3000 mA par heure.
 	\par
 	\begin{figure} [H]
 		\begin{center}
@@ -83,7 +83,7 @@
 	\subsubsection{Émetteur} 
 	La Turnigy 9x est une radiocommande de 9 voies, elle est équipée de 6 interrupteurs de deux positions, un interrupteur de trois position et de trois potentiomètres rotatifs.
 	De plus, grâce à la technologie 2,4 Ghz, nous disposons d'une réaction ultra-rapide et d'un contrôle sans interférence. Pour la
-	conception ergonomique, celle-ci facilite l'utilisation de toutes les commandes dont les interrupteurs et les ports sont tous positionnés pour plus de confort\cite{Hobbyking}. En plus, les bâtons de longueur réglable peuvent être adaptés à nos besoins et l' écran LCD monochrome facilite la programmation ainsi que la modification des paramètres. 
+	conception ergonomique, celle-ci facilite l'utilisation de toutes les commandes dont les interrupteurs et les ports sont tous positionnés pour plus de confort \cite{Hobbyking}. En plus, les bâtons de longueur réglable peuvent être adaptés à nos besoins et l' écran LCD monochrome facilite la programmation ainsi que la modification des paramètres. 
 	
 	\begin{figure} [H]
 		\begin{center}
@@ -102,7 +102,7 @@
 		\caption{Récepteur IA8 AFHDS 2A}
 	\end{figure}
 	\subsection {Diodes  et résistances}
-	Afin d'éclairer notre quadrirotor, nous avons utilisé 8 diodes ( 4 diodes blanches et 4  rouges) pour mieux connaître son mouvement. Nous avons utilisé 5V de l'Apm 2.8. Puisqu'une diode a besoin de 3V et 5mA, nous avons choisi une résistance de \SI{330}{\ohm} à chaque diode pour encaisser les 2V supplémentaires et tout cela sous 5mA.
+	Afin d'éclairer notre quadrirotor, nous avons utilisé 8 diodes ( 4 diodes blanches et 4  rouges) pour mieux connaître son mouvement. Nous avons utilisé 5V de l'APM 2.8. Puisqu'une diode a besoin de 3V et 5mA, nous avons choisi une résistance de \SI{330}{\ohm} à chaque diode pour encaisser les 2V supplémentaires et tout cela sous 5mA.
 	\begin{figure}[H]
 		\centering
 		\begin{minipage}{0.49\textwidth}
@@ -120,7 +120,7 @@
 		\end{minipage}
 	\end{figure}
 
-	\section[D.définition de bloc]{Diagramme de bloc de définition  }
+	\section{Diagramme de bloc de définition  }
 	
 Le diagramme de définition de bloc permet d'exprimer la structure d'un système, d'un sous-système ou d'un composant. Ces blocs peuvent représenter des entités physiques ou logiques qui sont décomposables et peuvent posséder des propriétés ainsi qu'un comportement \cite{siloged}.
 
@@ -259,7 +259,7 @@ Le diagramme de définition de bloc permet d'exprimer la structure d'un système
 	\begin{figure}[H]
 		\begin{center}
 			\centering
-			\fbox{\includegraphics[width=0.6\linewidth]{Images/Choix du type de quadrirotor}}
+			\fbox{\includegraphics[width=0.53\linewidth]{Images/Choix du type de quadrirotor}}
 		\end{center}
 		\caption{Choix du type de châssis}
 	\end{figure}
@@ -270,7 +270,7 @@ Le diagramme de définition de bloc permet d'exprimer la structure d'un système
 	\begin{figure}[H]
 		\begin{center}
 			\centering
-			\fbox{\includegraphics[width=0.6\linewidth]{Images/calibration du magnétométre}}
+			\fbox{\includegraphics[width=0.53\linewidth]{Images/calibration du magnétométre}}
 		\end{center}
 		\caption{calibration du magnétométre}
 	\end{figure}
@@ -281,7 +281,8 @@ Le diagramme de définition de bloc permet d'exprimer la structure d'un système
 	
 	\begin{table}[H]
 		\begin{center}
-			\caption{Calibration des accéléromètres  }
+		
+			\vspace{1cm}\caption{Calibration des accéléromètres  }
 			
 			\hspace*{-1.1 cm}	\begin{tabular}{|c|c|}
 				\hline

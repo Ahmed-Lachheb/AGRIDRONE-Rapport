@@ -18,22 +18,21 @@
 \setlength{\belowcaptionskip}{-15pt}
 
 \usepackage{natbib}
+\raggedbottom
 
 \usepackage[french]{babel}
 \usepackage{lastpage}
 \usepackage{fancyhdr}
-\lhead{ISET BEJA}
 
-\renewcommand{\headrulewidth}{1mm}
-\renewcommand{\footrulewidth}{1mm}
 \begin{document}
 
-\pagestyle{fancy}
-\input{Chaps/Remer.tex}
 
+\frontmatter
+\input{Chaps/Remer.tex}
 \tableofcontents
 \listoffigures
 \listoftables
+\mainmatter
 \input{Chaps/Intro.tex}
 \input{Chaps/Chap1.tex}
 \input{Chaps/Chap2.tex}
