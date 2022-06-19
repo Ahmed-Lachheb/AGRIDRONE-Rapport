@@ -1,8 +1,6 @@
 \documentclass[a4paper,12pt]{book}
 \usepackage{graphicx}
-
 \usepackage{natbib}
-
 \graphicspath{ {figures/} }
 \usepackage{array}
 \usepackage{lipsum}
@@ -10,9 +8,14 @@
 \usepackage{siunitx}
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
-
+\usepackage[left=2.5cm,right=2.5cm,top=3cm,bottom=3cm]{geometry}
+\tolerance=1
+\emergencystretch=\maxdimen
+\hyphenpenalty=10000
+\hbadness=10000
 \usepackage[belowskip=-10pt,aboveskip=10 pt]{caption}
 \usepackage{setspace}
+\def\bibfont{\footnotesize}
 \doublespacing
 \setlength{\intextsep}{20pt plus 2pt minus 2pt}
 \setlength{\belowcaptionskip}{-15pt}
@@ -24,25 +27,29 @@
 %\usepackage{lastpage}
 \usepackage{fancyhdr}
 \pagestyle{fancy}
+\renewcommand{\headrulewidth}{2pt}
+\renewcommand{\footrulewidth}{1pt}
+\fancyhead[LO,LE]{\fontsize{14}{15}\selectfont\nouppercase\leftmark} 
+\fancyhead[RO,RE]{\fontsize{14}{15}\selectfont\nouppercase\rightmark}
 \begin{document}
-
-
-\frontmatter
-\input{Chaps/Remer.tex}
-\tableofcontents
-\listoffigures
-\listoftables
-\mainmatter
-\markboth{INTRODUCTION}{}
-\input{Chaps/Intro.tex}
-\input{Chaps/Chap1.tex}
-\input{Chaps/Chap2.tex}
-\input{Chaps/Chap3.tex}
-\input{Chaps/Conc-géné.tex}
-\bibliographystyle{unsrt}
-\raggedright
-\bibliography{Bib/ref.bib}
+	
+	\frontmatter
+	\input{Chaps/Remer.tex}
+	\tableofcontents
+	\listoffigures
+	\listoftables
+	\mainmatter
+	\markboth{INTRODUCTION}{}
+	\input{Chaps/Intro.tex}
+	\input{Chaps/Chap1.tex}
+	\input{Chaps/Chap2.tex}
+	\input{Chaps/Chap3.tex}
+	\input{Chaps/Conc-géné.tex}
+	\bibliographystyle{unsrt}
+	\raggedright
+	\bibliography{Bib/ref.bib}
 \end{document}
+
 
 	
 	  
