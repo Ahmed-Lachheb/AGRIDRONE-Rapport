@@ -1,6 +1,12 @@
 
 
-\chapter{Réalisation du projet}
+\chapter{ Réalisation du projet }
+
+
+
+
+
+
 \clearpage
 \section*{Introduction}
 
@@ -32,7 +38,7 @@ Notre drone nécessite l'utilisation de moteurs ayant une très grande vitesse e
 	\caption{Moteur Brushless}
 \end{figure}
 \subsection{Contrôleur de vitesse électronique (ESC)}
-Concernant l'étage de puissance, nous avons opté pour un contrôleur de vitesse ESC (Electronic Speed Controller) pour contrôller l'énergie délivrée aux moteurs brushless  grâce à la tension de sortie modulable d’une carte programmable. Ces appareils reçoivent des signaux PWM (Pulse Modulation Width)\cite{altidrone}, cette commande est alors traduite en une alimentation triphasée avec une fréquence particulière qui va faire tourner les moteurs. Vu que le contrôleur de vitesse doit être supérieur au courant maximum du moteur qui est de 10A, nous avons choisi un courant de 30A. 
+Concernant l'étage de puissance, nous avons opté pour un contrôleur de vitesse ESC (Electronic Speed Controller) pour contrôller l'énergie délivrée aux moteurs brushless  grâce à la tension de sortie modulable d’une carte programmable. Ces appareils reçoivent des signaux PWM (Pulse Modulation Width) \cite{altidrone}, cette commande est alors traduite en une alimentation triphasée avec une fréquence particulière qui va faire tourner les moteurs. Vu que le contrôleur de vitesse doit être supérieur au courant maximum du moteur qui est de 10A, nous avons choisi un courant de 30A. 
 \begin{figure} [H]
 	\begin{center}
 		\centering
@@ -75,7 +81,7 @@ Dans notre cas, l'APM 2.8 est connecté avec le récepteur de la radiocommande d
 	\caption{APM 2.8}
 \end{figure}
 
-\subsection {Radiocomamande}
+\subsection {Radiocommande}
 Une radiocommande est un outil permettant de contrôler à distance notre drone à travers des signaux radio. Nous avons choisi cet appareil grâce à sa portée et sa latence qui sont importantes par rapport au wifi et au bluetooth. Son émetteur est de type Turnigy 9x et son récepteur de type IA8 AFHDS2A.
 
 \subsubsection{Émetteur} 
@@ -86,7 +92,8 @@ conception ergonomique, celle-ci facilite l'utilisation de toutes les commandes 
 \begin{figure} [H]
 	\begin{center}
 		\centering
-		\fbox{\includegraphics[width=0.8\textwidth]{Images/Emetteur radiocommande}}
+		\vskip 1cm
+		\fbox{\includegraphics[width=0.9\textwidth]{Images/Emetteur radiocommande}}
 	\end{center}
 	\caption{Turnigy 9x}
 \end{figure}
@@ -104,7 +111,7 @@ Afin d'éclairer notre quadrirotor, nous avons utilisé 8 diodes ( 4 diodes blan
 \begin{figure}[H]
 	\centering
 	\begin{minipage}{0.49\textwidth}
-		\hspace*{-0.7cm}
+		\hspace*{-0.6cm}
 		\fbox{\includegraphics[width=0.8\textwidth]{Images/Diodes (blanche et rouge)}}
 		\centering
 		\caption{Diodes}
@@ -118,7 +125,7 @@ Afin d'éclairer notre quadrirotor, nous avons utilisé 8 diodes ( 4 diodes blan
 	\end{minipage}
 \end{figure}
 
-\section{Diagramme de bloc de définition  }
+\section{Diagramme de définition  de bloc  }
 
 Le diagramme de définition de bloc permet d'exprimer la structure d'un système, d'un sous-système ou d'un composant. Ces blocs peuvent représenter des entités physiques ou logiques qui sont décomposables et peuvent posséder des propriétés ainsi qu'un comportement \cite{siloged}.
 
@@ -126,7 +133,7 @@ Le diagramme de définition de bloc permet d'exprimer la structure d'un système
 \begin{figure}[H] 
 	\begin{center} 
 		\centering
-		\hspace*{-0.4cm}	\fbox{\includegraphics[width=1.15\linewidth]{Images/Diagramme de définition de bloc}}
+		\hspace*{-0.65cm}	\fbox{\includegraphics[width=1.15\linewidth]{Images/Diagramme de définition de bloc}}
 	\end{center}
 	
 	\caption{Diagramme de définition de bloc}
@@ -162,7 +169,7 @@ Le diagramme de définition de bloc permet d'exprimer la structure d'un système
 	\begin{figure}[h]
 		\begin{center}
 			\centering
-			\fbox{\includegraphics[width=0.6\linewidth]{Images/Jira}}
+			\fbox{\includegraphics[width=0.7\linewidth]{Images/Jira}}
 		\end{center}
 		\caption{Plateforme sur Jira software}
 	\end{figure}
@@ -200,6 +207,7 @@ Le diagramme de définition de bloc permet d'exprimer la structure d'un système
 	\begin{figure}[H]
 		\begin{center}
 			\centering
+			\vskip 1cm
 			\fbox{\includegraphics[width=0.7\linewidth]{Images/Companion 9x}}
 		\end{center}
 		\caption{Interface de Companion 9x}
@@ -210,10 +218,12 @@ Le diagramme de définition de bloc permet d'exprimer la structure d'un système
 	\begin{figure}[H]
 		\begin{center}
 			\centering
-			\fbox{\includegraphics[width=0.6\linewidth]{Images/Platforme de JabRef}}
+			\vskip 1cm
+			\fbox{\includegraphics[width=0.7\linewidth]{Images/Platforme de JabRef}}
 		\end{center}
-		\caption{Interface du Jabref}
+		\caption{Interface de Jabref}
 	\end{figure}
+	\vskip 1cm
 	\subsection{Mission Planner	}
 	Ce logiciel représente une station de contrôle au sol pour les hélicoptères, avions ou rovers. Il nous a permis de paramétrer notre contrôleur de vol et de configurer ses différents paramètres ainsi que d'assurer ses performances optimales.
 	\begin{figure} [H]
@@ -224,7 +234,7 @@ Le diagramme de définition de bloc permet d'exprimer la structure d'un système
 			\hspace*{1.5cm}	\caption{Interface de Mission Planner}
 		\end{center}
 	\end{figure}
-	
+	\vskip 1cm
 	\section{Montage des composants}
 	Pour réaliser notre drone, on a poursuivi le schéma électrique présenté ci-dessous :
 	
@@ -251,13 +261,14 @@ Le diagramme de définition de bloc permet d'exprimer la structure d'un système
 		\end{center}
 		\caption{Chargement de firmware}
 	\end{figure}
+	\vskip 1cm
 	
 	\subsubsection{Type de châssis}
 	Après avoir installé le firmware, nous avons connecté  la carte "APM 2.8" en haut à droite de Mission Planner. Pour s'assurer que notre carte est bien connectée, le logo « CONNECT » doit passer de la couleur rouge à la couleur verte. Ensuite, nous avons cliqué sur « INITIAL SETUP », « Mandatory Hardware » et « Frame Type » afin de configurer le type de notre quadrirotor. 
 	\begin{figure}[H]
 		\begin{center}
 			\centering
-			\fbox{\includegraphics[width=0.53\linewidth]{Images/Choix du type de quadrirotor}}
+			\fbox{\includegraphics[width=0.62\linewidth]{Images/Choix du type de quadrirotor}}
 		\end{center}
 		\caption{Choix du type de châssis}
 	\end{figure}
@@ -268,13 +279,14 @@ Le diagramme de définition de bloc permet d'exprimer la structure d'un système
 	\begin{figure}[H]
 		\begin{center}
 			\centering
-			\fbox{\includegraphics[width=0.53\linewidth]{Images/calibration du magnétométre}}
+			\vskip 1cm
+			\fbox{\includegraphics[width=0.62\linewidth]{Images/calibration du magnétométre}}
 		\end{center}
-		\caption{Calibration du magnétométre}
+		\caption{Calibration du magnétomètre}
 	\end{figure}
-	
+	\vskip 1cm
 	\subsubsection{Calibration des accéléromètres}
-	Pour un résultat optimal,  nous devons premiérement  accéder au menu « INITIAL SETUP », deuxièment « Mandatory Hardware » et finalement, « Accel Calibration ». L'"APM2.8" doit être positionnée successivement sur chacune de ses six faces.
+	Pour un résultat optimal,  nous devons premièrement  accéder au menu « INITIAL SETUP », deuxièment « Mandatory Hardware » et finalement, « Accel Calibration ». L'"APM2.8" doit être positionnée successivement sur chacune de ses six faces.
 	La séquence se présente de la façon suivante :
 	
 	\begin{table}[H]
@@ -282,7 +294,7 @@ Le diagramme de définition de bloc permet d'exprimer la structure d'un système
 			
 			\vspace{1cm}\caption{Calibration des accéléromètres  }
 			
-			\hspace*{-1.1 cm}	\begin{tabular}{|c|c|}
+			\hspace*{-0.5 cm}	\begin{tabular}{|c|c|}
 				\hline
 				\centering
 				\includegraphics[width=7.5cm]{Images/A plat sur le ventre} & \includegraphics[width=7.5cm]{Images/Vertical sur son flanc gauche}\\
@@ -318,15 +330,15 @@ Le diagramme de définition de bloc permet d'exprimer la structure d'un système
 	
 	
 	
-	\subsubsection{Calibration du radiocommande}
+	\subsubsection{Calibration de la radiocommande}
 	Après s'être assuré que le récepteur est bien connecté au contrôleur de vol et qu'il est apparié à la radiocommande sous tension et correctement programmée, nous avons  accédé aux « Radio Calibration », cliqué sur le bouton « Calibrer Radio ». 
 	Une fois validé, nous avons actionné toutes les commandes de la radio de leur minimum à leur maximum. 
 	\begin{figure} [H]
 		\begin{center}
 			\centering
-			\fbox{\includegraphics[width=0.8\linewidth]{Images/calibaration du radio}}
+			\fbox{\includegraphics[width=0.65\linewidth]{Images/calibaration du radio}}
 		\end{center}
-		\caption{Calibration du radiocommande}
+		\caption{Calibration de la radiocommande}
 	\end{figure}
 	
 	\subsubsection{Configurations des modes de vol} 
@@ -335,9 +347,9 @@ Le diagramme de définition de bloc permet d'exprimer la structure d'un système
 	\begin{figure} [H]
 		\begin{center}
 			\centering
-			\fbox{\includegraphics[width=0.8\linewidth]{Images/Modes de vol}}
+			\fbox{\includegraphics[width=0.9\linewidth]{Images/Modes de vol}}
 		\end{center}
-		\caption{Modes de vol}
+		\caption{Configurations des modes de vol}
 	\end{figure}
 	
 	\subsubsection{Régulateurs PID de contrôleur de vol APM2.8}
@@ -347,7 +359,7 @@ Le diagramme de définition de bloc permet d'exprimer la structure d'un système
 	\begin{figure} [H]
 		\begin{center}
 			\centering
-			\fbox{\includegraphics[width=0.8\linewidth]{Images/PID APM 2.8}}
+			\fbox{\includegraphics[width=0.9\linewidth]{Images/PID APM 2.8}}
 		\end{center}
 		\caption{Les valeurs des PIDs de l'APM 2.8}
 	\end{figure}
@@ -356,8 +368,8 @@ Le diagramme de définition de bloc permet d'exprimer la structure d'un système
 	Les contrôleurs de vitesse doivent être étalonnés pour connaître les valeurs minimales et maximales du commande des gaz. 
 	
 	Concernant La procédure d’étalonnage, nous avons en premier lieu coupé l'alimentation de l'appareil. Par la suite, nous avons allumé la radiocommande et positionné le manche des gaz à son maximum. Ensuite, nous avons mis l'appareil sous tension en attendant que le contrôleur de vol démarre. Ainsi, nous avons coupé l'alimentation de l'appareil et nous l'avons remis sous tension. Après avoir entendu la mélodie issue des moteurs confirmant l'apprentissage de la valeur maximale des gaz, nous avons baissé le manche des gaz au minimum en attendant la mélodie de confirmation et actionner doucement les gaz pour vérifier que tous les moteurs démarrent en même temps et tournent au même régime. Finalement, nous avons recoupé l'alimentation de l'appareil.
-	\subsection{Configuration et calibration de la radiocommande}
-	Concernant la configuration et la calibration de la radiocommande, nous avons passé par plusieurs étapes que nous expliquons ci-dessous. 
+	\subsection{Configurations et calibrations de la radiocommande}
+	Concernant la configurations et la calibrations de la radiocommande, nous avons passé par plusieurs étapes que nous expliquons ci-dessous. 
 	\subsubsection{Mode de la radiocommande}
 	Au début, notre radiocommande est activée en mode "1" où le bâton droite est relâché dans l'axe verticale et le bâton gauche est centré dans les deux axes. Afin de faciliter le pilotage de notre drone, nous avons activé notre radiocommande en mode "2" qui est l'inverse du mode précédent. Pour effectuer cette opération, nous avons tout d'abord retiré les six vis à l'arriére du boîtier. Ensuite, nous avons déplacé le ressort vers le bâton droite. Finalement, nous avons fermé la radiocommande en remettant les vis.
 	
@@ -371,7 +383,7 @@ Le diagramme de définition de bloc permet d'exprimer la structure d'un système
 			\centering
 			\fbox{\includegraphics[width=0.6\linewidth]{Images/Type de modèle}}
 		\end{center}
-		\caption{Type de modèle}
+		\caption{Types de modèle}
 	\end{figure}
 	\subsubsection{ Type de modulation}
 	Cette fonctionnalité nous permet de sélectionner le type de modulation qui sera utilisé à un modèle particulier (PPM ou PCM).
@@ -389,7 +401,7 @@ Le diagramme de définition de bloc permet d'exprimer la structure d'un système
 			\centering
 			\fbox{\includegraphics[width=0.6\linewidth]{Images/Sélection de mode pour Acro}}
 		\end{center}
-		\caption{Sélection de mode pour Acro}
+		\caption{Types de modulation}
 	\end{figure}
 	\subsubsection{Mode de la radiocommande }
 	Dans le menu Réglages Système, nous avons sélectionné « STICK SET », après avoir presser le « MENU ». Ensuite, nous avons choisi le mode le plus appropriée à notre style d'utilisation "modèle 2". Dés que cette étape est réalisée, nous avons effectué la sauvegarde de l'option sélectionnée en appuyant sur « MENU ». Après, nous avons appuyé sur le bouton «EXIT» pour revenir au menu précédent.
@@ -406,7 +418,7 @@ Le diagramme de définition de bloc permet d'exprimer la structure d'un système
 	\begin{table}[H]
 		\begin{center}
 			
-			\vspace{1cm}	\caption{Différentes Modes }
+			\vspace{1cm}	\caption{Différents Modes }
 			\begin{tabular}{|c|c|}
 				\hline
 				
@@ -443,7 +455,7 @@ Le diagramme de définition de bloc permet d'exprimer la structure d'un système
 	\begin{figure}[H]
 		\begin{center}
 			\centering
-			\fbox{\includegraphics[width=0.6\linewidth]{Images/Inversion des servos}}
+			\fbox{\includegraphics[width=0.65\linewidth]{Images/Inversion des servos}}
 		\end{center}
 		\caption{Inversion des servos}
 	\end{figure}
@@ -489,7 +501,7 @@ Le diagramme de définition de bloc permet d'exprimer la structure d'un système
 			\centering
 			\fbox{\includegraphics[width=0.8\linewidth]{Images/Soudure des files}}
 		\end{center}
-		\caption{Soudure des files\label{fig:S.F}}
+		\caption{Soudure des fils\label{fig:S.F}}
 	\end{figure}
 	
 	
@@ -497,6 +509,7 @@ Le diagramme de définition de bloc permet d'exprimer la structure d'un système
 	
 	\begin{table}[H]
 		\begin{center}
+			\vskip 1cm
 			\caption{Communication entre le microcontrôleur "Green-128" et "Usbasp" }
 			\begin{tabular}{|c|c|c|}
 				\hline
@@ -521,7 +534,7 @@ Le diagramme de définition de bloc permet d'exprimer la structure d'un système
 	\subsection{Firmware ER9X}
 	Tout d'abord, nous avons téléchargé le firmware ER9X.hex et nous l'avons écrit dans la mémoire de la radiocommande à travers le logiciel "EEPE". Cette opération a été effectué avec succès, l'erreur eeprom n'existe plus et la radiocommande fonctionne avec ce firmware. Par la suite, lorsque nous avons essayé d'envoyer le signal de l'émetteur vers le récepteur, l'opération a échoué. Il faut donc installer le firmware original "AFHDS 2A".
 	\subsection{Firmware AFHDS 2A}
-	Après l'installation du Frimware AFHDS 2A, nous avons installé Companion9X et envoyé ce firmware vers la mémoire de la radiocommande. Nous avons réussi à envoyer les signaux au récepteur et notre radiocommande est reglée.
+	Après l'installation du Firmware AFHDS 2A, nous avons installé Companion9X et envoyé ce firmware vers la mémoire de la radiocommande. Nous avons réussi à envoyer les signaux au récepteur et notre radiocommande est reglée.
 	
 	
 	

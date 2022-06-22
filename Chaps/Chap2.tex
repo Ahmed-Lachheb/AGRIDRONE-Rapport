@@ -1,4 +1,4 @@
-\chapter{Etat de l'art }
+\chapter{ Etat de l'art }
 
 \clearpage
 \section*{Introduction}
@@ -8,11 +8,11 @@ Ce chapitre portera en premier lieu sur le drone avec ses différents types et m
 Les drones sont des aéronefs sans équipage dont le pilotage est automatique ou télécommandé. Leur masse varie de quelques grammes à plusieurs tonnes\cite{Wikipideaa}. Il sont moins chers et plus simples à mettre en œuvre qu'un avion. Ils sont aussi plus discrets et leur perte est moins grave que celle d'un appareil avec son pilote.
 
 Dans cette section, nous allons étudier les principaux types de drone ainsi que les multirotors que nous avons choisi. En plus, nous allons passer aux différents domaines d'application du quadrirotor, ses mouvements, sa stabilisation et les applications d'un quadrirotor basés sur la vision artificielle.   	
-\subsection{Les types des drones}
+\subsection{Les types de drones}
 Il existe plusieurs types de drones, nous avons mis l'accent sur deux types: aile fixe et multirotor.
 
 \subsubsection{Aile fixe }
-L'avion à voile fixe est capable de voler en utilisant des ailes qui génèrent une élévation causée par la vitesse avant du véhicule et la forme des ailes\cite{educalingo}.
+L'avion à voile fixe est capable de voler en utilisant des ailes qui génèrent une élévation causée par la vitesse avant du véhicule et la forme des ailes \cite{educalingo}.
 
 
 \begin{figure}[H] 
@@ -38,14 +38,14 @@ C'est le type de drone qui possède plusieurs rotors sur son corps. Cette caract
 
 \caption{Types des multirotors}
 \end{figure}
-\subsubsection{Comparaison entre un drone aile fixe  et un drone multirotors}
+\subsubsection{Comparaison entre un drone à aile fixe  et un drone multirotors}
 Après avoir étudié chaque type de drone, nous avons effectué une étude comparative entre eux selon plusieurs critères : vitesse, niveau de contrôle, capacité de charge, endurance et atterissage/décollage.
 
 Nous remarquons à travers ce tableau que les drones à voilure fixe sont plus rapides que les drones à voilure tournante. Ils sont difficiles à contrôller, supportent une faible charge et nécessitent des grandes surfaces pour l'atterissage et le décollage.
 Vu que notre situation nécessite une vitesse adapté à notre système de détection des oranges, nous avons choisi le quadrirotor qui est facile à contrôler, supporte une charge importante et pratique dans les petites surfaces.      
 \begin{table}[H]
 \begin{center}
-	\vspace{0.5cm}\caption{Comparaison entre un drone aile fixe  et un drone multirotors }
+	\vspace{0.5cm}\caption{Comparaison entre un drone à aile fixe  et un drone multirotors }
 	\begin{tabular}{|c|c|c|}
 		\hline
 		\centering
@@ -94,12 +94,14 @@ Le quadrirotor est de plus en plus répandu dans le secteur professionnel grâce
 
 \begin{itemize}
 
-\item [$\bullet$]Le militaire et la protection civile
+\item [$\bullet$]Le militaire 
+\item [$\bullet$]la protection civile
 \item [$\bullet$]La sécurité et la surveillance
 \item [$\bullet$]L'agriculture
 \item [$\bullet$]Le journalisme
 \item [$\bullet$]Le FPV racing
-
+\item [$\bullet$]Livrer des colis
+ \item [$\bullet$]Modéliser les sols et le bâtiments en 3D
 \end{itemize}
 
 \subsection{Mouvements du quadrirotor}
@@ -140,7 +142,7 @@ Pour incliner vers la gauche, nous diminuons les moteurs de gauche et augmentons
 	\caption{Mouvement de roulis}
 \end{center}
 \end{figure}
-\subsubsection{Mouvement de tanguage}
+\subsubsection{Mouvement de tangage}
 Pour avancer, nous diminuons la vitesse des moteurs avant et augmentons la vitesse des moteurs arrière et inversement pour reculer. C'est le tangage.
 
 
@@ -149,7 +151,7 @@ Pour avancer, nous diminuons la vitesse des moteurs avant et augmentons la vites
 	\centering
 	\fbox{\includegraphics[width=1\linewidth]{Images/Mouvement de tanguage}}
 \end{center}
-\caption{Mouvement de tanguage}
+\caption{Mouvement de tangage}
 \end{figure}
 
 \subsubsection{Mouvement de lacet}
@@ -218,25 +220,30 @@ Nous pouvons distinguer quatre principaux types d'applications:
 \item[$\bullet$] Atterrissage de drones 
 \item[$\bullet$] Détection d'objets 
 \end{itemize}
+\vspace{0.5cm}
 \begin{figure}[H]
 \centering
 \begin{minipage}{0.49\textwidth}
+	\hspace{0.6cm}
 	\fbox{\includegraphics[width=0.8\linewidth]{Images/Evitement d'obstacles}}
 	\caption{Évitement d'obstacles}
 	
 \end{minipage}
 \begin{minipage}{0.49\textwidth}
+	\hspace{0.5cm}
 	\fbox{\includegraphics[width=0.9\linewidth]{Images/Quadrirotor mener par un autre}}
 	\caption{Suivi de cible}
 \end{minipage}
 \end{figure}
 \begin{figure}[H]
 \begin{minipage}{0.49\textwidth}
+	\hspace{0.8cm}
 	\fbox{\includegraphics[width=0.8\linewidth]{Images/Atterissage de quadrirotor}}
 	\caption{Atterrissage }
 	
 \end{minipage}
 \begin{minipage}{0.49\textwidth}
+	\hspace{0.6cm}
 	\fbox{\includegraphics[width=0.8\linewidth]{Images/Détection d'objet}}
 	\caption{Détection d'objets }
 	

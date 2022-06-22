@@ -1,4 +1,4 @@
-\documentclass[a4paper,12pt]{book}
+\documentclass[a4paper,12pt,twoside]{book}
 \usepackage{graphicx}
 \usepackage{natbib}
 \graphicspath{ {figures/} }
@@ -29,12 +29,24 @@
 \pagestyle{fancy}
 \renewcommand{\headrulewidth}{2pt}
 \renewcommand{\footrulewidth}{1pt}
-\fancyhead[LO,LE]{\fontsize{14}{15}\selectfont\nouppercase\leftmark} 
-\fancyhead[RO,RE]{\fontsize{14}{15}\selectfont\nouppercase\rightmark}
+
+\fancyhf{}
+\renewcommand{\chaptermark}[1]{\markboth{\bsc{\chaptername~\thechapter{} :} #1}{}}
+\renewcommand{\sectionmark}[1]{\markright{\thesection{} \ #1}}
+\renewcommand{\headrulewidth}{0pt}
+\lhead[\textsl{\leftmark}]{\textsl{\rightmark}}
+\rhead[\textsl{\rightmark}]{\textsl{\leftmark}}
+\cfoot[\thepage]{\thepage}
+
+
+
+\renewcommand{\headrulewidth}{2pt}
+\renewcommand{\footrulewidth}{1pt}
 \begin{document}
 	
 	\frontmatter
 	\input{Chaps/Dédicace.tex}
+	\input{Chaps/Dédicace1.tex}
 	\input{Chaps/Remer.tex}
 	\tableofcontents
 	\listoffigures
