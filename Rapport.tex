@@ -37,8 +37,9 @@
 \lhead[\textsl{\leftmark}]{\textsl{\rightmark}}
 \rhead[\textsl{\rightmark}]{\textsl{\leftmark}}
 \cfoot[\thepage]{\thepage}
+\setlength{\headheight}{15pt}
 
-
+\DeclareDocumentCommand{\corr}{m}{{\color{red}#1}}
 
 \renewcommand{\headrulewidth}{2pt}
 \renewcommand{\footrulewidth}{1pt}
@@ -52,12 +53,12 @@
 	\listoffigures
 	\listoftables
 	\mainmatter
-	\markboth{INTRODUCTION}{}
+	%\markboth{INTRODUCTION}{}
 	\input{Chaps/Intro.tex}
-	\input{Chaps/Chap1.tex}
-	\input{Chaps/Chap2.tex}
-	\input{Chaps/Chap3.tex}
-	\input{Chaps/Conc-géné.tex}
+	%\input{Chaps/Chap1.tex}
+	%\input{Chaps/Chap2.tex}
+	%\input{Chaps/Chap3.tex}
+	%\input{Chaps/Conc-géné.tex}
 	\bibliographystyle{unsrt}
 	\raggedright
 	\bibliography{Bib/ref.bib}
