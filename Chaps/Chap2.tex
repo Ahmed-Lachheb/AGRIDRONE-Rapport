@@ -5,7 +5,7 @@
 Ce chapitre portera en premier lieu sur le drone avec ses différents types et mouvements ainsi que sa stabilisation. En second lieu, nous détaillerons la partie qui concerne l'intelligence artificielle et nous passerons au concept de la détection des fruits. 
 
 \section{Drone}	
-Les drones sont des aéronefs sans équipage dont le pilotage est automatique ou télécommandé. Leur masse varie de quelques grammes à plusieurs tonnes\cite{Wikipideaa}. Il sont moins chers et plus simples à mettre en œuvre qu'un avion. Ils sont aussi plus discrets et leur perte est moins grave que celle d'un appareil avec son pilote.
+Les drones sont des aéronefs sans équipage dont le pilotage est automatique ou télécommandé. Leur masse varie de quelques grammes à plusieurs tonnes  \cite{Wikipideaa}. Il sont moins chers et plus simples à mettre en œuvre qu'un avion. Ils sont aussi plus discrets et leur perte est moins grave que celle d'un appareil avec son pilote.
 
 Dans cette section, nous allons étudier les principaux types de drone ainsi que les multirotors que nous avons choisi. En plus, nous allons passer aux différents domaines d'application du quadrirotor, ses mouvements, sa stabilisation et les applications d'un quadrirotor basés sur la vision artificielle.   	
 \subsection{Les types de drones}
@@ -78,7 +78,7 @@ C'est un aéronef à voilure tournante à quatre rotors qui sont généralement 
 \caption{Sens de rotation des moteurs }
 \end{figure}
 \subsection{Histoire des quadrirotors}
-Le premier quadrirotor à décoller du sol est le gyroplane Breguet-Richet, développé par la société Breguet en 1907. Il ne décolle qu'à une hauteur de 60 cm et quatre hommes maintiennent la structure\cite{Wikipidea}. 
+Le premier quadrirotor à décoller du sol est le gyroplane Breguet-Richet, développé par la société Breguet en 1907. Il ne décolle qu'à une hauteur de 60 cm et quatre hommes maintiennent la structure \cite{Wikipidea}. 
 \begin{figure}[H] 
 \begin{center} 
 	\centering
@@ -110,9 +110,9 @@ Les mouvements de base du quadrirotor sont réalisés en variant la vitesse de c
 Nous présentons ci-dessous les mouvements effectués par le quadrirotor:		
 \begin{itemize}
 \item[$\bullet$] \textbf{Mouvement vertical}
-\item[$\bullet$] \textbf{Mouvement de roulis} 
-\item[$\bullet$] \textbf{Mouvement de tangage}
-\item[$\bullet$] \textbf {Mouvement de lacet}
+\item[$\bullet$] \textbf{Mouvement de roulis (Roll)} 
+\item[$\bullet$] \textbf{Mouvement de tangage (Pitch)}
+\item[$\bullet$] \textbf {Mouvement de lacet (Yaw)}
 \end{itemize}
 \begin{figure} [H]
 \begin{center}
@@ -133,7 +133,7 @@ Pour monter, nous augmentons la vitesse des moteurs simultanément, tous les mot
 \caption{Mouvement vertical}
 \end{figure}
 
-\subsubsection{Mouvement de roulis}
+\subsubsection{Mouvement de roulis (Roll)}
 Pour incliner vers la gauche, nous diminuons les moteurs de gauche et augmentons ceux de droite. Inversement pour incliner vers la droite. Cette action s'appelle le roulis.
 \begin{figure} [H]
 \begin{center}
@@ -142,7 +142,7 @@ Pour incliner vers la gauche, nous diminuons les moteurs de gauche et augmentons
 	\caption{Mouvement de roulis}
 \end{center}
 \end{figure}
-\subsubsection{Mouvement de tangage}
+\subsubsection{Mouvement de tangage (Pitch)}
 Pour avancer, nous diminuons la vitesse des moteurs avant et augmentons la vitesse des moteurs arrière et inversement pour reculer. C'est le tangage.
 
 
@@ -154,7 +154,7 @@ Pour avancer, nous diminuons la vitesse des moteurs avant et augmentons la vites
 \caption{Mouvement de tangage}
 \end{figure}
 
-\subsubsection{Mouvement de lacet}
+\subsubsection{Mouvement de lacet (Yaw)}
 Pour un mouvement de rotation, nous augmentons la vitesse d'une paire de moteurs sur le même axe et inversement. Ceci est un mouvement de lacet.
 \begin{figure} [H]
 \begin{center}
@@ -182,7 +182,7 @@ $ c(t)=K_p\times \epsilon(t) + K_i\int\epsilon(t)dt+K_d\frac{d\epsilon(t)}{dt}$
 Ainsi ce régulateur permet d'atteindre les objectifs fixés en termes de vitesse de stabilité et de
 précision et ce en trouvant la configuration optimale des valeurs des différents gains $K_p $, $ K_i$ et $ K_d$.
 \subsubsection {Action proportionnelle}
-L'effet de l’action proportionnelle consiste à amplifier l'erreur d’un gain constant afin que le
+L'effet de l’action proportionnelle consiste à réduire l'erreur d’un gain constant afin que le
 système réagisse plus rapidement aux changements de consigne. Cette action proportionnelle est
 représentée par l'équation suivante:
 
@@ -208,7 +208,7 @@ Cette action permet d'éliminer le dépassement de la réponse et d'améliorer l
 $ c(t)  = K_d\times\frac{d\epsilon(t)}{dt}$
 
 
-Plus la valeur de Kd est grande plus le dépassement est atténué mais si elle est trop grande le
+Plus la valeur de $K_d$ est grande plus le dépassement est atténué mais si elle est trop grande le
 système est ralenti jusqu'à risquer de devenir instable pour de très grandes valeurs.
 \subsection{Applications de quadrirotors basées sur la vision artificielle}
 L'emploi de l'intelligence artificielle sur les quadrirotors est une innovation qui a réalisé plusieurs succès dans les différents domaines d'applications. Cette procédure facilite notre mode de vie vu qu'elle nous permet de gagner du temps et d'effectuer des tâches complexes.

@@ -18,7 +18,7 @@ Lors de notre réalisation, nous avons utilisé plusieurs composants que nous pr
 Le châssis représente le corps principal de notre quadrirotor. Il comprend quatre bras de forme "X". Ses caractéristiques à prendre en compte sont le poids, qui est lié aux matériaux utilisés et sa résistance au choc. Plus le châssis est léger, plus nous conservons de la puissance.
 
 Pour éliminer les vibrations du moteur et pour obtenir les meilleures performances aérodynamique, nous avons choisis d’utiliser un châssis professionnel "le DJI F450". Il est fabriqué en PA66 et 30GF qui offre une meilleur résistance aux dommages sur les atterrissages durs \cite{smartcube}, son assemblage est simple et rapide. Les 4 bras sont vissés entre la plaque inférieure et la plaque supérieure. Notre châssis a une envergure de 450 mm et pèse 272 grammes.
-Cette structure permet d'accueillir toute l'électronique : ESCs, moteurs, contrôleur de vol. En plus, nous pouvons grâce au PCB intégré dans la plaque inférieure souder les pôles du contrôleur de vitesse (+/-) et la batterie. La propulsion recommandée repose sur le châssis qui est capable de supporter un poids total en vol situé entre 800 et 1600 grammes maximum a l'aide des moteurs 2212 \cite{studiosport}.
+Cette structure permet d'accueillir toute l'électronique : ESCs, moteurs, contrôleur de vol. En plus, nous pouvons grâce au PCB intégré dans la plaque inférieure souder les pôles du contrôleur de vitesse (+/-) et la batterie. La propulsion recommandée repose sur le châssis qui est capable de supporter un poids total en vol situé entre 800 et 1600 grammes maximum a l'aide des moteurs brushless 2212 \cite{studiosport}.
 
 \begin{figure} [H]
 	\begin{center}
@@ -38,7 +38,7 @@ Notre drone nécessite l'utilisation de moteurs ayant une très grande vitesse e
 	\caption{Moteur Brushless}
 \end{figure}
 \subsection{Contrôleur de vitesse électronique (ESC)}
-Concernant l'étage de puissance, nous avons opté pour un contrôleur de vitesse ESC (Electronic Speed Controller) pour contrôller l'énergie délivrée aux moteurs brushless  grâce à la tension de sortie modulable d’une carte programmable. Ces appareils reçoivent des signaux PWM (Pulse Modulation Width) \cite{altidrone}, cette commande est alors traduite en une alimentation triphasée avec une fréquence particulière qui va faire tourner les moteurs. Vu que le contrôleur de vitesse doit être supérieur au courant maximum du moteur qui est de 10A, nous avons choisi un courant de 30A. 
+Concernant l'étage de puissance, nous avons opté pour un contrôleur de vitesse ESC (Electronic Speed Controller) pour contrôller l'énergie délivrée aux moteurs brushless  grâce à la tension de sortie modulable d’une carte programmable. Ces appareils reçoivent des signaux PWM (Pulse Modulation Width) \cite{altidrone}, cette commande est alors traduite en une alimentation triphasée avec une fréquence particulière qui va faire tourner les moteurs. Vu que le courrent du contrôleur de vitesse doit être supérieur au courant maximum du moteur qui est de 10A, nous avons choisi un courant de 30A. 
 \begin{figure} [H]
 	\begin{center}
 		\centering
@@ -68,8 +68,8 @@ L'hélice est un dispositif rotatif formé d’un certains nombre de pales ayant
 \end{figure}
 \subsection {Contrôleur de vol }
 Le contrôleur de vol est l'élément central de l'électronique de notre drone.
-Nous avons sélectionné l'APM 2.8 comme étant un contrôleur de vol grâce à son système de pilotage automatique open source complet. Permettant aussi de contrôler plusieurs objets radiocommandes comme les avions, les voitures, les planeurs et les multirotors tel que hexarotor, trirotor et quadrirotor ...
-Ce contrôleur de vol constitue le cerveau de notre quadrirotor qui est capable d'effectuer des missions GPS programmées avec des points de cheminement. Il s'agit des puces ATMEGA2560 et ATMEGA32U-2 d'Atmel pour le traitement et les fonctions usb respectivement et qui comprend aussi un MPU6000(gyroscope à 3 axes et un accéléromètre 3 axes)  et un magnétomètre, ainsi qu'un baromètre haute performance \cite{abraelectronics}.
+Nous avons sélectionné l'APM 2.8 comme étant un contrôleur de vol grâce à son système de pilotage automatique open source complet. Permettant aussi de contrôler plusieurs objets radiocommandes comme les avions, les voitures, les planeurs et les multirotors tel que hexarotor, trirotor et quadrirotor, etc.
+Ce contrôleur de vol constitue le cerveau de notre quadrirotor qui est capable d'effectuer des missions GPS programmées avec des points de cheminement. Il s'agit des puces ATMEGA2560 et ATMEGA32U-2 d'Atmel pour le traitement et les fonctions usb respectivement et qui comprend aussi un MPU6000 (gyroscope à 3 axes et un accéléromètre 3 axes)  et un magnétomètre, ainsi qu'un baromètre haute performance \cite{abraelectronics}.
 
 Dans notre cas, l'APM 2.8 est connecté avec le récepteur de la radiocommande dans les broches d’entrée ainsi qu'avec les contrôleurs de vitesse ESC dans les broches de sortie. 
 
@@ -107,7 +107,7 @@ Ce récepteur IA8 AFHDS 2A dispose de 8 voies et fonctionne parfaitement avec la
 	\caption{Récepteur IA8 AFHDS 2A}
 \end{figure}
 \subsection {Diodes  et résistances}
-Afin d'éclairer notre quadrirotor, nous avons utilisé 8 diodes ( 4 diodes blanches et 4  rouges) pour mieux connaître son mouvement. Nous avons utilisé 5V de l'APM 2.8. Puisqu'une diode a besoin de 3V et 5mA, nous avons choisi une résistance de \SI{330}{\ohm} à chaque diode pour encaisser les 2V supplémentaires et tout cela sous 5mA.
+Afin d'éclairer notre quadrirotor, nous avons utilisé 8 diodes (4 diodes blanches et 4  rouges) pour mieux connaître son mouvement. Nous avons utilisé 5V de l'APM 2.8. Puisqu'une diode a besoin de 3V et 5mA, nous avons choisi une résistance de \SI{330}{\ohm} à chaque diode pour encaisser les 2V supplémentaires et tout cela sous 5mA.
 \begin{figure}[H]
 	\centering
 	\begin{minipage}{0.49\textwidth}
@@ -144,6 +144,16 @@ Le diagramme de définition de bloc permet d'exprimer la structure d'un système
 	Le quadrirotor est lié à une alimentation électrique qui  délivre une tension de 12V au contrôleur de vitesse. Ce dernier transmet 5V au contrôleur de vol qui l'envoi à son tour au récepteur de la radiocommande afin de l'allumer. Ce composant est en attente du signal radio qui va être transmis par l'émmeteur. Dès que ce signal est reçu, le récepteur se charge de le décoder puis de l'envoyer au contôleur de vol en tant que signal PWM. Par la suite, il sera transmis au contrôleur de vitesse pour effectuer le démarrage des moteurs qui sont chargés de la rotation des hélices. Le châssis est aussi un élément du quadrirotor qui supporte tous ses composants sauf l'émetteur de la radiocommande.
 	
 	Concernant le système de détection, il est aussi en relation avec l'alimentation électrique. Cette dernière fournit une tension de 12V au système de décision qui délivre 5V à la caméra.
+		\section{Montage des composants}
+	Pour réaliser notre drone, on a poursuivi le schéma électrique présenté ci-dessous :
+	
+	\begin{figure} [H]
+		\begin{center}
+			\centering
+			\hspace*{-1cm}\includegraphics[width=1.1\linewidth]{Images/Shéma électrique}
+		\end{center}
+		\caption{Montage des composant}
+	\end{figure}
 	\section{Logiciels utilisés}
 	Dans notre projet, nous avons travaillé sur de nombreux logiciels que nous traitons un par un.
 	\subsection{Latex}
@@ -234,19 +244,6 @@ Le diagramme de définition de bloc permet d'exprimer la structure d'un système
 			\hspace*{1.5cm}	\caption{Interface de Mission Planner}
 		\end{center}
 	\end{figure}
-	\vskip 1cm
-	\section{Montage des composants}
-	Pour réaliser notre drone, on a poursuivi le schéma électrique présenté ci-dessous :
-	
-	\begin{figure} [H]
-		\begin{center}
-			\centering
-			\hspace*{-1cm}\includegraphics[width=1.1\linewidth]{Images/Shéma électrique}
-		\end{center}
-		\caption{Montage des composant}
-	\end{figure}
-	
-	
 	\section{Configurations et calibrations}
 	Puisque le contrôleur de vol et la radiocommande fonctionnent sur différents modèles d'avions, il est nécessaire de leurs effectuer des configurations  ainsi que  des calibrations spécifiques pour le fonctionnement de notre quadrirotor. 
 	\subsection{Configurations et calibrations de l'APM 2.8}
@@ -280,7 +277,7 @@ Le diagramme de définition de bloc permet d'exprimer la structure d'un système
 		\begin{center}
 			\centering
 			\vskip 1cm
-			\fbox{\includegraphics[width=0.62\linewidth]{Images/calibration du magnétométre}}
+			\fbox{\includegraphics[width=1.1\linewidth]{Images/calibration du magnétométre}}
 		\end{center}
 		\caption{Calibration du magnétomètre}
 	\end{figure}
@@ -336,7 +333,7 @@ Le diagramme de définition de bloc permet d'exprimer la structure d'un système
 	\begin{figure} [H]
 		\begin{center}
 			\centering
-			\fbox{\includegraphics[width=0.65\linewidth]{Images/calibaration du radio}}
+			\fbox{\includegraphics[width=1.1\linewidth]{Images/calibaration du radio}}
 		\end{center}
 		\caption{Calibration de la radiocommande}
 	\end{figure}
@@ -389,9 +386,9 @@ Le diagramme de définition de bloc permet d'exprimer la structure d'un système
 	Cette fonctionnalité nous permet de sélectionner le type de modulation qui sera utilisé à un modèle particulier (PPM ou PCM).
 	
 	
-	\textbf{PPM:} modulation de position d'impulsion. 
+	\textbf{PPM:} pulse position modulation. 
 	
-	\textbf{PCM:} modulation d'impulsions codées.
+	\textbf{PCM:} pulse code modulation.
 	
 	
 	Dans le menu configuration système, nous avons cliqué sur « Modeuat », appuyé sur « MENU », sélectionné l'option désirée PPM et confirmé cette option sélectionnée en appuyant sur « MENU ». Ensuite, nous avons appuyé sur le bouton « EXIT » pour revenir au menu précédent.
@@ -462,13 +459,13 @@ Le diagramme de définition de bloc permet d'exprimer la structure d'un système
 	\section{Erreur eeprom}
 	Lors de la configuration et du paramétrage de notre radiocommande, nous avons observé qu'elle s'éteind tout d'un coup et un message "erreur eeprom" s'affiche avec une alerte sonore. Nous avons effectué le redémarrage de la radiocommande mais en vain. Nous avons cherché comment résoudre ce problème et nous avons constaté qu'il faut la rènitialiser. Pour effectuer cette opération, nous avons besoin d'un logiciel, d'un firmware à installer et d'un programmateur.
 	\subsection{Microcontôleur Green-128}
-	L'emmetteur de notre radiocommande turnigy 9x contient un microcontrôleur "Green-128" qui est compatible avec le microcontrôleur  "Atmega 128". Nous montrons dans la figure ci-dessous les pins de "Green-128". 
+	L'emmetteur de notre radiocommande turnigy 9x contient un microcontrôleur "Green-128" qui est compatible avec le microcontrôleur  "Atmega 128". Nous montrons dans la figure \ref{fig:G.128} les pins de "Green-128". 
 	\begin{figure}[H]
 		\begin{center}
 			\centering
 			\fbox{\includegraphics[width=0.5\linewidth]{Images/Green-128}}
 		\end{center}
-		\caption{Pins Green-128\label{fig:P.G}}
+		\caption{\label{fig:G.128} Pins Green-128}
 	\end{figure}
 	
 	\subsection{Programmateur Usbasp}
